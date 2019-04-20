@@ -1,0 +1,101 @@
+{
+  "enableSearch": true,
+  "pages": [
+    {
+      "headings": {
+        "about-us": "About Us"
+      },
+      "title": "About Us",
+      "header": "header.md",
+      "footer": "footer.md",
+      "src": "about.md",
+      "layout": "default"
+    },
+    {
+      "headings": {
+        "examples-of-markbind-websites": "Examples of MarkBind Websites",
+        "course-websites": "Course Websites",
+        "online-books": "Online Books",
+        "product-websites": "Product Websites"
+      },
+      "title": "Showcase",
+      "header": "header.md",
+      "footer": "footer.md",
+      "src": "showcase.md",
+      "layout": "default"
+    },
+    {
+      "headings": {
+        "requirement": "Requirement",
+        "environment": "Environment",
+        "project-structure": "Project Structure",
+        "markbind-core-library": "MarkBind Core Library",
+        "markbind-cli": "MarkBind CLI",
+        "vuestrap": "VueStrap",
+        "development-process": "Development Process",
+        "development": "Development",
+        "troubleshooting": "Troubleshooting",
+        "testing": "Testing",
+        "running-tests": "Running tests",
+        "updating-tests": "Updating tests",
+        "new-features": "New features",
+        "using-eslint": "Using ESLint",
+        "installation": "Installation",
+        "lint-your-code": "Lint your code",
+        "integration-with-editors": "Integration with editors"
+      },
+      "title": "Developer Guide",
+      "header": "header.md",
+      "footer": "footer.md",
+      "pageNav": "default",
+      "siteNav": "devGuideSections.md",
+      "src": "devGuide/devGuide.md",
+      "layout": "default"
+    },
+    {
+      "headings": {
+        "requirement": "Requirement",
+        "environment": "Environment",
+        "project-structure": "Project Structure",
+        "markbind-core-library": "MarkBind Core Library",
+        "markbind-cli": "MarkBind CLI",
+        "vuestrap": "VueStrap",
+        "development-process": "Development Process",
+        "development": "Development",
+        "troubleshooting": "Troubleshooting",
+        "testing": "Testing",
+        "running-tests": "Running tests",
+        "updating-tests": "Updating tests",
+        "new-features": "New features",
+        "using-eslint": "Using ESLint",
+        "installation": "Installation",
+        "lint-your-code": "Lint your code",
+        "integration-with-editors": "Integration with editors"
+      },
+      "title": "Developer Guide",
+      "header": "header.md",
+      "footer": "footer.md",
+      "pageNav": "default",
+      "siteNav": "devGuideSections.md",
+      "src": "devGuide/index.md",
+      "layout": "default"
+    },
+    {
+      "headings": {
+        "pr-merging-workflow": "PR Merging Workflow",
+        "approval": "Approval",
+        "actual-merging": "Actual Merging",
+        "doing-a-release": "Doing a Release",
+        "building-vue-strap": "Building Vue-Strap",
+        "building-markbind": "Building MarkBind"
+      },
+      "title": "Maintainer Guide",
+      "header": "header.md",
+      "footer": "footer.md",
+      "pageNav": "default",
+      "siteNav": "devGuideSections.md",
+      "src": "devGuide/maintainerGuide.md",
+      "layout": "default"
+    }
+  ]
+}
