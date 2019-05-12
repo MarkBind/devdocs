@@ -115,6 +115,16 @@ to be done in #782.
             the release process will be easier.</li>
         </ol>
         <h1 id="doing-a-release">Doing a Release<a class="fa fa-anchor" href="#doing-a-release"></a></h1>
+        <h2 id="prerequisites-for-new-maintainers">Prerequisites for New Maintainers<a class="fa fa-anchor" href="#prerequisites-for-new-maintainers"></a></h2>
+        <p>Ensure that:</p>
+        <ul>
+          <li>You have the rights to push to master branch on <a href="https://github.com/MarkBind/markbind">MarkBind's repository</a>, and also to make new releases.</li>
+          <li>You have the rights on <a href="https://www.npmjs.com/">npm</a> to make a new release.
+            <ul>
+              <li>You need to login to npm on your terminal with <code>npm adduser</code> first, before you can publish packages to npm.</li>
+            </ul>
+          </li>
+        </ul>
         <h2 id="building-vue-strap">Building Vue-Strap<a class="fa fa-anchor" href="#building-vue-strap"></a></h2>
         <ol>
           <li>Ensure that you are on the root directory on vue-strap, then execute:</li>
@@ -133,7 +143,7 @@ to be done in #782.
         <ol start="2">
           <li>Commit the new changes.</li>
         </ol>
-        <pre><code class="hljs">$ git commit -m 'Update dist'
+        <pre><code class="hljs">$ git commit -am 'Update dist'
 </code></pre>
         <ol start="3">
           <li>Tag the new commit with the new version number, whereby <code>XYZ</code> is the incremented number of the previous release.</li>
@@ -171,6 +181,26 @@ $ cp &lt;VUE_STRAP_REPO&gt;/dist/vue-strap.min.js &lt;MARKBIND_REPO&gt;/test/fun
           </li>
         </ul>
         <ol start="2">
+          <li>Run <code>npm version</code> to increment the version number. Which to increment (<code>patch</code>, <code>minor</code> or <code>major</code>) depends on what PRs are merged for the new version, which means you must know beforehand about the
+            changes.</li>
+        </ol>
+        <ul>
+          <li>If there are no significant changes, a <code>patch</code> is sufficient:</li>
+        </ul>
+        <pre><code class="hljs">$ npm version patch
+</code></pre>
+        <ul>
+          <li>If there are significant changes (e.g. breaking changes, new release), a <code>minor</code> release is needed:</li>
+        </ul>
+        <p>a. Run <code>npm version minor</code> as per normal.</p>
+        <p>b. Update the version number inside <code>src/lib/markbind/package-lock.json</code> and <code>src/lib/markbind/package.json</code> manually. This is because <code>npm version</code> will not automatically update the numbers from the outside. (Note:
+          You do not have to commit these changes immediately, as we also have to rebuild the test files in the next step anyway.)</p>
+        <pre><code class="hljs">$ npm version minor
+</code></pre>
+        <ul>
+          <li>We rarely do <code>major</code> releases, but if necessary, the steps are the same as the <code>minor</code> release (just change <code>minor</code> to <code>major</code>).</li>
+        </ul>
+        <ol start="3">
           <li>Rebuild the test files.</li>
         </ol>
         <pre><code class="hljs"># on Unix
@@ -195,38 +225,24 @@ index 779f279..bb3c602 100644
      &lt;link rel="stylesheet" href="../markbind/css/bootstrap.min.css"&gt;
 </code></pre>
         <p>However, if there are any extra lines changed, that means that someone screwed up the functional tests, and needs to be fixed accordingly!</p>
-        <p>Only when it is fixed do you proceed with the next step of the release procedure.</p>
-        <ol start="3">
-          <li>Do an <code>npm version</code> to increment the version number. Which to increment (<code>patch</code>, <code>minor</code> or <code>major</code>) depends on what PRs are merged for the new version, which means you must know beforehand about
-            the changes.</li>
-        </ol>
-        <ul>
-          <li>If there are no significant changes, a <code>patch</code> is sufficient:</li>
-        </ul>
-        <pre><code class="hljs">$ npm version patch
-</code></pre>
-        <ul>
-          <li>If there are significant changes (e.g. breaking changes, new release), a <code>minor</code> release is needed:</li>
-        </ul>
-        <p>a. Update the version number inside <code>src/lib/markbind/package-lock.json</code> and <code>src/lib/markbind/package.json</code> manually. This is because <code>npm version</code> will not automatically update the numbers from the outside.</p>
-        <p>b. Do a <code>npm version minor</code> as per normal.</p>
-        <pre><code class="hljs">$ npm version minor
-</code></pre>
-        <ul>
-          <li>We rarely do <code>major</code> releases, but if necessary, the steps are the same as the <code>minor</code> release (just change <code>minor</code> to <code>major</code>).</li>
-        </ul>
         <ol start="4">
+          <li>The changes that you have made in the last two steps need to be combined together with the version commit generated by <code>npm version</code>. Therefore, amend the version commit and version tag by doing the following (change <code>vA.B.C</code>            to the new version's string accordingly).</li>
+        </ol>
+        <pre><code class="hljs">$ git commit -a --amend --reuse-message vA.B.C
+$ git tag --force vA.B.C            # to reassign the tag to the newly amended commit
+</code></pre>
+        <ol start="5">
           <li>Push the new commit and version tag generated by <code>npm</code> (change <code>vA.B.C</code> to the new version's string accordingly).</li>
         </ol>
         <pre><code class="hljs">$ git push upstream master
 $ git push upstream vA.B.C
 </code></pre>
-        <ol start="5">
-          <li>Do an <code>npm publish</code>. You should receive a notification by <code>npm</code> that the publish is successful.</li>
+        <ol start="6">
+          <li>Run <code>npm publish</code>. You should receive a notification by <code>npm</code> that the publish is successful.</li>
         </ol>
         <pre><code class="hljs">$ npm publish
 </code></pre>
-        <ol start="6">
+        <ol start="7">
           <li>
             <p>If you used <code>npm link</code> for your project, ensure that you try the new release on another platform that doesn't use <code>npm link</code>, so that we can be sure the end-users can install and use the new version.</p>
             <p>a. Just do <code>npm i -g markbind-cli@A.B.C</code> on the different platform and...</p>
@@ -236,13 +252,17 @@ $ git push upstream vA.B.C
             <p>Ensure that the documentation at <a href="http://markbind.org">markbind.org</a> is deployed correctly.</p>
           </li>
         </ol>
-        <p>Since #701, the deployment is automated.</p>
+        <p>Since <a href="https://github.com/markbind/markbind/pull/701">#701</a>, the deployment is automated.</p>
         <p>However, if it doesn't deploy properly for the release, do the following:</p>
         <pre><code class="hljs">$ cd docs
 $ markbind build
 $ markbind deploy
 </code></pre>
-        <ol start="8">
+        <ol start="9">
+          <li>
+            <p>Close the <a href="https://github.com/MarkBind/markbind/milestones">issue milestone on GitHub</a> tied to that version.</p>
+            <p>a. Please also create a new milestone for the next iterations. Recommended to have at least two version milestones opened.</p>
+          </li>
           <li>
             <p>Draft a new release on GitHub.</p>
             <p>a. Go to the Markbind release page at <a href="https://github.com/MarkBind/markbind/releases">https://github.com/MarkBind/markbind/releases</a>.</p>
@@ -354,7 +374,7 @@ test: Add diff printing for easier debugging (#632)
 [MarkBind/vue-strap](https://github.com/MarkBind/vue-strap): v2.0.1-markbind.20 → v2.0.1-markbind.21
 </code></pre>
         <p>f. Click &quot;Publish release&quot;.</p>
-        <ol start="9">
+        <ol start="11">
           <li>Finally, announce the new release on our Slack channel (replace <code>A.B.C</code> with the new version). Congrats!</li>
         </ol>
         <ul>
@@ -372,6 +392,7 @@ test: Add diff printing for easier debugging (#632)
             </nav>
             <a class="nav-link py-1" href="#doing-a-release">Doing a Release&#x200E;</a>
             <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#prerequisites-for-new-maintainers">Prerequisites for New Maintainers&#x200E;</a>
               <a class="nav-link py-1" href="#building-vue-strap">Building Vue-Strap&#x200E;</a>
               <a class="nav-link py-1" href="#building-markbind">Building MarkBind&#x200E;</a>
             </nav>
@@ -382,7 +403,7 @@ test: Add diff printing for easier debugging (#632)
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.4.0</a> on Sun, 12 May 2019 12:37:28 GMT]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.4.0</a> on Sun, 12 May 2019 12:38:04 GMT]</small></div>
     </footer>
   </div>
 </body>

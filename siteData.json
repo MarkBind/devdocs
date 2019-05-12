@@ -86,6 +86,7 @@
         "approval": "Approval",
         "actual-merging": "Actual Merging",
         "doing-a-release": "Doing a Release",
+        "prerequisites-for-new-maintainers": "Prerequisites for New Maintainers",
         "building-vue-strap": "Building Vue-Strap",
         "building-markbind": "Building MarkBind"
       },
