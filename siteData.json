@@ -45,12 +45,9 @@
         "integration-with-editors": "Integration with editors"
       },
       "title": "Developer Guide",
-      "header": "header.md",
-      "footer": "footer.md",
+      "layout": "devGuide",
       "pageNav": "default",
-      "siteNav": "devGuideSections.md",
-      "src": "devGuide/devGuide.md",
-      "layout": "default"
+      "src": "devGuide/devGuide.md"
     },
     {
       "headings": {
@@ -73,12 +70,9 @@
         "integration-with-editors": "Integration with editors"
       },
       "title": "Developer Guide",
-      "header": "header.md",
-      "footer": "footer.md",
+      "layout": "devGuide",
       "pageNav": "default",
-      "siteNav": "devGuideSections.md",
-      "src": "devGuide/index.md",
-      "layout": "default"
+      "src": "devGuide/index.md"
     },
     {
       "headings": {
@@ -91,12 +85,9 @@
         "building-markbind": "Building MarkBind"
       },
       "title": "Maintainer Guide",
-      "header": "header.md",
-      "footer": "footer.md",
+      "layout": "devGuide",
       "pageNav": "default",
-      "siteNav": "devGuideSections.md",
-      "src": "devGuide/maintainerGuide.md",
-      "layout": "default"
+      "src": "devGuide/maintainerGuide.md"
     }
   ]
 }
