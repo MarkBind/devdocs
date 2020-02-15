@@ -2,29 +2,35 @@
   "enableSearch": true,
   "pages": [
     {
-      "headings": {
-        "about-us": "About Us"
-      },
       "title": "About Us",
       "header": "header.md",
       "footer": "footer.md",
       "src": "about.md",
-      "layout": "default"
+      "layout": "default",
+      "headings": {
+        "about-us": "About Us"
+      },
+      "headingKeywords": {}
     },
     {
+      "title": "Showcase",
+      "header": "header.md",
+      "footer": "footer.md",
+      "src": "showcase.md",
+      "layout": "default",
       "headings": {
         "examples-of-markbind-websites": "Examples of MarkBind Websites",
         "course-websites": "Course Websites",
         "online-books": "Online Books",
         "product-websites": "Product Websites"
       },
-      "title": "Showcase",
-      "header": "header.md",
-      "footer": "footer.md",
-      "src": "showcase.md",
-      "layout": "default"
+      "headingKeywords": {}
     },
     {
+      "title": "Developer Guide",
+      "layout": "devGuide",
+      "pageNav": "default",
+      "src": "devGuide/devGuide.md",
       "headings": {
         "requirement": "Requirement",
         "environment": "Environment",
@@ -45,12 +51,13 @@
         "lint-your-code": "Lint your code",
         "integration-with-editors": "Integration with editors"
       },
+      "headingKeywords": {}
+    },
+    {
       "title": "Developer Guide",
       "layout": "devGuide",
       "pageNav": "default",
-      "src": "devGuide/devGuide.md"
-    },
-    {
+      "src": "devGuide/index.md",
       "headings": {
         "requirement": "Requirement",
         "environment": "Environment",
@@ -71,12 +78,13 @@
         "lint-your-code": "Lint your code",
         "integration-with-editors": "Integration with editors"
       },
-      "title": "Developer Guide",
-      "layout": "devGuide",
-      "pageNav": "default",
-      "src": "devGuide/index.md"
+      "headingKeywords": {}
     },
     {
+      "title": "Maintainer Guide",
+      "layout": "devGuide",
+      "pageNav": "default",
+      "src": "devGuide/maintainerGuide.md",
       "headings": {
         "pr-merging-workflow": "PR Merging Workflow",
         "approval": "Approval",
@@ -86,10 +94,7 @@
         "building-vue-strap": "Building Vue-Strap",
         "building-markbind": "Building MarkBind"
       },
-      "title": "Maintainer Guide",
-      "layout": "devGuide",
-      "pageNav": "default",
-      "src": "devGuide/maintainerGuide.md"
+      "headingKeywords": {}
     }
   ]
 }
