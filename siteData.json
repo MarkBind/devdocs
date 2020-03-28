@@ -13,6 +13,23 @@
       "headingKeywords": {}
     },
     {
+      "title": "Contributing",
+      "layout": "devGuide",
+      "pageNav": "default",
+      "src": "devGuide/contributing.md",
+      "headings": {
+        "contributing-to-markbind": "Contributing to MarkBind",
+        "code-of-conduct": "Code of conduct",
+        "things-to-do-before-getting-started": "Things to do before getting started",
+        "how-to-contribute": "How to contribute",
+        "how-to-report-a-bug": "How to report a bug",
+        "how-to-request-a-feature": "How to request a feature",
+        "first-issues-for-contributors": "First issues for contributors",
+        "how-to-make-pull-requests-to-submit-changes": "How to make Pull Requests to submit changes?"
+      },
+      "headingKeywords": {}
+    },
+    {
       "title": "Developer Guide",
       "layout": "devGuide",
       "pageNav": "default",
