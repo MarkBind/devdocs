@@ -13,20 +13,6 @@
       "headingKeywords": {}
     },
     {
-      "title": "Showcase",
-      "header": "header.md",
-      "footer": "footer.md",
-      "src": "showcase.md",
-      "layout": "default",
-      "headings": {
-        "examples-of-markbind-websites": "Examples of MarkBind Websites",
-        "course-websites": "Course Websites",
-        "online-books": "Online Books",
-        "product-websites": "Product Websites"
-      },
-      "headingKeywords": {}
-    },
-    {
       "title": "Developer Guide",
       "layout": "devGuide",
       "pageNav": "default",
@@ -93,6 +79,20 @@
         "prerequisites-for-new-maintainers": "Prerequisites for New Maintainers",
         "building-vue-strap": "Building Vue-Strap",
         "building-markbind": "Building MarkBind"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "title": "Showcase",
+      "header": "header.md",
+      "footer": "footer.md",
+      "src": "showcase.md",
+      "layout": "default",
+      "headings": {
+        "examples-of-markbind-websites": "Examples of MarkBind Websites",
+        "course-websites": "Course Websites",
+        "online-books": "Online Books",
+        "product-websites": "Product Websites"
       },
       "headingKeywords": {}
     }
