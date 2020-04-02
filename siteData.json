@@ -57,30 +57,10 @@
       "headingKeywords": {}
     },
     {
-      "title": "Developer Guide",
-      "layout": "devGuide",
-      "pageNav": "default",
       "src": "devGuide/index.md",
-      "headings": {
-        "requirement": "Requirement",
-        "environment": "Environment",
-        "project-structure": "Project Structure",
-        "markbind-core-library": "MarkBind Core Library",
-        "markbind-cli": "MarkBind CLI",
-        "vuestrap": "VueStrap",
-        "development-process": "Development Process",
-        "prerequisite": "Prerequisite",
-        "development": "Development",
-        "troubleshooting": "Troubleshooting",
-        "testing": "Testing",
-        "running-tests": "Running tests",
-        "updating-tests": "Updating tests",
-        "new-features": "New features",
-        "using-eslint": "Using ESLint",
-        "installation": "Installation",
-        "lint-your-code": "Lint your code",
-        "integration-with-editors": "Integration with editors"
-      },
+      "title": "",
+      "layout": "default",
+      "headings": {},
       "headingKeywords": {}
     },
     {
