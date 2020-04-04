@@ -54,6 +54,7 @@
           </ul>
         </div>
       </nav>
+
       <div id="content-wrapper">
         <h1 id="pr-merging-workflow">PR Merging Workflow<a class="fa fa-anchor" href="#pr-merging-workflow"></a></h1>
         <h2 id="approval">Approval<a class="fa fa-anchor" href="#approval"></a></h2>
@@ -76,9 +77,7 @@
           <li>
             <p>Re-run the Travis build for the current PR's <code>continuous-integration/travis-ci/pr</code>.</p>
             <ul>
-              <li><strong>Rationale:</strong> This is because we do not ask PR authors to rebase their PRs, but the master branch may have since been updated. It is possible for tests to pass on their branch, only to fail when integrating the changes with
-                the master (
-                <strong>Note:</strong> This is possible even if GitHub <em>doesn't</em> complain about any merge conflict!)</li>
+              <li><strong>Rationale:</strong> This is because we do not ask PR authors to rebase their PRs, but the master branch may have since been updated. It is possible for tests to pass on their branch, only to fail when integrating the changes with the master (<strong>Note:</strong> This is possible even if GitHub <em>doesn't</em> complain about any merge conflict!)</li>
             </ul>
           </li>
           <li>
@@ -112,8 +111,7 @@ to be done in #782.
 ```
 </code></pre>
         <ol start="3">
-          <li>Ensure that a version milestone is tagged to the PR. <strong>Reason:</strong> We may have missed it during the &quot;Approval&quot; stage, so please add the version milestone if it is missing, so that the drafting of the release notes during
-            the release process will be easier.</li>
+          <li>Ensure that a version milestone is tagged to the PR. <strong>Reason:</strong> We may have missed it during the &quot;Approval&quot; stage, so please add the version milestone if it is missing, so that the drafting of the release notes during the release process will be easier.</li>
         </ol>
         <h1 id="doing-a-release">Doing a Release<a class="fa fa-anchor" href="#doing-a-release"></a></h1>
         <h2 id="prerequisites-for-new-maintainers">Prerequisites for New Maintainers<a class="fa fa-anchor" href="#prerequisites-for-new-maintainers"></a></h2>
@@ -166,13 +164,10 @@ to be done in #782.
         <p>b. Commit the new vue-strap assets (replace <code>XYZ</code> with version number).</p>
         <pre><code class="hljs"><span>$ git commit -m 'Update vue-strap version to v2.0.1-markbind.XYZ'</span></code></pre>
         <ul>
-          <li><strong>Note:</strong> We uniquely do this for each MarkBind release (rather than spontaneously update the vue-strap files for each affected PR), in order to reduce unnecessary merge conflicts. It also makes it easier for the maintainers to
-            vet the changes.
-          </li>
+          <li><strong>Note:</strong> We uniquely do this for each MarkBind release (rather than spontaneously update the vue-strap files for each affected PR), in order to reduce unnecessary merge conflicts. It also makes it easier for the maintainers to vet the changes.</li>
         </ul>
         <ol start="2">
-          <li>Run <code>npm version</code> to increment the version number. Which to increment (<code>patch</code>, <code>minor</code> or <code>major</code>) depends on what PRs are merged for the new version, which means you must know beforehand about the
-            changes.</li>
+          <li>Run <code>npm version</code> to increment the version number. Which to increment (<code>patch</code>, <code>minor</code> or <code>major</code>) depends on what PRs are merged for the new version, which means you must know beforehand about the changes.</li>
         </ol>
         <ul>
           <li>If there are no significant changes, a <code>patch</code> is sufficient:</li>
@@ -182,8 +177,7 @@ to be done in #782.
           <li>If there are significant changes (e.g. breaking changes, new release), a <code>minor</code> release is needed:</li>
         </ul>
         <p>a. Run <code>npm version minor</code> as per normal.</p>
-        <p>b. Update the version number inside <code>src/lib/markbind/package-lock.json</code> and <code>src/lib/markbind/package.json</code> manually. This is because <code>npm version</code> will not automatically update the numbers from the outside. (Note:
-          You do not have to commit these changes immediately, as we also have to rebuild the test files in the next step anyway.)</p>
+        <p>b. Update the version number inside <code>src/lib/markbind/package-lock.json</code> and <code>src/lib/markbind/package.json</code> manually. This is because <code>npm version</code> will not automatically update the numbers from the outside. (Note: You do not have to commit these changes immediately, as we also have to rebuild the test files in the next step anyway.)</p>
         <pre><code class="hljs"><span>$ npm version minor</span></code></pre>
         <ul>
           <li>We rarely do <code>major</code> releases, but if necessary, the steps are the same as the <code>minor</code> release (just change <code>minor</code> to <code>major</code>).</li>
@@ -196,7 +190,7 @@ to be done in #782.
         <pre><code class="hljs diff"><span>diff --git a/test/functional/test_site/expected/bugs/index.html b/test/functional/test_site/expected/bugs/index.html</span><span>index 779f279..bb3c602 100644</span><span><span class="hljs-comment">--- a/test/functional/test_site/expected/bugs/index.html</span></span><span><span class="hljs-comment">+++ b/test/functional/test_site/expected/bugs/index.html</span></span><span><span class="hljs-meta">@@ -4,7 +4,7 @@</span></span><span>     &lt;meta name="default-head-top"&gt;</span><span>     &lt;meta charset="utf-8"&gt;</span><span>     &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</span><span><span class="hljs-deletion">-    &lt;meta name="generator" content="MarkBind 1.20.0"&gt;</span></span><span><span class="hljs-addition">+    &lt;meta name="generator" content="MarkBind 1.21.0"&gt;</span></span><span>     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</span><span>     &lt;title&gt;Open Bugs&lt;/title&gt;</span><span>     &lt;link rel="stylesheet" href="../markbind/css/bootstrap.min.css"&gt;</span></code></pre>
         <p>However, if there are any extra lines changed, that means that someone screwed up the functional tests, and needs to be fixed accordingly!</p>
         <ol start="4">
-          <li>The changes that you have made in the last two steps need to be combined together with the version commit generated by <code>npm version</code>. Therefore, amend the version commit and version tag by doing the following (change <code>vA.B.C</code>            to the new version's string accordingly).</li>
+          <li>The changes that you have made in the last two steps need to be combined together with the version commit generated by <code>npm version</code>. Therefore, amend the version commit and version tag by doing the following (change <code>vA.B.C</code> to the new version's string accordingly).</li>
         </ol>
         <pre><code class="hljs"><span>$ git commit -a --amend --reuse-message vA.B.C</span><span>$ git tag --force vA.B.C            # to reassign the tag to the newly amended commit</span></code></pre>
         <ol start="5">
@@ -246,6 +240,8 @@ to be done in #782.
           <li>Published: <code>npm i -g markbind-cli@A.B.C</code></li>
         </ul>
       </div>
+
+
       <nav id="page-nav" class="navbar navbar-light bg-transparent">
         <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -268,7 +264,7 @@ to be done in #782.
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.13.1</a> on Fri, Apr 3, 2020, 3:55:34 PM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.13.1</a> on Sat, Apr 4, 2020, 12:34:16 PM UTC]</small></div>
     </footer>
   </div>
 </body>
