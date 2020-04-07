@@ -137,14 +137,14 @@
           </li>
           <li>
             <p>In the folder of your cloned repo, run</p>
-            <pre><code class="hljs"><span>$ npm install<br></span></code></pre>
+            <pre><code class="hljs"><span>$ npm install</span></code></pre>
           </li>
         </ol>
         <p>to install the project dependencies.</p>
         <ol start="3">
           <li>
             <p>To make sure you are using the cloned CLI program in your own terminal/console, in the cloned CLI repo, run</p>
-            <pre><code class="hljs"><span>$ npm link<br></span></code></pre>
+            <pre><code class="hljs"><span>$ npm link</span></code></pre>
           </li>
         </ol>
         <p>to bind the local MarkBind CLI program to the cloned development version.</p>
@@ -153,7 +153,7 @@
         </ol>
         <h4 id="troubleshooting">Troubleshooting<a class="fa fa-anchor" href="#troubleshooting"></a></h4>
         <p><strong>Q: When I build a MarkBind website, I get strange errors relating to HTML tags in .md/.mbd files. For example:</strong></p>
-        <pre><code class="hljs"><span>TypeError: Cannot set property 'src' of null<br></span><span>    at Page.collectFrontMatter (~\markbind\src\Page.js:399:26)<br></span></code></pre>
+        <pre><code class="hljs"><span>TypeError: Cannot set property 'src' of null</span><span>    at Page.collectFrontMatter (~\markbind\src\Page.js:399:26)</span></code></pre>
         <p>A: Please report this in a <a href="https://github.com/MarkBind/markbind/issues/new">new issue</a>, since this should already be fixed by <a href="https://github.com/MarkBind/markbind/pull/948">MarkBind/markbind#948</a>.</p>
         <h3 id="testing">Testing<a class="fa fa-anchor" href="#testing"></a></h3>
         <p>Our test script does the following:</p>
@@ -165,16 +165,16 @@
         <h4 id="running-tests">Running tests<a class="fa fa-anchor" href="#running-tests"></a></h4>
         <p>To execute the tests, simply run:</p>
         <p>For Unix:</p>
-        <pre><code class="hljs"><span>$ npm run test<br></span></code></pre>
+        <pre><code class="hljs"><span>$ npm run test</span></code></pre>
         <p>For Windows users:</p>
-        <pre><code class="hljs"><span>&gt; npm run testwin<br></span></code></pre>
+        <pre><code class="hljs"><span>&gt; npm run testwin</span></code></pre>
         <h4 id="updating-tests">Updating tests<a class="fa fa-anchor" href="#updating-tests"></a></h4>
         <p>Whether you are adding a new feature, updating existing features or fixing bugs, make sure to update the test sites to reflect the changes.</p>
         <p>You may use the following script to do this:</p>
         <p>On Unix:</p>
-        <pre><code class="hljs"><span>$ npm run updatetest<br></span></code></pre>
+        <pre><code class="hljs"><span>$ npm run updatetest</span></code></pre>
         <p>On Windows:</p>
-        <pre><code class="hljs"><span>&gt; npm run updatetestwin<br></span></code></pre>
+        <pre><code class="hljs"><span>&gt; npm run updatetestwin</span></code></pre>
         <box type="warning">
           You should always check that the generated output is correct before committing any changes to the test sites.
         </box>
@@ -187,17 +187,17 @@
         <p>Our projects follow a <a href="https://github.com/oss-generic/process/blob/master/docs/CodingStandards.adoc">coding standard</a>. Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is <a href="https://eslint.org/">ESLint</a>. Here is a <a href="https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e">gist</a> with an explanation of the ESLint rules chosen in markbind-cli.</p>
         <h4 id="installation">Installation<a class="fa fa-anchor" href="#installation"></a></h4>
         <p>Install developer dependencies (ESLint, related plugins) in your cloned markbind and markbind-cli repositories.</p>
-        <pre><code class="hljs"><span>$ npm install --only=dev<br></span></code></pre>
+        <pre><code class="hljs"><span>$ npm install --only=dev</span></code></pre>
         <h4 id="lint-your-code">Lint your code<a class="fa fa-anchor" href="#lint-your-code"></a></h4>
         <p>Before making a commit or pull request, you should lint your code.</p>
         <p>To lint a specific file, go to the root directory of the cloned repo and run</p>
-        <pre><code class="hljs"><span>$ ./node_modules/.bin/eslint path/to/specificfile.js<br></span></code></pre>
+        <pre><code class="hljs"><span>$ ./node_modules/.bin/eslint path/to/specificfile.js</span></code></pre>
         <p>To lint all files, run</p>
-        <pre><code class="hljs"><span>$ ./node_modules/.bin/eslint .<br></span></code></pre>
+        <pre><code class="hljs"><span>$ ./node_modules/.bin/eslint .</span></code></pre>
         <p>You can add the <code>--fix</code> flag to correct any fixable style errors.</p>
-        <pre><code class="hljs"><span>$ ./node_modules/.bin/eslint . --fix<br></span></code></pre>
+        <pre><code class="hljs"><span>$ ./node_modules/.bin/eslint . --fix</span></code></pre>
         <p>You may also correct fixable style errors for both JavaScript and CSS, by running this npm script</p>
-        <pre><code class="hljs"><span>$ npm run autolint<br></span></code></pre>
+        <pre><code class="hljs"><span>$ npm run autolint</span></code></pre>
         <h4 id="integration-with-editors">Integration with editors<a class="fa fa-anchor" href="#integration-with-editors"></a></h4>
         <p>ESLint has <a href="https://eslint.org/docs/user-guide/integrations">integrations with popular editors</a>. They offer features such as &quot;fix errors on save&quot;, which will make developement more convenient.</p>
       </div>
@@ -244,7 +244,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.13.1</a> on Tue, Apr 7, 2020, 7:39:13 AM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.13.1</a> on Tue, Apr 7, 2020, 8:03:49 AM UTC]</small></div>
     </footer>
   </div>
 </body>
