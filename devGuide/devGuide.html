@@ -159,7 +159,7 @@
         <p>Our test script does the following:</p>
         <ol>
           <li>Lints the code for any code and style errors using ESLint.</li>
-          <li>Builds the test sites whose directory names are listed in <code>test/functional/test_sites</code>.</li>
+          <li>Builds the test sites whose directory names are listed in <code>test/functional/test_site</code>.</li>
           <li>For each test site, compares the HTML files generated with the HTML files in its <code>expected</code> directory.</li>
         </ol>
         <h4 id="running-tests">Running tests<a class="fa fa-anchor" href="#running-tests"></a></h4>
@@ -178,10 +178,31 @@
         <box type="warning">
           You should always check that the generated output is correct before committing any changes to the test sites.
         </box>
-        <h5 id="new-features">New features<a class="fa fa-anchor" href="#new-features"></a></h5>
+        <h4 id="adding-test-site-content">Adding test site content<a class="fa fa-anchor" href="#adding-test-site-content"></a></h4>
         <p>When adding new features, you should also add new site content into an existing test site or create a new test site to demonstrate the new feature. This is to ensure that your feature can be tested by building that test site.</p>
+        <p>To add a page to an existing test site, for this example, to <code>test_site</code>:</p>
+        <ol>
+          <li>
+            <p>Add a new test page, e.g., <code>newTestPage.md</code>, containing a demonstration of the new feature.</p>
+          </li>
+          <li>
+            <p>Open the <code>site.json</code> corresponding to the test site, i.e. <code>test/functional/test_site/site.json</code></p>
+          </li>
+          <li>
+            <p>To include the new page, i.e. <code>newTestPage.md</code>, add it to the <code>pages</code> array.</p>
+          </li>
+        </ol>
+        <div class="code-block">
+          <div class="code-block-heading"><span>site.json</span></div>
+          <div class="code-block-content">
+            <pre><code heading="site.json" class="hljs"><span>&quot;pages&quot;: [<br></span><span>    {<br></span><span>      &quot;src&quot;: &quot;index.md&quot;,<br></span><span>      &quot;title&quot;: &quot;Hello World&quot;,<br></span><span>      &quot;frontmatter&quot;: {<br></span><span>        &quot;frontMatterOverrideProperty&quot;: &quot;Overridden by front matter override&quot;,<br></span><span>        &quot;globalAndFrontMatterOverrideProperty&quot;:  &quot;Overridden by front matter override&quot;<br></span><span>      }<br></span><span>    },<br></span><span>    ...<br></span><span>    {<br></span><span>      &quot;src&quot;: &quot;testLayouts.md&quot;,<br></span><span>      &quot;title&quot;: &quot;Hello World&quot;<br></span><span>    },<br></span><span>    {,<br></span><span class="highlighted">      &quot;src&quot;: &quot;newTestPage.md&quot;,<br></span><span class="highlighted">      &quot;title&quot;: [some title you see fit]<br></span><span>    },<br></span><span>    ...<br></span></code></pre>
+          </div>
+        </div>
+        <ol start="4">
+          <li>Update the tests using <code>npm run updatetest</code>.</li>
+        </ol>
         <box type="info">
-          When creating a new test site, the directory name of the new test site should be added to <code>test/functional/test_sites</code>.
+          When creating a new test site, the directory name of the new test site should be added to `test/functional/test_sites` file.
         </box>
         <h3 id="using-eslint">Using ESLint<a class="fa fa-anchor" href="#using-eslint"></a></h3>
         <p>Our projects follow a <a href="https://github.com/oss-generic/process/blob/master/docs/CodingStandards.adoc">coding standard</a>. Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is <a href="https://eslint.org/">ESLint</a>. Here is a <a href="https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e">gist</a> with an explanation of the ESLint rules chosen in markbind-cli.</p>
@@ -226,9 +247,7 @@
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                 <a class="nav-link py-1" href="#running-tests">Running tests&#x200E;</a>
                 <a class="nav-link py-1" href="#updating-tests">Updating tests&#x200E;</a>
-                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                  <a class="nav-link py-1" href="#new-features">New features&#x200E;</a>
-                </nav>
+                <a class="nav-link py-1" href="#adding-test-site-content">Adding test site content&#x200E;</a>
               </nav>
               <a class="nav-link py-1" href="#using-eslint">Using ESLint&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
@@ -244,7 +263,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.13.1</a> on Wed, Apr 8, 2020, 11:14:44 AM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.13.1</a> on Wed, Apr 8, 2020, 5:28:45 PM UTC]</small></div>
     </footer>
   </div>
 </body>
