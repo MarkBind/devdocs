@@ -30,6 +30,22 @@
       "headingKeywords": {}
     },
     {
+      "title": "Code of Conduct",
+      "layout": "devGuide",
+      "pageNav": "default",
+      "src": "devGuide/contributing/code-of-conduct.md",
+      "headings": {
+        "contributor-covenant-code-of-conduct": "Contributor Covenant Code of Conduct",
+        "our-pledge": "Our Pledge",
+        "our-standards": "Our Standards",
+        "our-responsibilities": "Our Responsibilities",
+        "scope": "Scope",
+        "enforcement": "Enforcement",
+        "attribution": "Attribution"
+      },
+      "headingKeywords": {}
+    },
+    {
       "title": "Developer Guide",
       "layout": "devGuide",
       "pageNav": "default",
