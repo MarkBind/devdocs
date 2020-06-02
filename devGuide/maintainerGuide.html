@@ -80,7 +80,7 @@
         <h2 id="actual-merging">Actual Merging<span id="actual-merging" class="anchor"></span><a class="fa fa-anchor" href="#actual-merging" onclick="event.stopPropagation()"></a></h2>
         <ol>
           <li>
-            <p>Re-run the Travis build for the current PR's <code>continuous-integration/travis-ci/pr</code>.</p>
+            <p>Re-run the Travis build for the current PR's <code v-pre="">continuous-integration/travis-ci/pr</code>.</p>
             <ul>
               <li><strong>Rationale:</strong> This is because we do not ask PR authors to rebase their PRs, but the master branch may have since been updated. It is possible for tests to pass on their branch, only to fail when integrating the changes with the master (<strong>Note:</strong> This is possible even if GitHub <em>doesn't</em> complain about any merge conflict!)</li>
             </ul>
@@ -91,14 +91,14 @@
               <li>Use &quot;Squash and Merge&quot; if the PR is a simple feature.</li>
               <li>Use &quot;Create a Merge Commit&quot; if the PR is non-trivial, and the author has tidied up the commit organization so that each commit is a logical change.</li>
             </ul>
-            <p>a. Regardless of the option chosen above, ensure that your commit title is of the form <code>&lt;PR_TITLE&gt; (#PR_NUMBER)</code>. For example, for PR #745, it is of the form:</p>
-            <p><code>Add built-in support for light themes from bootswatch (#745)</code></p>
+            <p>a. Regardless of the option chosen above, ensure that your commit title is of the form <code v-pre="">&lt;PR_TITLE&gt; (#PR_NUMBER)</code>. For example, for PR #745, it is of the form:</p>
+            <p><code v-pre="">Add built-in support for light themes from bootswatch (#745)</code></p>
             <p>b. For non-trivial PRs, ensure that there is a sensible commit message accompanied by it. <strong>Rationale:</strong> So that future developers have an idea of what is going on for this PR without having to go back to the GitHub website.</p>
             <p>c. Before confirming the merge, do ensure that no other PRs have been merged to master <strong>since the time you started drafting the merging commit's title and message</strong>. Otherwise, you may face a glitch where GitHub merges your PR without squashing. (Reference: <a href="https://github.com/MarkBind/markbind/pull/1160">MarkBind#1160</a>)</p>
           </li>
         </ol>
         <p>Please follow the <a href="https://oss-generic.github.io/process/docs/FormatsAndConventions.html#commit-message">commit message convention</a>. For example, for PR #745, the commit message is as follows:</p>
-        <pre><code>```
+        <pre><code v-pre="">```
 To use any custom Bootstrap themes, authors must manually copy over the
 theme's .css files to the website's asset folders, and configure the
 layout's head.md to use the .css files.
@@ -126,7 +126,7 @@ to be done in #782.
           <li>You have the rights to push to master branch on <a href="https://github.com/MarkBind/markbind">MarkBind's repository</a>, and also to make new releases.</li>
           <li>You have the rights on <a href="https://www.npmjs.com/">npm</a> to make a new release.
             <ul>
-              <li>You need to login to npm on your terminal with <code>npm adduser</code> first, before you can publish packages to npm.</li>
+              <li>You need to login to npm on your terminal with <code v-pre="">npm adduser</code> first, before you can publish packages to npm.</li>
             </ul>
           </li>
         </ul>
@@ -134,91 +134,91 @@ to be done in #782.
         <ol>
           <li>Navigate to the root directory for vue-strap, then ensure that all dependencies are updated by executing:</li>
         </ol>
-        <pre><code class="hljs"><span>$ npm install<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ npm install<br></span></code></pre>
         <ol start="2">
           <li>Build the assets by executing:</li>
         </ol>
-        <pre><code class="hljs"><span>$ npm run build<br></span></code></pre>
-        <p>You should see changes in <code>vue-strap.min.js</code>.</p>
+        <pre><code class="hljs" v-pre=""><span>$ npm run build<br></span></code></pre>
+        <p>You should see changes in <code v-pre="">vue-strap.min.js</code>.</p>
         <ul>
           <li>
             <p><strong>Note:</strong> Building vue-strap is optional if there's no changes since the last release of MarkBind. If there are no changes to the three files mentioned above, skip to the &quot;Building MarkBind&quot; section.</p>
           </li>
           <li>
-            <p><strong>Note:</strong> Do take a glance at the diff for <code>vue-strap.min.js</code> to see if there's any strange changes (e.g. the version of jQuery changes even though no one upgraded it).</p>
+            <p><strong>Note:</strong> Do take a glance at the diff for <code v-pre="">vue-strap.min.js</code> to see if there's any strange changes (e.g. the version of jQuery changes even though no one upgraded it).</p>
           </li>
         </ul>
         <ol start="3">
           <li>Commit the new changes.</li>
         </ol>
-        <pre><code class="hljs"><span>$ git commit -am 'Update dist'<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ git commit -am 'Update dist'<br></span></code></pre>
         <ol start="4">
-          <li>Tag the new commit with the new version number, whereby <code>XYZ</code> is the incremented number of the previous release.</li>
+          <li>Tag the new commit with the new version number, whereby <code v-pre="">XYZ</code> is the incremented number of the previous release.</li>
         </ol>
-        <pre><code class="hljs"><span>$ git tag v2.0.1-markbind.XYZ<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ git tag v2.0.1-markbind.XYZ<br></span></code></pre>
         <ul>
           <li><strong>Note:</strong> The tag used is a lightweight tag. <em>Don't</em> use an annotated tag.</li>
         </ul>
         <ol start="5">
-          <li>Push everything to the main vue-strap repository (replace <code>XYZ</code> with version number).</li>
+          <li>Push everything to the main vue-strap repository (replace <code v-pre="">XYZ</code> with version number).</li>
         </ol>
-        <pre><code class="hljs"><span>$ git push upstream master<br></span><span>$ git push upstream v2.0.1-markbind.XYZ<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ git push upstream master<br></span><span>$ git push upstream v2.0.1-markbind.XYZ<br></span></code></pre>
         <h2 id="building-markbind">Building MarkBind<span id="building-markbind" class="anchor"></span><a class="fa fa-anchor" href="#building-markbind" onclick="event.stopPropagation()"></a></h2>
         <ol>
           <li>Navigate to the root directory for MarkBind, then ensure that all dependencies are updated by executing:</li>
         </ol>
-        <pre><code class="hljs"><span>$ npm install<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ npm install<br></span></code></pre>
         <ol start="2">
           <li>
             <p>If we did a new vue-strap release, then:</p>
-            <p>a. Copy <code>vue-strap.min.js</code> from the vue-strap repository to the main asset folder, and to each of the test site's <code>expected/</code> folder.</p>
+            <p>a. Copy <code v-pre="">vue-strap.min.js</code> from the vue-strap repository to the main asset folder, and to each of the test site's <code v-pre="">expected/</code> folder.</p>
           </li>
         </ol>
-        <pre><code class="hljs"><span># copy to main asset folder<br></span><span>$ cp &lt;VUE_STRAP_REPO&gt;/dist/vue-strap.min.js &lt;MARKBIND_REPO&gt;/asset/js/vue-strap.mins.js<br></span><span><br></span><span># for each test site's expected folder:<br></span><span>$ cp &lt;VUE_STRAP_REPO&gt;/dist/vue-strap.min.js &lt;MARKBIND_REPO&gt;/test/functional/&lt;TEST_SITE_NAME&gt;/expected/markbind/js/vue-strap.min.js<br></span></code></pre>
-        <p>b. Commit the new vue-strap assets (replace <code>XYZ</code> with version number).</p>
-        <pre><code class="hljs"><span>$ git commit -m 'Update vue-strap version to v2.0.1-markbind.XYZ'<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span># copy to main asset folder<br></span><span>$ cp &lt;VUE_STRAP_REPO&gt;/dist/vue-strap.min.js &lt;MARKBIND_REPO&gt;/asset/js/vue-strap.mins.js<br></span><span><br></span><span># for each test site's expected folder:<br></span><span>$ cp &lt;VUE_STRAP_REPO&gt;/dist/vue-strap.min.js &lt;MARKBIND_REPO&gt;/test/functional/&lt;TEST_SITE_NAME&gt;/expected/markbind/js/vue-strap.min.js<br></span></code></pre>
+        <p>b. Commit the new vue-strap assets (replace <code v-pre="">XYZ</code> with version number).</p>
+        <pre><code class="hljs" v-pre=""><span>$ git commit -m 'Update vue-strap version to v2.0.1-markbind.XYZ'<br></span></code></pre>
         <ul>
           <li><strong>Note:</strong> We uniquely do this for each MarkBind release (rather than spontaneously update the vue-strap files for each affected PR), in order to reduce unnecessary merge conflicts. It also makes it easier for the maintainers to vet the changes.</li>
         </ul>
         <ol start="3">
-          <li>Run <code>npm version</code> to increment the version number. Which to increment (<code>patch</code>, <code>minor</code> or <code>major</code>) depends on what PRs are merged for the new version, which means you must know beforehand about the changes.</li>
+          <li>Run <code v-pre="">npm version</code> to increment the version number. Which to increment (<code v-pre="">patch</code>, <code v-pre="">minor</code> or <code v-pre="">major</code>) depends on what PRs are merged for the new version, which means you must know beforehand about the changes.</li>
         </ol>
         <ul>
-          <li>If there are no significant changes, a <code>patch</code> is sufficient:</li>
+          <li>If there are no significant changes, a <code v-pre="">patch</code> is sufficient:</li>
         </ul>
-        <pre><code class="hljs"><span>$ npm version patch<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ npm version patch<br></span></code></pre>
         <ul>
-          <li>If there are significant changes (e.g. breaking changes, new release), a <code>minor</code> release is needed:</li>
+          <li>If there are significant changes (e.g. breaking changes, new release), a <code v-pre="">minor</code> release is needed:</li>
         </ul>
-        <p>a. Run <code>npm version minor</code> as per normal.</p>
-        <p>b. Update the version number inside <code>src/lib/markbind/package-lock.json</code> and <code>src/lib/markbind/package.json</code> manually. This is because <code>npm version</code> will not automatically update the numbers from the outside. (Note: You do not have to commit these changes immediately, as we also have to rebuild the test files in the next step anyway.)</p>
-        <pre><code class="hljs"><span>$ npm version minor<br></span></code></pre>
+        <p>a. Run <code v-pre="">npm version minor</code> as per normal.</p>
+        <p>b. Update the version number inside <code v-pre="">src/lib/markbind/package-lock.json</code> and <code v-pre="">src/lib/markbind/package.json</code> manually. This is because <code v-pre="">npm version</code> will not automatically update the numbers from the outside. (Note: You do not have to commit these changes immediately, as we also have to rebuild the test files in the next step anyway.)</p>
+        <pre><code class="hljs" v-pre=""><span>$ npm version minor<br></span></code></pre>
         <ul>
-          <li>We rarely do <code>major</code> releases, but if necessary, the steps are the same as the <code>minor</code> release (just change <code>minor</code> to <code>major</code>).</li>
+          <li>We rarely do <code v-pre="">major</code> releases, but if necessary, the steps are the same as the <code v-pre="">minor</code> release (just change <code v-pre="">minor</code> to <code v-pre="">major</code>).</li>
         </ul>
         <ol start="4">
           <li>Rebuild the test files.</li>
         </ol>
-        <pre><code class="hljs"><span># on Unix<br></span><span>$ npm run updatetest<br></span><span><br></span><span># on Windows<br></span><span>&gt; npm run updatetestwin<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span># on Unix<br></span><span>$ npm run updatetest<br></span><span><br></span><span># on Windows<br></span><span>&gt; npm run updatetestwin<br></span></code></pre>
         <p>When rebuilding the expected test files, ensure that <strong>only</strong> the version number is updated. For example, this is correct:</p>
-        <pre><code class="hljs diff"><span>diff --git a/test/functional/test_site/expected/bugs/index.html b/test/functional/test_site/expected/bugs/index.html<br></span><span>index 779f279..bb3c602 100644<br></span><span><span class="hljs-comment">--- a/test/functional/test_site/expected/bugs/index.html</span><br></span><span><span class="hljs-comment">+++ b/test/functional/test_site/expected/bugs/index.html</span><br></span><span><span class="hljs-meta">@@ -4,7 +4,7 @@</span><br></span><span>     &lt;meta name="default-head-top"&gt;<br></span><span>     &lt;meta charset="utf-8"&gt;<br></span><span>     &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br></span><span><span class="hljs-deletion">-    &lt;meta name="generator" content="MarkBind 1.20.0"&gt;</span><br></span><span><span class="hljs-addition">+    &lt;meta name="generator" content="MarkBind 1.21.0"&gt;</span><br></span><span>     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br></span><span>     &lt;title&gt;Open Bugs&lt;/title&gt;<br></span><span>     &lt;link rel="stylesheet" href="../markbind/css/bootstrap.min.css"&gt;<br></span></code></pre>
+        <pre><code class="hljs diff" v-pre=""><span>diff --git a/test/functional/test_site/expected/bugs/index.html b/test/functional/test_site/expected/bugs/index.html<br></span><span>index 779f279..bb3c602 100644<br></span><span><span class="hljs-comment">--- a/test/functional/test_site/expected/bugs/index.html</span><br></span><span><span class="hljs-comment">+++ b/test/functional/test_site/expected/bugs/index.html</span><br></span><span><span class="hljs-meta">@@ -4,7 +4,7 @@</span><br></span><span>     &lt;meta name="default-head-top"&gt;<br></span><span>     &lt;meta charset="utf-8"&gt;<br></span><span>     &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br></span><span><span class="hljs-deletion">-    &lt;meta name="generator" content="MarkBind 1.20.0"&gt;</span><br></span><span><span class="hljs-addition">+    &lt;meta name="generator" content="MarkBind 1.21.0"&gt;</span><br></span><span>     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br></span><span>     &lt;title&gt;Open Bugs&lt;/title&gt;<br></span><span>     &lt;link rel="stylesheet" href="../markbind/css/bootstrap.min.css"&gt;<br></span></code></pre>
         <p>However, if there are any extra lines changed, that means that someone screwed up the functional tests, and needs to be fixed accordingly!</p>
         <ol start="5">
-          <li>The changes that you have made in the last two steps need to be combined together with the version commit generated by <code>npm version</code>. Therefore, amend the version commit and version tag by doing the following (change <code>vA.B.C</code> to the new version's string accordingly).</li>
+          <li>The changes that you have made in the last two steps need to be combined together with the version commit generated by <code v-pre="">npm version</code>. Therefore, amend the version commit and version tag by doing the following (change <code v-pre="">vA.B.C</code> to the new version's string accordingly).</li>
         </ol>
-        <pre><code class="hljs"><span>$ git commit -a --amend --reuse-message vA.B.C<br></span><span>$ git tag --force vA.B.C            # to reassign the tag to the newly amended commit<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ git commit -a --amend --reuse-message vA.B.C<br></span><span>$ git tag --force vA.B.C            # to reassign the tag to the newly amended commit<br></span></code></pre>
         <ol start="6">
-          <li>Push the new commit and version tag generated by <code>npm</code> (change <code>vA.B.C</code> to the new version's string accordingly).</li>
+          <li>Push the new commit and version tag generated by <code v-pre="">npm</code> (change <code v-pre="">vA.B.C</code> to the new version's string accordingly).</li>
         </ol>
-        <pre><code class="hljs"><span>$ git push upstream master<br></span><span>$ git push upstream vA.B.C<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ git push upstream master<br></span><span>$ git push upstream vA.B.C<br></span></code></pre>
         <ol start="7">
-          <li>Run <code>npm publish</code>. You should receive a notification by <code>npm</code> that the publish is successful.</li>
+          <li>Run <code v-pre="">npm publish</code>. You should receive a notification by <code v-pre="">npm</code> that the publish is successful.</li>
         </ol>
-        <pre><code class="hljs"><span>$ npm publish<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ npm publish<br></span></code></pre>
         <ol start="8">
           <li>
-            <p>If you used <code>npm link</code> for your project, ensure that you try the new release on another platform that doesn't use <code>npm link</code>, so that we can be sure the end-users can install and use the new version.</p>
-            <p>a. Just do <code>npm i -g markbind-cli@A.B.C</code> on the different platform and...</p>
+            <p>If you used <code v-pre="">npm link</code> for your project, ensure that you try the new release on another platform that doesn't use <code v-pre="">npm link</code>, so that we can be sure the end-users can install and use the new version.</p>
+            <p>a. Just do <code v-pre="">npm i -g markbind-cli@A.B.C</code> on the different platform and...</p>
             <p>b. ... play around with the new MarkBind version to ensure that it works.</p>
           </li>
           <li>
@@ -227,7 +227,7 @@ to be done in #782.
         </ol>
         <p>Since <a href="https://github.com/markbind/markbind/pull/701">#701</a>, the deployment is automated.</p>
         <p>However, if it doesn't deploy properly for the release, do the following:</p>
-        <pre><code class="hljs"><span>$ cd docs<br></span><span>$ markbind build<br></span><span>$ markbind deploy<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ cd docs<br></span><span>$ markbind build<br></span><span>$ markbind deploy<br></span></code></pre>
         <ol start="10">
           <li>
             <p>Close the <a href="https://github.com/MarkBind/markbind/milestones">issue milestone on GitHub</a> tied to that version.</p>
@@ -237,21 +237,21 @@ to be done in #782.
             <p>Draft a new release on GitHub.</p>
             <p>a. Go to the Markbind release page at <a href="https://github.com/MarkBind/markbind/releases">https://github.com/MarkBind/markbind/releases</a>.</p>
             <p>b. Click &quot;Draft a new release&quot;.</p>
-            <p>c. For the tag version, enter <code>vA.B.C</code>. (The newly released version should be recognized by GitHub, with an &quot;Existing Tag&quot; indicator, otherwise, ensure that you have pushed the version commit and tag in step 4).</p>
+            <p>c. For the tag version, enter <code v-pre="">vA.B.C</code>. (The newly released version should be recognized by GitHub, with an &quot;Existing Tag&quot; indicator, otherwise, ensure that you have pushed the version commit and tag in step 4).</p>
             <p>d. For the release title, leave it blank.</p>
             <p>e. For the main body, use the following template:</p>
           </li>
         </ol>
-        <pre><code class="hljs markdown"><span><span class="hljs-section"># markbind-cli</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- List out each of the PR for this version in the following format: --&gt;</span></span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- #ISSUE_NUMBER ISSUE_TITLE (#PR_NUMBER) --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">## User Facing Changes</span><br></span><span><br></span><span><span class="hljs-section">### Breaking Changes</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Any feature that is made obsolete --&gt;</span></span><br></span><span><br></span><span><span class="hljs-quote">&gt; Also give a brief explanation note about:</span><br></span><span><span class="hljs-quote">&gt;   - what was the old feature that was made obsolete</span><br></span><span><span class="hljs-quote">&gt;   - any replacement feature (if any), and</span><br></span><span><span class="hljs-quote">&gt;   - how the author should modify his website to migrate from the old feature to the replacement feature (if possible).</span><br></span><span><br></span><span><span class="hljs-section">### Features</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Features enable users (authors/readers) to do something new. --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">### Enhancements</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Enhances any existing features --&gt;</span></span> <br></span><span><br></span><span><span class="hljs-section">### Fixes</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Fixes correct a programming error/assumption. --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">### Documentation</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Pure changes to the documentation, such as typo, restructuring, etc --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">## Other Changes</span><br></span><span><br></span><span><span class="hljs-section">### Code Quality</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Refactoring, etc. --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">### DevOps Changes</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Tooling, etc. --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">### Dependencies</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Replace `OLD` with the previous version and `NEW` with the current version --&gt;</span></span><br></span><span><br></span><span>[<span class="hljs-string">MarkBind/vue-strap</span>](<span class="hljs-link">https://github.com/MarkBind/vue-strap</span>): v2.0.1-markbind.OLD → v2.0.1-markbind.NEW<br></span><span><br></span><span><span class="hljs-section">### Miscellaneous</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Any other changes --&gt;</span></span><br></span><span><br></span></code></pre>
+        <pre><code class="hljs markdown" v-pre=""><span><span class="hljs-section"># markbind-cli</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- List out each of the PR for this version in the following format: --&gt;</span></span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- #ISSUE_NUMBER ISSUE_TITLE (#PR_NUMBER) --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">## User Facing Changes</span><br></span><span><br></span><span><span class="hljs-section">### Breaking Changes</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Any feature that is made obsolete --&gt;</span></span><br></span><span><br></span><span><span class="hljs-quote">&gt; Also give a brief explanation note about:</span><br></span><span><span class="hljs-quote">&gt;   - what was the old feature that was made obsolete</span><br></span><span><span class="hljs-quote">&gt;   - any replacement feature (if any), and</span><br></span><span><span class="hljs-quote">&gt;   - how the author should modify his website to migrate from the old feature to the replacement feature (if possible).</span><br></span><span><br></span><span><span class="hljs-section">### Features</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Features enable users (authors/readers) to do something new. --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">### Enhancements</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Enhances any existing features --&gt;</span></span> <br></span><span><br></span><span><span class="hljs-section">### Fixes</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Fixes correct a programming error/assumption. --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">### Documentation</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Pure changes to the documentation, such as typo, restructuring, etc --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">## Other Changes</span><br></span><span><br></span><span><span class="hljs-section">### Code Quality</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Refactoring, etc. --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">### DevOps Changes</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Tooling, etc. --&gt;</span></span><br></span><span><br></span><span><span class="hljs-section">### Dependencies</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Replace `OLD` with the previous version and `NEW` with the current version --&gt;</span></span><br></span><span><br></span><span>[<span class="hljs-string">MarkBind/vue-strap</span>](<span class="hljs-link">https://github.com/MarkBind/vue-strap</span>): v2.0.1-markbind.OLD → v2.0.1-markbind.NEW<br></span><span><br></span><span><span class="hljs-section">### Miscellaneous</span><br></span><span><br></span><span><span class="xml"><span class="hljs-comment">&lt;!-- Any other changes --&gt;</span></span><br></span><span><br></span></code></pre>
         <p>Use the list of PRs merged in the milestone to write the release notes. You may omit any sections that do not have a single PR under it.</p>
         <p>An example of a release note draft (taken from v1.18.0):</p>
-        <pre><code class="hljs"><span># markbind-cli<br></span><span><br></span><span>### Breaking Changes<br></span><span><br></span><span>#653 Disable decamelize for anchor ID generation (#667, MarkBind/vue-strap#95)<br></span><span><br></span><span>&gt; Headings with PascalCase wordings now generate a different anchor ID<br></span><span>in order to be more compatible with anchor IDs generated by Github<br></span><span>Flavored Markdown.<br></span><span>&gt;<br></span><span>&gt; For example, if we have the following heading:<br></span><span>&gt;<br></span><span>&gt; ```markdown<br></span><span>&gt; # MarkBind docs<br></span><span>&gt; ```<br></span><span>&gt;<br></span><span>&gt; Old anchor id:<br></span><span>&gt;<br></span><span>&gt; ```<br></span><span>&gt; mark-bind-docs<br></span><span>&gt; ```<br></span><span>&gt;<br></span><span>&gt; **New** anchor id:<br></span><span>&gt;<br></span><span>&gt; ```<br></span><span>&gt; markbind-docs<br></span><span>&gt; ```<br></span><span>&gt;<br></span><span><br></span><span>### Features<br></span><span><br></span><span>#457 Add `deploy -t/--travis` to deploy via Travis (#649)<br></span><span>#470 Support custom MarkBind plugins (#474)<br></span><span>#642 Support specifying include variables inline (#681)<br></span><span><br></span><span>### Enhancements<br></span><span><br></span><span>#369 Seamless panels: omit caret if not expandable (MarkBind/vue-strap#96)<br></span><span>#657 Add temporary styles to prevent FOUC (#664)<br></span><span><br></span><span>### Fixes<br></span><span><br></span><span>#651 Exit MarkBind with non-zero exit code on fatal error (#679)<br></span><span><br></span><span>### Documentation<br></span><span><br></span><span>Restructure user docs on MarkBind syntax (#668)<br></span><span>Add documentation for badges (#686)<br></span><span>Fix filename capitalization for syntax documentation (#685)<br></span><span><br></span><span>### Code Quality<br></span><span><br></span><span>test: Add diff printing for easier debugging (#632)<br></span><span><br></span><span>### Dependencies<br></span><span><br></span><span>[MarkBind/vue-strap](https://github.com/MarkBind/vue-strap): v2.0.1-markbind.20 → v2.0.1-markbind.21<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span># markbind-cli<br></span><span><br></span><span>### Breaking Changes<br></span><span><br></span><span>#653 Disable decamelize for anchor ID generation (#667, MarkBind/vue-strap#95)<br></span><span><br></span><span>&gt; Headings with PascalCase wordings now generate a different anchor ID<br></span><span>in order to be more compatible with anchor IDs generated by Github<br></span><span>Flavored Markdown.<br></span><span>&gt;<br></span><span>&gt; For example, if we have the following heading:<br></span><span>&gt;<br></span><span>&gt; ```markdown<br></span><span>&gt; # MarkBind docs<br></span><span>&gt; ```<br></span><span>&gt;<br></span><span>&gt; Old anchor id:<br></span><span>&gt;<br></span><span>&gt; ```<br></span><span>&gt; mark-bind-docs<br></span><span>&gt; ```<br></span><span>&gt;<br></span><span>&gt; **New** anchor id:<br></span><span>&gt;<br></span><span>&gt; ```<br></span><span>&gt; markbind-docs<br></span><span>&gt; ```<br></span><span>&gt;<br></span><span><br></span><span>### Features<br></span><span><br></span><span>#457 Add `deploy -t/--travis` to deploy via Travis (#649)<br></span><span>#470 Support custom MarkBind plugins (#474)<br></span><span>#642 Support specifying include variables inline (#681)<br></span><span><br></span><span>### Enhancements<br></span><span><br></span><span>#369 Seamless panels: omit caret if not expandable (MarkBind/vue-strap#96)<br></span><span>#657 Add temporary styles to prevent FOUC (#664)<br></span><span><br></span><span>### Fixes<br></span><span><br></span><span>#651 Exit MarkBind with non-zero exit code on fatal error (#679)<br></span><span><br></span><span>### Documentation<br></span><span><br></span><span>Restructure user docs on MarkBind syntax (#668)<br></span><span>Add documentation for badges (#686)<br></span><span>Fix filename capitalization for syntax documentation (#685)<br></span><span><br></span><span>### Code Quality<br></span><span><br></span><span>test: Add diff printing for easier debugging (#632)<br></span><span><br></span><span>### Dependencies<br></span><span><br></span><span>[MarkBind/vue-strap](https://github.com/MarkBind/vue-strap): v2.0.1-markbind.20 → v2.0.1-markbind.21<br></span></code></pre>
         <p>f. Click &quot;Publish release&quot;.</p>
         <ol start="12">
-          <li>Finally, announce the new release on our Slack channel (replace <code>A.B.C</code> with the new version). Congrats!</li>
+          <li>Finally, announce the new release on our Slack channel (replace <code v-pre="">A.B.C</code> with the new version). Congrats!</li>
         </ol>
         <ul>
-          <li>Published: <code>npm i -g markbind-cli@A.B.C</code></li>
+          <li>Published: <code v-pre="">npm i -g markbind-cli@A.B.C</code></li>
         </ul>
       </div>
 
@@ -278,7 +278,7 @@ to be done in #782.
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Thu, May 21, 2020, 4:22:10 PM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Tue, Jun 2, 2020, 12:27:22 PM UTC]</small></div>
     </footer>
   </div>
 </body>

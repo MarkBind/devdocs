@@ -84,7 +84,7 @@
                 <p>The command-line interface (CLI) application that accepts commands from users, and uses the core library to parse and generate web pages resides in the root.</p>
               </li>
               <li>
-                <p>The core library that resolves the content include path, and the rendering of Markdown contents resides in the <code>lib/markbind/</code> directory.</p>
+                <p>The core library that resolves the content include path, and the rendering of Markdown contents resides in the <code v-pre="">lib/markbind/</code> directory.</p>
               </li>
             </ul>
             <p>Stack used: <em>Node.js</em></p>
@@ -99,21 +99,21 @@
         </ul>
         <h3 id="markbind-core-library">MarkBind Core Library<span id="markbind-core-library" class="anchor"></span><a class="fa fa-anchor" href="#markbind-core-library" onclick="event.stopPropagation()"></a></h3>
         <p>The core library parses the given Markdown file, processes all the content include, and renders all Markdown into HTML so that it could be displayed in a browser.</p>
-        <p>All the core logic resides inside the <code>lib/parser.js</code> file. It exposes two important APIs: <strong>include</strong> and <strong>render</strong>.</p>
+        <p>All the core logic resides inside the <code v-pre="">lib/parser.js</code> file. It exposes two important APIs: <strong>include</strong> and <strong>render</strong>.</p>
         <p><em>Include</em> and <em>Render</em> will first parse the given file as a DOM tree, and then recursively visit every node to check if it needs special handling.</p>
-        <p>In the <em>Include</em> stage, it will check if the node will include new contents (for example, if it is an &quot;include&quot; tag (<code>&lt;include /&gt;</code>), and then load the file/content to be included into the current working context. For the new content included, the <em>Include</em> step will be run recursively until all the content to be included are resolved and loaded.</p>
+        <p>In the <em>Include</em> stage, it will check if the node will include new contents (for example, if it is an &quot;include&quot; tag (<code v-pre="">&lt;include /&gt;</code>), and then load the file/content to be included into the current working context. For the new content included, the <em>Include</em> step will be run recursively until all the content to be included are resolved and loaded.</p>
         <p><em>Render</em> is a similar process to <em>Include</em>, but it will render the content recursively to ensure all Markdown are converted to HTML.</p>
-        <p>MarkBind uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> to do the Markdown parsing and rendering. There are also several customized markdown-it plugins used in MarkBind, which are located inside the <code>lib/markdown-it/</code> directory.</p>
+        <p>MarkBind uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> to do the Markdown parsing and rendering. There are also several customized markdown-it plugins used in MarkBind, which are located inside the <code v-pre="">lib/markdown-it/</code> directory.</p>
         <h3 id="markbind-cli">MarkBind CLI<span id="markbind-cli" class="anchor"></span><a class="fa fa-anchor" href="#markbind-cli" onclick="event.stopPropagation()"></a></h3>
         <p>The CLI application handles the site generation logic. It contains the command handling logic, as well as the Site and Page models.</p>
         <p>The site generation logic is as follows:</p>
         <ol>
-          <li>Read the project's <code>site.json</code> file to collect all pages that will be generated.</li>
-          <li>Create a Site model, where the site's root path is where <code>site.json</code> is located. The site model knows all the pages it contains, as well as the static assets. Static assets, such as stylesheets and JavaScript libraries, will be scanned and filtered, and then copied to the generated site folder (<code>_site/</code>).</li>
+          <li>Read the project's <code v-pre="">site.json</code> file to collect all pages that will be generated.</li>
+          <li>Create a Site model, where the site's root path is where <code v-pre="">site.json</code> is located. The site model knows all the pages it contains, as well as the static assets. Static assets, such as stylesheets and JavaScript libraries, will be scanned and filtered, and then copied to the generated site folder (<code v-pre="">_site/</code>).</li>
           <li>The Site model will create different Page models, and each Page model will generate a HTML page at the designated file location by calling MarkBind core library's <em>include</em> and <em>render</em> APIs.</li>
         </ol>
-        <p>The generated page is rendered using <a href="https://mozilla.github.io/nunjucks/">nunjucks</a>, and the page template could be found at <code>lib/template/page.njk</code>.</p>
-        <p>Static assets of MarkBind, such as stylesheets and JavaScript libraries, are located in <code>asset/</code> folder. They will be copied to the generated site and used in the generated pages. For each version update of VueStrap, copy the built library file to overwrite <code>asset/js/vue-strap.min.js</code>.</p>
+        <p>The generated page is rendered using <a href="https://mozilla.github.io/nunjucks/">nunjucks</a>, and the page template could be found at <code v-pre="">lib/template/page.njk</code>.</p>
+        <p>Static assets of MarkBind, such as stylesheets and JavaScript libraries, are located in <code v-pre="">asset/</code> folder. They will be copied to the generated site and used in the generated pages. For each version update of VueStrap, copy the built library file to overwrite <code v-pre="">asset/js/vue-strap.min.js</code>.</p>
         <p>The CLI program is built using <a href="https://github.com/tj/commander.js/">commander.js</a>.</p>
         <p>The auto deployment library used is <a href="https://github.com/tschaub/gh-pages">gh-pages</a>.</p>
         <h3 id="vuestrap">VueStrap<span id="vuestrap" class="anchor"></span><a class="fa fa-anchor" href="#vuestrap" onclick="event.stopPropagation()"></a></h3>
@@ -129,10 +129,10 @@
         </ul>
         <p>Before cloning MarkBind's repo, run</p>
         <ul>
-          <li><code>node --version</code> for Node.js</li>
-          <li><code>npm --version</code> for NPM</li>
-          <li><code>java --version</code> for Java</li>
-          <li><code>dot -V</code> for Graphviz</li>
+          <li><code v-pre="">node --version</code> for Node.js</li>
+          <li><code v-pre="">npm --version</code> for NPM</li>
+          <li><code v-pre="">java --version</code> for Java</li>
+          <li><code v-pre="">dot -V</code> for Graphviz</li>
         </ul>
         <p>to make sure that you have all necessary dependencies installed and accessible in the path variable.</p>
         <h3 id="development">Development<span id="development" class="anchor"></span><a class="fa fa-anchor" href="#development" onclick="event.stopPropagation()"></a></h3>
@@ -142,14 +142,14 @@
           </li>
           <li>
             <p>In the folder of your cloned repo, run</p>
-            <pre><code class="hljs"><span>$ npm install<br></span></code></pre>
+            <pre><code class="hljs" v-pre=""><span>$ npm install<br></span></code></pre>
           </li>
         </ol>
         <p>to install the project dependencies.</p>
         <ol start="3">
           <li>
             <p>To make sure you are using the cloned CLI program in your own terminal/console, in the cloned CLI repo, run</p>
-            <pre><code class="hljs"><span>$ npm link<br></span></code></pre>
+            <pre><code class="hljs" v-pre=""><span>$ npm link<br></span></code></pre>
           </li>
         </ol>
         <p>to bind the local MarkBind CLI program to the cloned development version.</p>
@@ -158,53 +158,53 @@
         </ol>
         <h4 id="troubleshooting">Troubleshooting<span id="troubleshooting" class="anchor"></span><a class="fa fa-anchor" href="#troubleshooting" onclick="event.stopPropagation()"></a></h4>
         <p><strong>Q: When I build a MarkBind website, I get strange errors relating to HTML tags in .md/.mbd files. For example:</strong></p>
-        <pre><code class="hljs"><span>TypeError: Cannot set property 'src' of null<br></span><span>    at Page.collectFrontMatter (~\markbind\src\Page.js:399:26)<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>TypeError: Cannot set property 'src' of null<br></span><span>    at Page.collectFrontMatter (~\markbind\src\Page.js:399:26)<br></span></code></pre>
         <p>A: Please report this in a <a href="https://github.com/MarkBind/markbind/issues/new">new issue</a>, since this should already be fixed by <a href="https://github.com/MarkBind/markbind/pull/948">MarkBind/markbind#948</a>.</p>
         <h3 id="testing">Testing<span id="testing" class="anchor"></span><a class="fa fa-anchor" href="#testing" onclick="event.stopPropagation()"></a></h3>
         <p>Our test script does the following:</p>
         <ol>
           <li>Lints the code for any code and style errors using ESLint.</li>
-          <li>Builds the test sites whose directory names are listed in <code>test/functional/test_site</code>.</li>
-          <li>For each test site, compares the HTML files generated with the HTML files in its <code>expected</code> directory.</li>
+          <li>Builds the test sites whose directory names are listed in <code v-pre="">test/functional/test_site</code>.</li>
+          <li>For each test site, compares the HTML files generated with the HTML files in its <code v-pre="">expected</code> directory.</li>
         </ol>
         <h4 id="running-tests">Running tests<span id="running-tests" class="anchor"></span><a class="fa fa-anchor" href="#running-tests" onclick="event.stopPropagation()"></a></h4>
         <p>To execute the tests, simply run:</p>
         <p>For Unix:</p>
-        <pre><code class="hljs"><span>$ npm run test<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ npm run test<br></span></code></pre>
         <p>For Windows users:</p>
-        <pre><code class="hljs"><span>&gt; npm run testwin<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>&gt; npm run testwin<br></span></code></pre>
         <h4 id="updating-tests">Updating tests<span id="updating-tests" class="anchor"></span><a class="fa fa-anchor" href="#updating-tests" onclick="event.stopPropagation()"></a></h4>
         <p>Whether you are adding a new feature, updating existing features or fixing bugs, make sure to update the test sites to reflect the changes.</p>
         <p>You may use the following script to do this:</p>
         <p>On Unix:</p>
-        <pre><code class="hljs"><span>$ npm run updatetest<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ npm run updatetest<br></span></code></pre>
         <p>On Windows:</p>
-        <pre><code class="hljs"><span>&gt; npm run updatetestwin<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>&gt; npm run updatetestwin<br></span></code></pre>
         <box type="warning">
           You should always check that the generated output is correct before committing any changes to the test sites.
         </box>
         <h4 id="adding-test-site-content">Adding test site content<span id="adding-test-site-content" class="anchor"></span><a class="fa fa-anchor" href="#adding-test-site-content" onclick="event.stopPropagation()"></a></h4>
         <p>When adding new features, you should also add new site content into an existing test site or create a new test site to demonstrate the new feature. This is to ensure that your feature can be tested by building that test site.</p>
-        <p>To add a page to an existing test site, for this example, to <code>test_site</code>:</p>
+        <p>To add a page to an existing test site, for this example, to <code v-pre="">test_site</code>:</p>
         <ol>
           <li>
-            <p>Add a new test page, e.g., <code>newTestPage.md</code>, containing a demonstration of the new feature.</p>
+            <p>Add a new test page, e.g., <code v-pre="">newTestPage.md</code>, containing a demonstration of the new feature.</p>
           </li>
           <li>
-            <p>Open the <code>site.json</code> corresponding to the test site, i.e. <code>test/functional/test_site/site.json</code></p>
+            <p>Open the <code v-pre="">site.json</code> corresponding to the test site, i.e. <code v-pre="">test/functional/test_site/site.json</code></p>
           </li>
           <li>
-            <p>To include the new page, i.e. <code>newTestPage.md</code>, add it to the <code>pages</code> array.</p>
+            <p>To include the new page, i.e. <code v-pre="">newTestPage.md</code>, add it to the <code v-pre="">pages</code> array.</p>
           </li>
         </ol>
         <div class="code-block">
           <div class="code-block-heading"><span>site.json</span></div>
           <div class="code-block-content">
-            <pre><code heading="site.json" class="hljs"><span>&quot;pages&quot;: [<br></span><span>    {<br></span><span>      &quot;src&quot;: &quot;index.md&quot;,<br></span><span>      &quot;title&quot;: &quot;Hello World&quot;,<br></span><span>      &quot;frontmatter&quot;: {<br></span><span>        &quot;frontMatterOverrideProperty&quot;: &quot;Overridden by front matter override&quot;,<br></span><span>        &quot;globalAndFrontMatterOverrideProperty&quot;:  &quot;Overridden by front matter override&quot;<br></span><span>      }<br></span><span>    },<br></span><span>    ...<br></span><span>    {<br></span><span>      &quot;src&quot;: &quot;testLayouts.md&quot;,<br></span><span>      &quot;title&quot;: &quot;Hello World&quot;<br></span><span>    },<br></span><span>    {,<br></span><span class="highlighted">      &quot;src&quot;: &quot;newTestPage.md&quot;,<br></span><span class="highlighted">      &quot;title&quot;: [some title you see fit]<br></span><span>    },<br></span><span>    ...<br></span></code></pre>
+            <pre><code heading="site.json" class="hljs" v-pre=""><span>&quot;pages&quot;: [<br></span><span>    {<br></span><span>      &quot;src&quot;: &quot;index.md&quot;,<br></span><span>      &quot;title&quot;: &quot;Hello World&quot;,<br></span><span>      &quot;frontmatter&quot;: {<br></span><span>        &quot;frontMatterOverrideProperty&quot;: &quot;Overridden by front matter override&quot;,<br></span><span>        &quot;globalAndFrontMatterOverrideProperty&quot;:  &quot;Overridden by front matter override&quot;<br></span><span>      }<br></span><span>    },<br></span><span>    ...<br></span><span>    {<br></span><span>      &quot;src&quot;: &quot;testLayouts.md&quot;,<br></span><span>      &quot;title&quot;: &quot;Hello World&quot;<br></span><span>    },<br></span><span>    {,<br></span><span class="highlighted">      &quot;src&quot;: &quot;newTestPage.md&quot;,<br></span><span class="highlighted">      &quot;title&quot;: [some title you see fit]<br></span><span>    },<br></span><span>    ...<br></span></code></pre>
           </div>
         </div>
         <ol start="4">
-          <li>Update the tests using <code>npm run updatetest</code>.</li>
+          <li>Update the tests using <code v-pre="">npm run updatetest</code>.</li>
         </ol>
         <box type="info">
           When creating a new test site, the directory name of the new test site should be added to `test/functional/test_sites` file.
@@ -213,17 +213,17 @@
         <p>Our projects follow a <a href="https://github.com/oss-generic/process/blob/master/docs/CodingStandards.adoc">coding standard</a>. Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is <a href="https://eslint.org/">ESLint</a>. Here is a <a href="https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e">gist</a> with an explanation of the ESLint rules chosen in markbind-cli.</p>
         <h4 id="installation">Installation<span id="installation" class="anchor"></span><a class="fa fa-anchor" href="#installation" onclick="event.stopPropagation()"></a></h4>
         <p>Install developer dependencies (ESLint, related plugins) in your cloned markbind and markbind-cli repositories.</p>
-        <pre><code class="hljs"><span>$ npm install --only=dev<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ npm install --only=dev<br></span></code></pre>
         <h4 id="lint-your-code">Lint your code<span id="lint-your-code" class="anchor"></span><a class="fa fa-anchor" href="#lint-your-code" onclick="event.stopPropagation()"></a></h4>
         <p>Before making a commit or pull request, you should lint your code.</p>
         <p>To lint a specific file, go to the root directory of the cloned repo and run</p>
-        <pre><code class="hljs"><span>$ ./node_modules/.bin/eslint path/to/specificfile.js<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ ./node_modules/.bin/eslint path/to/specificfile.js<br></span></code></pre>
         <p>To lint all files, run</p>
-        <pre><code class="hljs"><span>$ ./node_modules/.bin/eslint .<br></span></code></pre>
-        <p>You can add the <code>--fix</code> flag to correct any fixable style errors.</p>
-        <pre><code class="hljs"><span>$ ./node_modules/.bin/eslint . --fix<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ ./node_modules/.bin/eslint .<br></span></code></pre>
+        <p>You can add the <code v-pre="">--fix</code> flag to correct any fixable style errors.</p>
+        <pre><code class="hljs" v-pre=""><span>$ ./node_modules/.bin/eslint . --fix<br></span></code></pre>
         <p>You may also correct fixable style errors for both JavaScript and CSS, by running this npm script</p>
-        <pre><code class="hljs"><span>$ npm run autolint<br></span></code></pre>
+        <pre><code class="hljs" v-pre=""><span>$ npm run autolint<br></span></code></pre>
         <h4 id="integration-with-editors">Integration with editors<span id="integration-with-editors" class="anchor"></span><a class="fa fa-anchor" href="#integration-with-editors" onclick="event.stopPropagation()"></a></h4>
         <p>ESLint has <a href="https://eslint.org/docs/user-guide/integrations">integrations with popular editors</a>. They offer features such as &quot;fix errors on save&quot;, which will make developement more convenient.</p>
       </div>
@@ -268,7 +268,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Thu, May 21, 2020, 4:22:10 PM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Tue, Jun 2, 2020, 12:27:22 PM UTC]</small></div>
     </footer>
   </div>
 </body>
