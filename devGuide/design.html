@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MarkBind - Design</title>
+  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../markbind/layouts/devGuide/styles.css">
+  <link rel="stylesheet" href="../markbind/css/site-nav.css">
+  <link rel="stylesheet" href="../markbind/css/page-nav.css">
+  <link rel="icon" href="/devdocs/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+  <div id="app">
+    <header fixed="">
+      <link rel="stylesheet" href="/devdocs/css/main.css">
+      <navbar type="dark" class="temp-navbar">
+        <a slot="brand" href="/devdocs/index.html" title="Home" class="navbar-brand"><img src="/devdocs/images/logo-darkbackground.png" height="20"></a>
+        <li><a href="/devdocs/index.html" class="nav-link">HOME</a></li>
+
+        <div tags="environment--dg">
+          <li><a href="/devdocs/devGuide/index.html" class="nav-link">DEVELOPER GUIDE</a></li>
+        </div>
+        <li><a href="/devdocs/showcase.html" class="nav-link">SHOWCASE</a></li>
+        <li><a href="/devdocs/about.html" class="nav-link">ABOUT</a></li>
+        <li>
+          <a href="https://github.com/MarkBind/markbind" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
+        <li slot="right">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+      <nav id="site-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-right-grey nav-inner position-sticky slim-scroll">
+          <p><span style="font-weight: bolder; font-size: 1.25em;">Developer Guide</span></p>
+          <ul class="site-nav-list site-nav-list-root">
+            <li>
+              <div class="site-nav-list-item-content site-nav-list-item-content-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/devGuide.html">Contributing</a></div>
+            </li>
+            <li>
+              <div class="site-nav-list-item-content site-nav-list-item-content-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/settingUp.html">Setting up</a></div>
+            </li>
+            <li>
+              <div class="site-nav-list-item-content site-nav-list-item-content-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/workflow.html">Workflow</a></div>
+            </li>
+            <li>
+              <div class="site-nav-list-item-content site-nav-list-item-content-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/design.html" class="current">Design</a></div>
+            </li>
+            <li>
+              <div class="site-nav-list-item-content site-nav-list-item-content-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/projectManagement.html">Project management</a></div>
+            </li>
+            <li>
+              <div class="site-nav-list-item-content site-nav-list-item-content-0" onclick="handleSiteNavClick(this)">Appendices
+                <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+                <li>
+                  <div class="site-nav-list-item-content site-nav-list-item-content-1" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/styleGuides.html">Style guides</a></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="content-wrapper">
+        <div></div>
+        <h1 id="design">Design<span id="design" class="anchor"></span><a class="fa fa-anchor" href="#design" onclick="event.stopPropagation()"></a></h1>
+        <div class="lead">
+          <p>This page gives you an overview of the MarkBind's internal design.</p>
+        </div>
+        <h2 id="project-structure">Project structure<span id="project-structure" class="anchor"></span><a class="fa fa-anchor" href="#project-structure" onclick="event.stopPropagation()"></a></h2>
+        <p>MarkBind project consists of two repos:</p>
+        <ul>
+          <li>
+            <p><a href="https://github.com/MarkBind/markbind">MarkBind</a></p>
+            <ul>
+              <li>
+                <p>The command-line interface (CLI) application that accepts commands from users, and uses the core library to parse and generate web pages resides in the root.</p>
+              </li>
+              <li>
+                <p>The core library that resolves the content include path, and the rendering of Markdown contents resides in the <code v-pre="">lib/markbind/</code> directory.</p>
+              </li>
+            </ul>
+            <p>Stack used: <em>Node.js</em></p>
+          </li>
+          <li>
+            <p><a href="https://github.com/MarkBind/vue-strap">VueStrap library (forked version modified for MarkBind)</a></p>
+            <ul>
+              <li>The UI components library used in MarkBind project. Users could use it in their contents to create complex and interactive structure.</li>
+            </ul>
+            <p>Stack used: <em>Vue.js</em></p>
+          </li>
+        </ul>
+        <h3 id="markbind-core-library">MarkBind core library<span id="markbind-core-library" class="anchor"></span><a class="fa fa-anchor" href="#markbind-core-library" onclick="event.stopPropagation()"></a></h3>
+        <p>The core library parses the given Markdown file, processes all the content include, and renders all Markdown into HTML so that it could be displayed in a browser.</p>
+        <p>All the core logic resides inside the <code v-pre="">lib/parser.js</code> file. It exposes two important APIs: <strong>include</strong> and <strong>render</strong>.</p>
+        <p><em>Include</em> and <em>Render</em> will first parse the given file as a DOM tree, and then recursively visit every node to check if it needs special handling.</p>
+        <p>In the <em>Include</em> stage, it will check if the node will include new contents (for example, if it is an &quot;include&quot; tag (<code v-pre="">&lt;include /&gt;</code>), and then load the file/content to be included into the current working context. For the new content included, the <em>Include</em> step will be run recursively until all the content to be included are resolved and loaded.</p>
+        <p><em>Render</em> is a similar process to <em>Include</em>, but it will render the content recursively to ensure all Markdown are converted to HTML.</p>
+        <p>MarkBind uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> to do the Markdown parsing and rendering. There are also several customized markdown-it plugins used in MarkBind, which are located inside the <code v-pre="">lib/markdown-it/</code> directory.</p>
+        <h3 id="markbind-cli">MarkBind CLI<span id="markbind-cli" class="anchor"></span><a class="fa fa-anchor" href="#markbind-cli" onclick="event.stopPropagation()"></a></h3>
+        <p>The CLI application handles the site generation logic. It contains the command handling logic, as well as the Site and Page models.</p>
+        <p>The site generation logic is as follows:</p>
+        <ol>
+          <li>Read the project's <code v-pre="">site.json</code> file to collect all pages that will be generated.</li>
+          <li>Create a Site model, where the site's root path is where <code v-pre="">site.json</code> is located. The site model knows all the pages it contains, as well as the static assets. Static assets, such as stylesheets and JavaScript libraries, will be scanned and filtered, and then copied to the generated site folder (<code v-pre="">_site/</code>).</li>
+          <li>The Site model will create different Page models, and each Page model will generate a HTML page at the designated file location by calling MarkBind core library's <em>include</em> and <em>render</em> APIs.</li>
+        </ol>
+        <p>The generated page is rendered using <a href="https://mozilla.github.io/nunjucks/">nunjucks</a>, and the page template could be found at <code v-pre="">lib/template/page.njk</code>.</p>
+        <p>Static assets of MarkBind, such as stylesheets and JavaScript libraries, are located in <code v-pre="">asset/</code> folder. They will be copied to the generated site and used in the generated pages. For each version update of VueStrap, copy the built library file to overwrite <code v-pre="">asset/js/vue-strap.min.js</code>.</p>
+        <p>The CLI program is built using <a href="https://github.com/tj/commander.js/">commander.js</a>.</p>
+        <p>The auto deployment library used is <a href="https://github.com/tschaub/gh-pages">gh-pages</a>.</p>
+        <h3 id="vuestrap">VueStrap<span id="vuestrap" class="anchor"></span><a class="fa fa-anchor" href="#vuestrap" onclick="event.stopPropagation()"></a></h3>
+        <p>The VueStrap library is <a href="/devdocs/devGuide/getbootstrap.com/components">Bootstrap</a> components rewritten in <a href="/devdocs/devGuide/vuejs.org">Vue.js</a>. We forked it from the original repo, and changed it based on our needs for educational websites.</p>
+        <p>You can find more information at the <a href="https://github.com/MarkBind/vue-strap">VueStrap repo</a>.</p>
+      </div>
+
+
+      <nav id="page-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+            <a class="nav-link py-1" href="#design">Design&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#project-structure">Project structure&#x200E;</a>
+              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                <a class="nav-link py-1" href="#markbind-core-library">MarkBind core library&#x200E;</a>
+                <a class="nav-link py-1" href="#markbind-cli">MarkBind CLI&#x200E;</a>
+                <a class="nav-link py-1" href="#vuestrap">VueStrap&#x200E;</a>
+              </nav>
+            </nav>
+
+          </nav>
+        </div>
+      </nav>
+    </div>
+    <footer>
+      <div class="text-center">
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Sun, Jun 14, 2020, 2:55:46 PM UTC]</small></div>
+    </footer>
+  </div>
+</body>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/vue-strap.min.js"></script>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/devdocs'
+  const enableSearch = true
+</script>
+<script src="../markbind/js/setup.js"></script>
+<script src="../markbind/layouts/devGuide/scripts.js"></script>
+
+</html>

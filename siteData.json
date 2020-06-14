@@ -13,62 +13,26 @@
       "headingKeywords": {}
     },
     {
+      "title": "Design",
+      "layout": "devGuide",
+      "pageNav": "default",
+      "src": "devGuide/design.md",
+      "headings": {
+        "design": "Design",
+        "project-structure": "Project structure",
+        "markbind-core-library": "MarkBind core library",
+        "markbind-cli": "MarkBind CLI",
+        "vuestrap": "VueStrap"
+      },
+      "headingKeywords": {}
+    },
+    {
       "title": "Contributing",
       "layout": "devGuide",
-      "pageNav": "default",
-      "src": "devGuide/contributing.md",
-      "headings": {
-        "contributing-to-markbind": "Contributing to MarkBind",
-        "code-of-conduct": "Code of conduct",
-        "things-to-do-before-getting-started": "Things to do before getting started",
-        "how-to-contribute": "How to contribute",
-        "how-to-report-a-bug": "How to report a bug",
-        "how-to-request-a-feature": "How to request a feature",
-        "first-issues-for-contributors": "First issues for contributors",
-        "how-to-make-pull-requests-to-submit-changes": "How to make Pull Requests to submit changes?"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "title": "Code of Conduct",
-      "layout": "devGuide",
-      "pageNav": "default",
-      "src": "devGuide/contributing/code-of-conduct.md",
-      "headings": {
-        "contributor-covenant-code-of-conduct": "Contributor Covenant Code of Conduct",
-        "our-pledge": "Our Pledge",
-        "our-standards": "Our Standards",
-        "our-responsibilities": "Our Responsibilities",
-        "scope": "Scope",
-        "enforcement": "Enforcement",
-        "attribution": "Attribution"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "title": "Developer Guide",
-      "layout": "devGuide",
-      "pageNav": "default",
       "src": "devGuide/devGuide.md",
       "headings": {
-        "requirement": "Requirement",
-        "environment": "Environment",
-        "project-structure": "Project Structure",
-        "markbind-core-library": "MarkBind Core Library",
-        "markbind-cli": "MarkBind CLI",
-        "vuestrap": "VueStrap",
-        "development-process": "Development Process",
-        "prerequisite": "Prerequisite",
-        "development": "Development",
-        "troubleshooting": "Troubleshooting",
-        "testing": "Testing",
-        "running-tests": "Running tests",
-        "updating-tests": "Updating tests",
-        "adding-test-site-content": "Adding test site content",
-        "using-eslint": "Using ESLint",
-        "installation": "Installation",
-        "lint-your-code": "Lint your code",
-        "integration-with-editors": "Integration with editors"
+        "developer-guide": "Developer guide",
+        "contributing": "Contributing"
       },
       "headingKeywords": {}
     },
@@ -80,18 +44,55 @@
       "headingKeywords": {}
     },
     {
-      "title": "Maintainer Guide",
+      "title": "Project management",
       "layout": "devGuide",
       "pageNav": "default",
-      "src": "devGuide/maintainerGuide.md",
+      "src": "devGuide/projectManagement.md",
       "headings": {
-        "pr-merging-workflow": "PR Merging Workflow",
+        "project-management": "Project management",
+        "managing-prs": "Managing PRs",
         "approval": "Approval",
-        "actual-merging": "Actual Merging",
+        "merging": "Merging",
         "doing-a-release": "Doing a Release",
-        "prerequisites-for-new-maintainers": "Prerequisites for New Maintainers",
         "building-vue-strap": "Building Vue-Strap",
         "building-markbind": "Building MarkBind"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "title": "Setting up",
+      "layout": "devGuide",
+      "src": "devGuide/settingUp.md",
+      "headings": {
+        "setting-up": "Setting up",
+        "prerequisites": "Prerequisites",
+        "setting-up-the-dev-environment": "Setting up the dev environment"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "title": "Appendix: Style guides",
+      "layout": "devGuide",
+      "pageNav": "default",
+      "src": "devGuide/styleGuides.md",
+      "headings": {
+        "appendix-style-guides": "Appendix: Style guides"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "title": "Workflow",
+      "layout": "devGuide",
+      "pageNav": "default",
+      "src": "devGuide/workflow.md",
+      "headings": {
+        "workflow": "Workflow",
+        "writing-code": "Writing code",
+        "testing": "Testing",
+        "running-tests": "Running tests",
+        "updating-tests": "Updating tests",
+        "adding-test-site-content": "Adding test site content",
+        "linting": "Linting"
       },
       "headingKeywords": {}
     },
