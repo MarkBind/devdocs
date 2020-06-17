@@ -85,26 +85,17 @@
           <p>This page gives you an overview of the MarkBind's internal design.</p>
         </div>
         <h2 id="project-structure">Project structure<span id="project-structure" class="anchor"></span><a class="fa fa-anchor" href="#project-structure" onclick="event.stopPropagation()"></a></h2>
-        <p>MarkBind project consists of two repos:</p>
+        <p>The MarkBind project is developed in a monorepo (<a href="https://github.com/MarkBind/markbind">MarkBind/markbind</a>) of 3 packages:</p>
         <ul>
           <li>
-            <p><a href="https://github.com/MarkBind/markbind">MarkBind</a></p>
-            <ul>
-              <li>
-                <p>The command-line interface (CLI) application that accepts commands from users, and uses the core library to parse and generate web pages resides in the root.</p>
-              </li>
-              <li>
-                <p>The core library that resolves the content include path, and the rendering of Markdown contents resides in the <code v-pre="">lib/markbind/</code> directory.</p>
-              </li>
-            </ul>
-            <p>Stack used: <em>Node.js</em></p>
+            <p>The command-line interface (CLI) application, which accepts commands from users and then uses the core library to parse and generate web pages, resides in the root.</p>
           </li>
           <li>
-            <p><a href="https://github.com/MarkBind/vue-strap">VueStrap library (forked version modified for MarkBind)</a></p>
-            <ul>
-              <li>The UI components library used in MarkBind project. Users could use it in their contents to create complex and interactive structure.</li>
-            </ul>
-            <p>Stack used: <em>Vue.js</em></p>
+            <p>The core library, which resolves the content include path and renders Markdown content, resides in the <code v-pre="">src/lib/markbind/</code> directory.</p>
+          </li>
+          <li>
+            <p>The UI components library, which MarkBind authors can use to create content with complex and interactive structure, resides in the <code v-pre="">frontend/components/</code> directory.</p>
+            <p>Stack used: <em>Node.js</em>, <em>Vue.js</em></p>
           </li>
         </ul>
         <h3 id="markbind-core-library">MarkBind core library<span id="markbind-core-library" class="anchor"></span><a class="fa fa-anchor" href="#markbind-core-library" onclick="event.stopPropagation()"></a></h3>
@@ -126,9 +117,9 @@
         <p>Static assets of MarkBind, such as stylesheets and JavaScript libraries, are located in <code v-pre="">asset/</code> folder. They will be copied to the generated site and used in the generated pages. For each version update of VueStrap, copy the built library file to overwrite <code v-pre="">asset/js/vue-strap.min.js</code>.</p>
         <p>The CLI program is built using <a href="https://github.com/tj/commander.js/">commander.js</a>.</p>
         <p>The auto deployment library used is <a href="https://github.com/tschaub/gh-pages">gh-pages</a>.</p>
-        <h3 id="vuestrap">VueStrap<span id="vuestrap" class="anchor"></span><a class="fa fa-anchor" href="#vuestrap" onclick="event.stopPropagation()"></a></h3>
-        <p>The VueStrap library is <a href="/devdocs/devGuide/getbootstrap.com/components">Bootstrap</a> components rewritten in <a href="/devdocs/devGuide/vuejs.org">Vue.js</a>. We forked it from the original repo, and changed it based on our needs for educational websites.</p>
-        <p>You can find more information at the <a href="https://github.com/MarkBind/vue-strap">VueStrap repo</a>.</p>
+        <h3 id="ui-components-library">UI components library<span id="ui-components-library" class="anchor"></span><a class="fa fa-anchor" href="#ui-components-library" onclick="event.stopPropagation()"></a></h3>
+        <p>This package consists of a mix of <a href="/devdocs/devGuide/getbootstrap.com/components">Bootstrap</a> and proprietary components rewritten in <a href="/devdocs/devGuide/vuejs.org">Vue.js</a> based on our needs for educational websites.</p>
+        <p>We forked it from the original <a href="https://github.com/yuche/vue-strap">yuche/vue-strap</a> repo into the <a href="https://github.com/MarkBind/vue-strap">MarkBind/vue-strap</a> repo, and then later merged it into the main <a href="https://github.com/MarkBind/markbind">MarkBind/markbind</a> repo.</p>
       </div>
 
 
@@ -142,7 +133,7 @@
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                 <a class="nav-link py-1" href="#markbind-core-library">MarkBind core library&#x200E;</a>
                 <a class="nav-link py-1" href="#markbind-cli">MarkBind CLI&#x200E;</a>
-                <a class="nav-link py-1" href="#vuestrap">VueStrap&#x200E;</a>
+                <a class="nav-link py-1" href="#ui-components-library">UI components library&#x200E;</a>
               </nav>
             </nav>
 
@@ -152,7 +143,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Sun, Jun 14, 2020, 2:55:46 PM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Wed, Jun 17, 2020, 1:29:39 PM UTC]</small></div>
     </footer>
   </div>
 </body>
