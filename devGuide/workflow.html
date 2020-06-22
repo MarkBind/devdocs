@@ -98,17 +98,18 @@
         <p>Our test script does the following:</p>
         <ol>
           <li>Lints the code for any code and style errors using ESLint.</li>
+          <li>Runs unit tests for the main and sub packages.</li>
           <li>Builds the test sites whose directory names are listed in <code v-pre="">test/functional/test_site</code>.</li>
           <li>For each test site, compares the HTML files generated with the HTML files in its <code v-pre="">expected</code> directory.</li>
         </ol>
         <h4 id="running-tests">Running tests<span id="running-tests" class="anchor"></span><a class="fa fa-anchor" href="#running-tests" onclick="event.stopPropagation()"></a></h4>
-        <p>To execute the tests, simply run:</p>
+        <p>To execute all the tests, simply run:</p>
         <ul>
           <li>Unix: <code v-pre="">npm run test</code></li>
           <li>Windows: <code v-pre="">npm run testwin</code></li>
         </ul>
-        <h4 id="updating-tests">Updating tests<span id="updating-tests" class="anchor"></span><a class="fa fa-anchor" href="#updating-tests" onclick="event.stopPropagation()"></a></h4>
-        <p>Whether you are adding a new feature, updating existing features or fixing bugs, make sure to update the test sites to reflect the changes by running this command:</p>
+        <h4 id="updating-and-writing-tests">Updating and writing tests<span id="updating-and-writing-tests" class="anchor"></span><a class="fa fa-anchor" href="#updating-and-writing-tests" onclick="event.stopPropagation()"></a></h4>
+        <p>Whether you are adding a new feature, updating existing features or fixing bugs, make sure to update the test files (test sites, snapshots) to reflect the changes by running the appropriate script:</p>
         <ul>
           <li>Unix: <code v-pre="">npm run updatetest</code></li>
           <li>Windows: <code v-pre="">npm run updatetestwin</code></li>
@@ -116,7 +117,7 @@
         <box type="warning" seamless>
           You should always check that the generated output is correct before committing any changes to the test sites.
         </box>
-        <h4 id="adding-test-site-content">Adding test site content<span id="adding-test-site-content" class="anchor"></span><a class="fa fa-anchor" href="#adding-test-site-content" onclick="event.stopPropagation()"></a></h4>
+        <h5 id="adding-test-site-content">Adding test site content<span id="adding-test-site-content" class="anchor"></span><a class="fa fa-anchor" href="#adding-test-site-content" onclick="event.stopPropagation()"></a></h5>
         <p>When adding new features, you should also add new site content into an existing test site or create a new test site to demonstrate the new feature. This is to ensure that your feature can be tested by building that test site.</p>
         <p>To add a page to an existing test site, for this example, to <code v-pre="">test_site</code>:</p>
         <ol>
@@ -143,11 +144,14 @@
           <p>When creating a new test site, the directory name of the new test site should be added to <code v-pre="">test/functional/test_sites</code> file.
           </p>
         </box>
+        <h5 id="adding-snapshot-tests-for-components">Adding snapshot tests for components<span id="adding-snapshot-tests-for-components" class="anchor"></span><a class="fa fa-anchor" href="#adding-snapshot-tests-for-components" onclick="event.stopPropagation()"></a></h5>
+        <p>When making changes to the Vue components in <code v-pre="">frontend/components</code>, you should add new snapshot tests or adapt existing ones as appropriate.</p>
+        <p>Once you're done, be sure to run the <code v-pre="">updatetest</code> script mentioned <a href="#updating-and-writing-tests">above</a>!</p>
         <h2 id="linting">Linting<span id="linting" class="anchor"></span><a class="fa fa-anchor" href="#linting" onclick="event.stopPropagation()"></a></h2>
         <p>We follow <a href="/devdocs/devGuide/styleGuides.html">our style guides</a>. Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is <a href="https://eslint.org/">ESLint</a>. Here is a <a href="https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e">gist</a> with an explanation of the ESLint rules chosen in markbind-cli.</p>
         <p>Before making a commit or pull request, you should lint your code by running the following commands from the root of your project:</p>
         <ul>
-          <li>To lint a specific file: <code v-pre="">./node_modules/.bin/eslint path/to/specificfile.js</code></li>
+          <li>To lint a specific file: <code v-pre="">eslint path/to/specificfile.js</code></li>
           <li>To lint all files: <code v-pre="">npm run lint</code></li>
         </ul>
         <p>It is also possible to auto-fix some (not all) style errors:</p>
@@ -157,6 +161,11 @@
         </ul>
         <box type="tip" seamless>
           <p>ESLint has <a href="https://eslint.org/docs/user-guide/integrations">integrations with popular editors</a>. They offer features such as &quot;fix errors on save&quot;, which will make development smoother.
+          </p>
+        </box>
+        <box type="tip" seamless>
+          <p>There are several versions of the <em>test and linting scripts</em> in the main <code v-pre="">package.json</code> that execute for only one of the main or sub packages,
+            feel free to look into <code v-pre="">package.json</code> and use them as you see fit!
           </p>
         </box>
       </div>
@@ -172,8 +181,11 @@
               <a class="nav-link py-1" href="#testing">Testing&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                 <a class="nav-link py-1" href="#running-tests">Running tests&#x200E;</a>
-                <a class="nav-link py-1" href="#updating-tests">Updating tests&#x200E;</a>
-                <a class="nav-link py-1" href="#adding-test-site-content">Adding test site content&#x200E;</a>
+                <a class="nav-link py-1" href="#updating-and-writing-tests">Updating and writing tests&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#adding-test-site-content">Adding test site content&#x200E;</a>
+                  <a class="nav-link py-1" href="#adding-snapshot-tests-for-components">Adding snapshot tests for components&#x200E;</a>
+                </nav>
               </nav>
               <a class="nav-link py-1" href="#linting">Linting&#x200E;</a>
             </nav>
@@ -184,12 +196,12 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Fri, Jun 19, 2020, 1:52:36 PM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Mon, Jun 22, 2020, 10:48:24 AM UTC]</small></div>
     </footer>
   </div>
 </body>
 <script src="../markbind/js/vue.min.js"></script>
-<script src="../markbind/js/vue-strap.min.js"></script>
+<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
 <script src="../markbind/js/polyfill.min.js"></script>
 <script src="../markbind/js/bootstrap-vue.min.js"></script>
