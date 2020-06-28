@@ -93,7 +93,8 @@
         "updating-and-writing-tests": "Updating and writing tests",
         "adding-test-site-content": "Adding test site content",
         "adding-snapshot-tests-for-components": "Adding snapshot tests for components",
-        "linting": "Linting"
+        "linting": "Linting",
+        "updating-dependencies": "Updating dependencies"
       },
       "headingKeywords": {}
     },
