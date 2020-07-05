@@ -24,7 +24,7 @@
 
 <body data-spy="scroll" data-target="#page-nav" data-offset="100">
   <div id="app">
-    <header fixed="">
+    <header fixed>
       <link rel="stylesheet" href="/devdocs/css/main.css">
       <navbar type="dark" class="temp-navbar">
         <a slot="brand" href="/devdocs/index.html" title="Home" class="navbar-brand"><img src="/devdocs/images/logo-darkbackground.png" height="20"></a>
@@ -39,7 +39,7 @@
           <a href="https://github.com/MarkBind/markbind" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
         <li slot="right">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -86,7 +86,7 @@
         </div>
         <p><strong>To submit a PR</strong>, follow <a href="https://se-education.org/guides/guidelines/PRs.html">this guide</a>, but note the following:</p>
         <ul>
-          <li>You can start by looking through <a href="https://github.com/MarkBind/markbind/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22+sort%3Acomments-desc">these issues</a> marked <span href="" class="badge" style="color:white; background-color: #7057FF;">good first issue</span>. Don't do more than one of them though.</li>
+          <li>You can start by looking through <a href="https://github.com/MarkBind/markbind/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22+sort%3Acomments-desc">these issues</a> marked <span href class="badge" style="color:white; background-color: #7057FF;">good first issue</span>. Don't do more than one of them though.</li>
           <li>As we squash the commits when merging a PR, there is <mark>no need to follow a strict commit organization or write elaborate commit messages for each commit</mark>.</li>
           <li>You can refer to the <a href="/devdocs/devGuide/design.html"><em>Design</em></a> page to learn about the design and implementation of MarkBind.</li>
         </ul>
@@ -99,66 +99,66 @@
         <ol>
           <li>Lints the code for any code and style errors using ESLint.</li>
           <li>Runs unit tests for the main and sub packages.</li>
-          <li>Builds the test sites whose directory names are listed in <code v-pre="">test/functional/test_site</code>.</li>
-          <li>For each test site, compares the HTML files generated with the HTML files in its <code v-pre="">expected</code> directory.</li>
+          <li>Builds the test sites whose directory names are listed in <code v-pre>test/functional/test_site</code>.</li>
+          <li>For each test site, compares the HTML files generated with the HTML files in its <code v-pre>expected</code> directory.</li>
         </ol>
         <h4 id="running-tests">Running tests<span id="running-tests" class="anchor"></span><a class="fa fa-anchor" href="#running-tests" onclick="event.stopPropagation()"></a></h4>
         <p>To execute all the tests, simply run:</p>
         <ul>
-          <li>Unix: <code v-pre="">npm run test</code></li>
-          <li>Windows: <code v-pre="">npm run testwin</code></li>
+          <li>Unix: <code v-pre>npm run test</code></li>
+          <li>Windows: <code v-pre>npm run testwin</code></li>
         </ul>
         <h4 id="updating-and-writing-tests">Updating and writing tests<span id="updating-and-writing-tests" class="anchor"></span><a class="fa fa-anchor" href="#updating-and-writing-tests" onclick="event.stopPropagation()"></a></h4>
         <p>Whether you are adding a new feature, updating existing features or fixing bugs, make sure to update the test files (test sites, snapshots) to reflect the changes by running the appropriate script:</p>
         <ul>
-          <li>Unix: <code v-pre="">npm run updatetest</code></li>
-          <li>Windows: <code v-pre="">npm run updatetestwin</code></li>
+          <li>Unix: <code v-pre>npm run updatetest</code></li>
+          <li>Windows: <code v-pre>npm run updatetestwin</code></li>
         </ul>
         <box type="warning" seamless>
           You should always check that the generated output is correct before committing any changes to the test sites.
         </box>
         <h5 id="adding-test-site-content">Adding test site content<span id="adding-test-site-content" class="anchor"></span><a class="fa fa-anchor" href="#adding-test-site-content" onclick="event.stopPropagation()"></a></h5>
         <p>When adding new features, you should also add new site content into an existing test site or create a new test site to demonstrate the new feature. This is to ensure that your feature can be tested by building that test site.</p>
-        <p>To add a page to an existing test site, for this example, to <code v-pre="">test_site</code>:</p>
+        <p>To add a page to an existing test site, for this example, to <code v-pre>test_site</code>:</p>
         <ol>
           <li>
-            <p>Add a new test page, e.g., <code v-pre="">newTestPage.md</code>, containing a demonstration of the new feature.</p>
+            <p>Add a new test page, e.g., <code v-pre>newTestPage.md</code>, containing a demonstration of the new feature.</p>
           </li>
           <li>
-            <p>Open the <code v-pre="">site.json</code> corresponding to the test site, i.e. <code v-pre="">test/functional/test_site/site.json</code></p>
+            <p>Open the <code v-pre>site.json</code> corresponding to the test site, i.e. <code v-pre>test/functional/test_site/site.json</code></p>
           </li>
           <li>
-            <p>To include the new page, i.e. <code v-pre="">newTestPage.md</code>, add it to the <code v-pre="">pages</code> array.</p>
+            <p>To include the new page, i.e. <code v-pre>newTestPage.md</code>, add it to the <code v-pre>pages</code> array.</p>
             <div class="code-block">
               <div class="code-block-heading"><span>site.json</span></div>
               <div class="code-block-content">
-                <pre><code heading="site.json" class="hljs" v-pre=""><span>&quot;pages&quot;: [<br></span><span>  {<br></span><span>    &quot;src&quot;: &quot;index.md&quot;,<br></span><span>    &quot;title&quot;: &quot;Hello World&quot;,<br></span><span>    &quot;frontmatter&quot;: {<br></span><span>      &quot;frontMatterOverrideProperty&quot;: &quot;Overridden by front matter override&quot;,<br></span><span>      &quot;globalAndFrontMatterOverrideProperty&quot;:  &quot;Overridden by front matter override&quot;<br></span><span>    }<br></span><span>  },<br></span><span>  ...<br></span><span>  {<br></span><span>    &quot;src&quot;: &quot;testLayouts.md&quot;,<br></span><span>    &quot;title&quot;: &quot;Hello World&quot;<br></span><span>  },<br></span><span>  {,<br></span><span class="highlighted">    &quot;src&quot;: &quot;newTestPage.md&quot;,<br></span><span class="highlighted">    &quot;title&quot;: [some title you see fit]<br></span><span>  },<br></span><span>  ...<br></span></code></pre>
+                <pre><code heading="site.json" class="hljs" v-pre><span>&quot;pages&quot;: [<br></span><span>  {<br></span><span>    &quot;src&quot;: &quot;index.md&quot;,<br></span><span>    &quot;title&quot;: &quot;Hello World&quot;,<br></span><span>    &quot;frontmatter&quot;: {<br></span><span>      &quot;frontMatterOverrideProperty&quot;: &quot;Overridden by front matter override&quot;,<br></span><span>      &quot;globalAndFrontMatterOverrideProperty&quot;:  &quot;Overridden by front matter override&quot;<br></span><span>    }<br></span><span>  },<br></span><span>  ...<br></span><span>  {<br></span><span>    &quot;src&quot;: &quot;testLayouts.md&quot;,<br></span><span>    &quot;title&quot;: &quot;Hello World&quot;<br></span><span>  },<br></span><span>  {,<br></span><span class="highlighted">    &quot;src&quot;: &quot;newTestPage.md&quot;,<br></span><span class="highlighted">    &quot;title&quot;: [some title you see fit]<br></span><span>  },<br></span><span>  ...<br></span></code></pre>
               </div>
             </div>
           </li>
           <li>
-            <p>Update the tests using <code v-pre="">npm run updatetest</code>.</p>
+            <p>Update the tests using <code v-pre>npm run updatetest</code>.</p>
           </li>
         </ol>
         <box type="info">
-          <p>When creating a new test site, the directory name of the new test site should be added to <code v-pre="">test/functional/test_sites</code> file.
+          <p>When creating a new test site, the directory name of the new test site should be added to <code v-pre>test/functional/test_sites</code> file.
           </p>
         </box>
         <p></p>
         <h5 id="adding-snapshot-tests-for-components">Adding snapshot tests for components<span id="adding-snapshot-tests-for-components" class="anchor"></span><a class="fa fa-anchor" href="#adding-snapshot-tests-for-components" onclick="event.stopPropagation()"></a></h5>
-        <p>When making changes to the Vue components in <code v-pre="">packages/vue-components</code>, you should add new snapshot tests or adapt existing ones as appropriate.</p>
-        <p>Once you're done, be sure to run the <code v-pre="">updatetest</code> script mentioned <a href="#updating-and-writing-tests">above</a>!</p>
+        <p>When making changes to the Vue components in <code v-pre>packages/vue-components</code>, you should add new snapshot tests or adapt existing ones as appropriate.</p>
+        <p>Once you're done, be sure to run the <code v-pre>updatetest</code> script mentioned <a href="#updating-and-writing-tests">above</a>!</p>
         <h2 id="linting">Linting<span id="linting" class="anchor"></span><a class="fa fa-anchor" href="#linting" onclick="event.stopPropagation()"></a></h2>
         <p>We follow <a href="/devdocs/devGuide/styleGuides.html">our style guides</a>. Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is <a href="https://eslint.org/">ESLint</a>. Here is a <a href="https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e">gist</a> with an explanation of the ESLint rules chosen in markbind-cli.</p>
         <p>Before making a commit or pull request, you should lint your code by running the following commands from the root of your project:</p>
         <ul>
-          <li>To lint a specific file: <code v-pre="">eslint path/to/specificfile.js</code></li>
-          <li>To lint all files: <code v-pre="">npm run lint</code></li>
+          <li>To lint a specific file: <code v-pre>eslint path/to/specificfile.js</code></li>
+          <li>To lint all files: <code v-pre>npm run lint</code></li>
         </ul>
         <p>It is also possible to auto-fix some (not all) style errors:</p>
         <ul>
-          <li>To correct any fixable style errors, run <code v-pre="">npm run lintfix</code></li>
-          <li>To correct fixable style errors for both JavaScript and CSS, run <code v-pre="">npm run autolint</code></li>
+          <li>To correct any fixable style errors, run <code v-pre>npm run lintfix</code></li>
+          <li>To correct fixable style errors for both JavaScript and CSS, run <code v-pre>npm run autolint</code></li>
         </ul>
         <box type="tip" seamless>
           <p>ESLint has <a href="https://eslint.org/docs/user-guide/integrations">integrations with popular editors</a>. They offer features such as &quot;fix errors on save&quot;, which will make development smoother.
@@ -166,15 +166,15 @@
         </box>
         <p></p>
         <box type="tip" seamless>
-          <p>There are several versions of the <em>test and linting scripts</em> in the main <code v-pre="">package.json</code> that execute for only one of the main or sub packages,
-            feel free to look into <code v-pre="">package.json</code> and use them as you see fit!
+          <p>There are several versions of the <em>test and linting scripts</em> in the main <code v-pre>package.json</code> that execute for only one of the main or sub packages,
+            feel free to look into <code v-pre>package.json</code> and use them as you see fit!
           </p>
         </box>
         <p></p>
         <h2 id="updating-dependencies">Updating dependencies<span id="updating-dependencies" class="anchor"></span><a class="fa fa-anchor" href="#updating-dependencies" onclick="event.stopPropagation()"></a></h2>
-        <p>We use <code v-pre="">npm install &lt;package folder&gt;</code> to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">take a look under the command in the link!</span><a href="https://docs.npmjs.com/cli/install">hoist</a></span> the MarkBind core package's dependencies to the root <code v-pre="">node_modules</code>, avoiding dependency duplication between the <code v-pre="">markbind-cli</code> and <code v-pre="">markbind</code> packages where possible.</p>
-        <p>Hence, when updating dependencies of the <code v-pre="">markbind</code> core package, be sure to run the <code v-pre="">npm install packages/core</code> command, or simply the <code v-pre="">npm run install:core</code> script. If you upgraded the dependencies of multiple packages, simply run <code v-pre="">npm run install:all</code> instead.</p>
-        <p>If the dependency <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e. is also listed under the root <code v-pre="">package.json</code></span>is also used</span> in the root package, make sure to update its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">as listed in the <code v-pre="">package.json</code> file</span>version number</span> as well!</p>
+        <p>We use <code v-pre>npm install &lt;package folder&gt;</code> to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">take a look under the command in the link!</span><a href="https://docs.npmjs.com/cli/install">hoist</a></span> the MarkBind core package's dependencies to the root <code v-pre>node_modules</code>, avoiding dependency duplication between the <code v-pre>markbind-cli</code> and <code v-pre>markbind</code> packages where possible.</p>
+        <p>Hence, when updating dependencies of the <code v-pre>markbind</code> core package, be sure to run the <code v-pre>npm install packages/core</code> command, or simply the <code v-pre>npm run install:core</code> script. If you upgraded the dependencies of multiple packages, simply run <code v-pre>npm run install:all</code> instead.</p>
+        <p>If the dependency <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e. is also listed under the root <code v-pre>package.json</code></span>is also used</span> in the root package, make sure to update its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">as listed in the <code v-pre>package.json</code> file</span>version number</span> as well!</p>
         <box type="warning">
           <p>Conversely, when updating dependencies of the <em>root</em> package, be sure to still check whether any subpackages list this as a dependency!
             If so, follow the above process as well.
@@ -210,7 +210,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Tue, Jun 30, 2020, 1:47:59 PM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Sun, Jul 5, 2020, 1:05:08 PM UTC]</small></div>
     </footer>
   </div>
 </body>
