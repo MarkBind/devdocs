@@ -91,32 +91,47 @@
             <p>The command-line interface (CLI) application, which accepts commands from users and then uses the core library to parse and generate web pages, resides in the root.</p>
           </li>
           <li>
-            <p>The core library, which resolves the content include path and renders Markdown content, resides in the <code v-pre>packages/core/</code> directory.</p>
+            <p>The core library, which parses and processes MarkBind's various syntaxes, resides in the <code v-pre>packages/core/</code> directory.</p>
           </li>
           <li>
             <p>The UI components library, which MarkBind authors can use to create content with complex and interactive structure, resides in the <code v-pre>packages/vue-components/</code> directory.</p>
-            <p>Stack used: <em>Node.js</em>, <em>Vue.js</em></p>
+            <p>Stacks used: <em>Node.js</em>, <em>Vue.js</em></p>
           </li>
         </ul>
         <h3 id="markbind-core-library">MarkBind core library<span id="markbind-core-library" class="anchor"></span><a class="fa fa-anchor" href="#markbind-core-library" onclick="event.stopPropagation()"></a></h3>
-        <p>The core library parses the given Markdown file, processes all the content include, and renders all Markdown into HTML so that it could be displayed in a browser.</p>
-        <p>All the core logic resides inside the <code v-pre>src/Parser.js</code> file. It exposes two important APIs: <strong>include</strong> and <strong>render</strong>.</p>
-        <p><em>Include</em> and <em>Render</em> will first parse the given file as a DOM tree, and then recursively visit every node to check if it needs special handling.</p>
-        <p>In the <em>Include</em> stage, it will check if the node will include new contents (for example, if it is an &quot;include&quot; tag (<code v-pre>&lt;include /&gt;</code>), and then load the file/content to be included into the current working context. For the new content included, the <em>Include</em> step will be run recursively until all the content to be included are resolved and loaded.</p>
-        <p><em>Render</em> is a similar process to <em>Include</em>, but it will render the content recursively to ensure all Markdown are converted to HTML.</p>
-        <p>MarkBind uses <a href="https://github.com/markdown-it/markdown-it">markdown-it</a> to do the Markdown parsing and rendering. There are also several customized markdown-it plugins used in MarkBind, which are located inside the <code v-pre>src/lib/markdown-it/</code> directory.</p>
-        <h3 id="markbind-cli">MarkBind CLI<span id="markbind-cli" class="anchor"></span><a class="fa fa-anchor" href="#markbind-cli" onclick="event.stopPropagation()"></a></h3>
-        <p>The CLI application handles the site generation logic. It contains the command handling logic, as well as the Site and Page models.</p>
-        <p>The site generation logic is as follows:</p>
+        <p><strong>The core library mainly houses:</strong></p>
         <ol>
-          <li>Read the project's <code v-pre>site.json</code> file to collect all pages that will be generated.</li>
-          <li>Create a Site model, where the site's root path is where <code v-pre>site.json</code> is located. The site model knows all the pages it contains, as well as the static assets. Static assets, such as stylesheets and JavaScript libraries, will be scanned and filtered, and then copied to the generated site folder (<code v-pre>_site/</code>).</li>
-          <li>The Site model will create different Page models, and each Page model will generate a HTML page at the designated file location by calling MarkBind core library's <em>include</em> and <em>render</em> APIs.</li>
+          <li>
+            <p>Various key functionalities in processing a <em>singular</em> page inside <code v-pre>src/Parser</code> that transforms MarkBind syntax into valid html output.</p>
+          </li>
+          <li>
+            <p>The <code v-pre>src/Page</code> model, which binds the functionalities exposed by <code v-pre>Parser</code> to generate a <em>single</em> page.</p>
+          </li>
+          <li>
+            <p>The <code v-pre>src/Site</code> model, which uses the <code v-pre>Page</code> model's interface to generate pages, and performs various other utility-like functions related to site generation such as copying of external assets into the output folder.</p>
+          </li>
+          <li>
+            <p>Static assets of MarkBind, such as stylesheets and JavaScript libraries, which are located in <code v-pre>asset/</code> folder. They will be copied to the generated site and used in the generated pages.</p>
+          </li>
+          <li>
+            <p>MarkBind's <a href="https://markbind.org/userGuide/templates.html">templates</a>, used in the <code v-pre>markbind init</code> command.</p>
+          </li>
         </ol>
-        <p>The generated page is rendered using <a href="https://mozilla.github.io/nunjucks/">nunjucks</a>, and the page template could be found at <code v-pre>lib/template/page.njk</code>.</p>
-        <p>Static assets of MarkBind, such as stylesheets and JavaScript libraries, are located in <code v-pre>asset/</code> folder. They will be copied to the generated site and used in the generated pages.</p>
+        <p><strong>The key external libraries used are:</strong></p>
+        <ol>
+          <li>
+            <p><a href="https://github.com/markdown-it/markdown-it">markdown-it</a>, which does the Markdown parsing and rendering. There are also several customized markdown-it plugins used in MarkBind, which are located inside the <code v-pre>src/lib/markdown-it/</code> directory.</p>
+          </li>
+          <li>
+            <p><a href="https://github.com/fb55/htmlparser2">htmlparser2</a>, a speedy and forgiving html parser which exposes a dom-like object structure to work on. To comply with the markdown spec, and our custom requirements, <code v-pre>src/patches/htmlparser2.js</code> patches various behaviours of this library.</p>
+          </li>
+          <li>
+            <p><a href="https://cheerio.js.org/">cheerio</a>, which is a node.js equivalent of <a href="https://jquery.com/">jQuery</a>. Cheerio uses <a href="https://github.com/fb55/htmlparser2">htmlparser2</a> to parse the html as well, hence our patches propagate here.</p>
+          </li>
+        </ol>
+        <h3 id="markbind-cli">MarkBind CLI<span id="markbind-cli" class="anchor"></span><a class="fa fa-anchor" href="#markbind-cli" onclick="event.stopPropagation()"></a></h3>
+        <p>The CLI application uses and further builds on the interface exposed by the core library's <code v-pre>Site</code> model to provide functionalities for the author, such as <code v-pre>markbind serve</code> which initiates a live reload workflow.</p>
         <p>The CLI program is built using <a href="https://github.com/tj/commander.js/">commander.js</a>.</p>
-        <p>The auto deployment library used is <a href="https://github.com/tschaub/gh-pages">gh-pages</a>.</p>
         <h3 id="ui-components-library">UI components library<span id="ui-components-library" class="anchor"></span><a class="fa fa-anchor" href="#ui-components-library" onclick="event.stopPropagation()"></a></h3>
         <p>This package consists of a mix of <a href="/devdocs/devGuide/getbootstrap.com/components">Bootstrap</a> and proprietary components rewritten in <a href="/devdocs/devGuide/vuejs.org">Vue.js</a> based on our needs for educational websites.</p>
         <p>We forked it from the original <a href="https://github.com/yuche/vue-strap">yuche/vue-strap</a> repo into the <a href="https://github.com/MarkBind/vue-strap">MarkBind/vue-strap</a> repo, and then later merged it into the main <a href="https://github.com/MarkBind/markbind">MarkBind/markbind</a> repo.</p>
@@ -143,7 +158,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Fri, Jul 10, 2020, 12:03:16 PM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Mon, Jul 20, 2020, 4:52:10 PM UTC]</small></div>
     </footer>
   </div>
 </body>
