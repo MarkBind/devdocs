@@ -158,53 +158,23 @@
           </ul>
         </box>
 
-        <h3 id="building-the-ui-components-library">Building the UI components library<span id="building-the-ui-components-library" class="anchor"></span><a class="fa fa-anchor" href="#building-the-ui-components-library" onclick="event.stopPropagation()"></a></h3>
+        <br>
         <ol>
           <li>
-            <p><strong>Start with a &quot;clean slate&quot;</strong> by running <code v-pre>npm run ci:all</code> or <code v-pre>npm run ciwin:all</code> in the root markbind directory, as this may affect the generated bundle.</p>
+            <p><strong>Make sure to start with a &quot;clean slate&quot;</strong> by running <code v-pre>lerna clean</code> and then <code v-pre>npm run setup</code> in the root MarkBind directory.</p>
           </li>
           <li>
-            <p><strong>Build the bundle</strong> by executing <code v-pre>npm run build:components</code> in the root directory, after which you should see changes in <code v-pre>packages/vue-components/dist/components.min.js</code>.</p>
+            <p><strong>Increment the version number</strong> by running <code v-pre>lerna version --no-push</code>. Which to increment (<code v-pre>patch</code>, <code v-pre>minor</code> or <code v-pre>major</code>) depends on what PRs are merged for the new version, which means you must know beforehand about the changes.</p>
             <box type="info" seamless>
-              <p>Building the UI components bundle is optional if there are no changes to the files in <code v-pre>packages/vue-components/</code> since the last release of MarkBind.
-              </p>
-            </box>
-            <box type="info" seamless>
-              <p></p>
-              <p>Do take a peek at the diff for <code v-pre>components.min.js</code> to see if there are any strange changes (e.g. the version of jQuery changes even though no one upgraded it).
+              <p>The end result of this command is version commit with an appropriate tag. We will make use of the generated tag and commit message later.
               </p>
             </box>
             <p></p>
           </li>
-        </ol>
-        <h3 id="building-markbind">Building MarkBind<span id="building-markbind" class="anchor"></span><a class="fa fa-anchor" href="#building-markbind" onclick="event.stopPropagation()"></a></h3>
-        <ol>
           <li>
-            <p><strong>Make sure to start with a &quot;clean slate&quot;</strong> by running <code v-pre>npm run ci:all</code> or <code v-pre>npm run ciwin:all</code> in the root markbind directory if you haven't done so previously.</p>
-          </li>
-          <li>
-            <p><strong>Increment the version number</strong> by running <code v-pre>npm version</code>. Which to increment (<code v-pre>patch</code>, <code v-pre>minor</code> or <code v-pre>major</code>) depends on what PRs are merged for the new version, which means you must know beforehand about the changes.</p>
-            <ul>
-              <li>
-                <p>If there are no significant changes, a <code v-pre>patch</code> is sufficient: <code v-pre>npm version patch</code></p>
-              </li>
-              <li>
-                <p>If there are significant changes (e.g. breaking changes, new release), a <code v-pre>minor</code> release is needed:</p>
-                <ol>
-                  <li>
-                    <p>Run <code v-pre>npm version minor</code> as per normal.</p>
-                  </li>
-                  <li>
-                    <p>Update the version number of <code v-pre>packages/core/</code> and <code v-pre>packages/vue-components/</code> similarly using <code v-pre>npm version minor</code> (as <code v-pre>npm version</code> does not update the subpackage versions automatically).</p>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <p>We rarely do <code v-pre>major</code> releases, but if necessary, the steps are the same as the <code v-pre>minor</code> release (just change <code v-pre>minor</code> to <code v-pre>major</code>).</p>
-              </li>
-            </ul>
-            <box type="info" seamless>
-              <p><a href="https://docs.npmjs.com/cli/version"><code v-pre>npm version</code></a> creates a version commit with an appropriate tag. We will make use of the generated tag later.
+            <p><strong>Build the vue-components package bundle</strong> by executing <code v-pre>npm run build:components</code> in the root directory, after which you should see changes in <code v-pre>packages/vue-components/dist/components.min.js</code>. <br><br>Take a peek at the diff for <code v-pre>components.min.js</code> to see if there are any strange changes (e.g. the version of jQuery changes even though no one upgraded it).</p>
+            <box type="tip" seamless>
+              <p>Building the UI components bundle is optional if there are no changes to the files in <code v-pre>packages/vue-components/</code> since the last release of MarkBind. If so, you may skip this step.
               </p>
             </box>
             <p></p>
@@ -220,7 +190,7 @@
             <p>If any other lines changed, that likely means the functional tests weren't updated in a pull request. Do revert everything done so far, and make a pull request specifically to fix that first!</p>
           </li>
           <li>
-            <p><strong>If we did a new release for the Vue components</strong>: also ensure that the minified <code v-pre>components.min.js</code> bundle from <a href="#building-the-ui-components-library">earlier</a> is copied to each of the expected test site's folders.</p>
+            <p><strong>If vue-components package bundle was updated earlier</strong>: also ensure that the minified <code v-pre>components.min.js</code> is copied to each of the expected test site's folders.</p>
             <box type="info" seamless>
               <p>We do this for each MarkBind release (rather than update <code v-pre>components.min.js</code> for each affected PR), in order to reduce unnecessary merge conflicts. It also makes it easier for the maintainers to vet the changes.
               </p>
@@ -228,7 +198,7 @@
             <p></p>
           </li>
           <li>
-            <p><strong>Combine</strong> the changes that you made in the last two steps with the <a href="https://docs.npmjs.com/cli/version">version commit</a> generated by <code v-pre>npm version</code>. To do so, amend the version commit and version tag by doing the following — take note to change <code v-pre>vA.B.C</code> to the new version.</p>
+            <p><strong>Combine</strong> the changes that you made in the last two steps with the <a href="https://docs.npmjs.com/cli/version">version commit</a> generated by <code v-pre>lerna version</code>. To do so, amend the version commit and version tag by doing the following — take note to change <code v-pre>vA.B.C</code> to the new version.</p>
             <pre><code class="no-line-numbers hljs sh" v-pre><span>$ git commit -a --amend --reuse-message vA.B.C<br></span><span>$ git tag --force vA.B.C            <span class="hljs-comment"># to reassign the tag to the newly amended commit</span><br></span></code></pre>
           </li>
           <li>
@@ -236,7 +206,7 @@
             <pre><code class="no-line-numbers hljs sh" v-pre><span>$ git push upstream master<br></span><span>$ git push upstream vA.B.C<br></span></code></pre>
           </li>
           <li>
-            <p><strong>Publish</strong> by running <code v-pre>npm publish</code>. You should receive a notification by <code v-pre>npm</code> that the publish is successful.</p>
+            <p><strong>Publish</strong> by running <code v-pre>lerna publish from-git</code>. You should receive a notification by <code v-pre>npm</code> that the publish is successful.</p>
           </li>
           <li>
             <p><strong>Smoke test</strong> the new version by installing the new version (run <code v-pre>npm i -g markbind-cli@A.B.C</code>) and playing around with it a bit to ensure that it works.</p>
@@ -290,10 +260,6 @@
                 <a class="nav-link py-1" href="#merging">Merging&#x200E;</a>
               </nav>
               <a class="nav-link py-1" href="#doing-a-release">Doing a Release&#x200E;</a>
-              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                <a class="nav-link py-1" href="#building-the-ui-components-library">Building the UI components library&#x200E;</a>
-                <a class="nav-link py-1" href="#building-markbind">Building MarkBind&#x200E;</a>
-              </nav>
             </nav>
 
           </nav>
@@ -302,7 +268,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Tue, Jul 28, 2020, 11:26:42 AM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Fri, Jul 31, 2020, 3:57:41 PM UTC]</small></div>
     </footer>
   </div>
 </body>

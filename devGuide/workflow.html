@@ -97,9 +97,9 @@
         <h2 id="testing">Testing<span id="testing" class="anchor"></span><a class="fa fa-anchor" href="#testing" onclick="event.stopPropagation()"></a></h2>
         <p>Our test script does the following:</p>
         <ol>
-          <li>Lints the code for any code and style errors using ESLint.</li>
-          <li>Runs unit tests for the main and sub packages.</li>
-          <li>Builds the test sites whose directory names are listed in <code v-pre>test/functional/test_site</code>.</li>
+          <li>Lints the code (<code v-pre>.js</code>, <code v-pre>.vue</code>) and stylesheets (<code v-pre>.css</code>) for any style errors using <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>.</li>
+          <li>Runs unit tests for all packages with <a href="https://jestjs.io/">Jest</a>.</li>
+          <li>Builds the test sites whose directory names are listed in <code v-pre>packages/cli/test/functional/test_site</code>.</li>
           <li>For each test site, compares the HTML files generated with the HTML files in its <code v-pre>expected</code> directory.</li>
         </ol>
         <h4 id="running-tests">Running tests<span id="running-tests" class="anchor"></span><a class="fa fa-anchor" href="#running-tests" onclick="event.stopPropagation()"></a></h4>
@@ -125,7 +125,7 @@
             <p>Add a new test page, e.g., <code v-pre>newTestPage.md</code>, containing a demonstration of the new feature.</p>
           </li>
           <li>
-            <p>Open the <code v-pre>site.json</code> corresponding to the test site, i.e. <code v-pre>test/functional/test_site/site.json</code></p>
+            <p>Open the <code v-pre>site.json</code> corresponding to the test site, i.e. <code v-pre>packages/cli/test/functional/test_site/site.json</code></p>
           </li>
           <li>
             <p>To include the new page, i.e. <code v-pre>newTestPage.md</code>, add it to the <code v-pre>pages</code> array.</p>
@@ -141,7 +141,7 @@
           </li>
         </ol>
         <box type="info">
-          <p>When creating a new test site, the directory name of the new test site should be added to <code v-pre>test/functional/test_sites</code> file.
+          <p>When creating a new test site, the directory name of the new test site should be added to <code v-pre>packages/cli/test/functional/test_sites</code> file.
           </p>
         </box>
         <p></p>
@@ -149,38 +149,25 @@
         <p>When making changes to the Vue components in <code v-pre>packages/vue-components</code>, you should add new snapshot tests or adapt existing ones as appropriate.</p>
         <p>Once you're done, be sure to run the <code v-pre>updatetest</code> script mentioned <a href="#updating-and-writing-tests">above</a>!</p>
         <h2 id="linting">Linting<span id="linting" class="anchor"></span><a class="fa fa-anchor" href="#linting" onclick="event.stopPropagation()"></a></h2>
-        <p>We follow <a href="/devdocs/devGuide/styleGuides.html">our style guides</a>. Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is <a href="https://eslint.org/">ESLint</a>. Here is a <a href="https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e">gist</a> with an explanation of the ESLint rules chosen in markbind-cli.</p>
+        <p>We follow <a href="/devdocs/devGuide/styleGuides.html">our style guides</a>. Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>. Here is a <a href="https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e">gist</a> with an explanation of the ESLint rules chosen in markbind-cli.</p>
         <p>Before making a commit or pull request, you should lint your code by running the following commands from the root of your project:</p>
         <ul>
           <li>To lint a specific file: <code v-pre>eslint path/to/specificfile.js</code></li>
           <li>To lint all files: <code v-pre>npm run lint</code></li>
         </ul>
-        <p>It is also possible to auto-fix some (not all) style errors:</p>
-        <ul>
-          <li>To correct any fixable style errors, run <code v-pre>npm run lintfix</code></li>
-          <li>To correct fixable style errors for both JavaScript and CSS, run <code v-pre>npm run autolint</code></li>
-        </ul>
+        <p>It is also possible to auto-fix some (not all) style errors, using <code v-pre>npm run lintfix</code>.</p>
         <box type="tip" seamless>
           <p>ESLint has <a href="https://eslint.org/docs/user-guide/integrations">integrations with popular editors</a>. They offer features such as &quot;fix errors on save&quot;, which will make development smoother.
           </p>
         </box>
         <p></p>
-        <box type="tip" seamless>
-          <p>There are several versions of the <em>test and linting scripts</em> in the main <code v-pre>package.json</code> that execute for only one of the main or sub packages,
-            feel free to look into <code v-pre>package.json</code> and use them as you see fit!
-          </p>
-        </box>
-        <p></p>
-        <h2 id="updating-dependencies">Updating dependencies<span id="updating-dependencies" class="anchor"></span><a class="fa fa-anchor" href="#updating-dependencies" onclick="event.stopPropagation()"></a></h2>
-        <p>We use <code v-pre>npm install &lt;package folder&gt;</code> to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">take a look under the command in the link!</span><a href="https://docs.npmjs.com/cli/install">hoist</a></span> the MarkBind core package's dependencies to the root <code v-pre>node_modules</code>, avoiding dependency duplication between the <code v-pre>markbind-cli</code> and <code v-pre>markbind</code> packages where possible.</p>
-        <p>Hence, when updating dependencies of the <code v-pre>markbind</code> core package, be sure to run the <code v-pre>npm install packages/core</code> command, or simply the <code v-pre>npm run install:core</code> script. If you upgraded the dependencies of multiple packages, simply run <code v-pre>npm run install:all</code> instead.</p>
-        <p>If the dependency <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e. is also listed under the root <code v-pre>package.json</code></span>is also used</span> in the root package, make sure to update its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">as listed in the <code v-pre>package.json</code> file</span>version number</span> as well!</p>
+        <h2 id="dependency-management">Dependency management<span id="dependency-management" class="anchor"></span><a class="fa fa-anchor" href="#dependency-management" onclick="event.stopPropagation()"></a></h2>
+        <p>As mentioned in the <a href="/devdocs/devGuide/settingUp.html#setting-up-the-dev-environment">setting up</a> page, MarkBind uses <a href="https://github.com/lerna/lerna">lerna</a> to manage the dependencies of its <a href="/devdocs/devGuide/design.html">various packages</a>.</p>
+        <p>Hence, instead of manually updating the version numbers in the packages' <code v-pre>package.json</code> files, you may consider using the <code v-pre>lerna add</code> <a href="https://github.com/lerna/lerna/tree/master/commands/add#readme">command</a> to speed things up!</p>
+        <p>Also, when updating dependencies, ensure that it is updated in <em>all</em> packages using that dependency.</p>
         <box type="warning">
-          <p>Conversely, when updating dependencies of the <em>root</em> package, be sure to still check whether any subpackages list this as a dependency!
-            If so, follow the above process as well.
-          </p>
+          Dependency updates are not trivial, and can be the source of subtle bugs. You should always check the respective dependency changelogs before doing so!
         </box>
-        <p></p>
       </div>
 
 
@@ -201,7 +188,7 @@
                 </nav>
               </nav>
               <a class="nav-link py-1" href="#linting">Linting&#x200E;</a>
-              <a class="nav-link py-1" href="#updating-dependencies">Updating dependencies&#x200E;</a>
+              <a class="nav-link py-1" href="#dependency-management">Dependency management&#x200E;</a>
             </nav>
 
           </nav>
@@ -210,7 +197,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Tue, Jul 28, 2020, 11:26:42 AM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a> on Fri, Jul 31, 2020, 3:57:41 PM UTC]</small></div>
     </footer>
   </div>
 </body>

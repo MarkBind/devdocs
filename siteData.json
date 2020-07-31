@@ -53,9 +53,7 @@
         "managing-prs": "Managing PRs",
         "approval": "Approval",
         "merging": "Merging",
-        "doing-a-release": "Doing a Release",
-        "building-the-ui-components-library": "Building the UI components library",
-        "building-markbind": "Building MarkBind"
+        "doing-a-release": "Doing a Release"
       },
       "headingKeywords": {}
     },
@@ -94,7 +92,7 @@
         "adding-test-site-content": "Adding test site content",
         "adding-snapshot-tests-for-components": "Adding snapshot tests for components",
         "linting": "Linting",
-        "updating-dependencies": "Updating dependencies"
+        "dependency-management": "Dependency management"
       },
       "headingKeywords": {}
     },
