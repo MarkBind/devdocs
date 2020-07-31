@@ -97,6 +97,20 @@
       "headingKeywords": {}
     },
     {
+      "title": "Writing Plugins",
+      "layout": "devGuide",
+      "pageNav": "default",
+      "src": "devGuide/writingPlugins.md",
+      "headings": {
+        "writing-plugins": "Writing Plugins",
+        "rendering": "Rendering",
+        "assets": "Assets",
+        "live-reload": "Live reload",
+        "special-tags": "Special tags"
+      },
+      "headingKeywords": {}
+    },
+    {
       "title": "Showcase",
       "header": "header.md",
       "footer": "footer.md",
