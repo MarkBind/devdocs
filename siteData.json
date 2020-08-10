@@ -2,21 +2,16 @@
   "enableSearch": true,
   "pages": [
     {
-      "title": "About Us",
-      "header": "header.md",
-      "footer": "footer.md",
       "src": "about.md",
-      "layout": "default",
+      "title": "About Us",
       "headings": {
         "about-us": "About Us"
       },
       "headingKeywords": {}
     },
     {
-      "title": "Design",
-      "layout": "devGuide",
-      "pageNav": "default",
       "src": "devGuide/design.md",
+      "title": "Design",
       "headings": {
         "design": "Design",
         "project-structure": "Project structure",
@@ -27,9 +22,8 @@
       "headingKeywords": {}
     },
     {
-      "title": "Contributing",
-      "layout": "devGuide",
       "src": "devGuide/devGuide.md",
+      "title": "Contributing",
       "headings": {
         "developer-guide": "Developer guide",
         "contributing": "Contributing"
@@ -39,15 +33,12 @@
     {
       "src": "devGuide/index.md",
       "title": "",
-      "layout": "default",
       "headings": {},
       "headingKeywords": {}
     },
     {
-      "title": "Project management",
-      "layout": "devGuide",
-      "pageNav": "default",
       "src": "devGuide/projectManagement.md",
+      "title": "Project management",
       "headings": {
         "project-management": "Project management",
         "managing-prs": "Managing PRs",
@@ -58,9 +49,8 @@
       "headingKeywords": {}
     },
     {
-      "title": "Setting up",
-      "layout": "devGuide",
       "src": "devGuide/settingUp.md",
+      "title": "Setting up",
       "headings": {
         "setting-up": "Setting up",
         "prerequisites": "Prerequisites",
@@ -69,20 +59,16 @@
       "headingKeywords": {}
     },
     {
-      "title": "Appendix: Style guides",
-      "layout": "devGuide",
-      "pageNav": "default",
       "src": "devGuide/styleGuides.md",
+      "title": "Appendix: Style guides",
       "headings": {
         "appendix-style-guides": "Appendix: Style guides"
       },
       "headingKeywords": {}
     },
     {
-      "title": "Workflow",
-      "layout": "devGuide",
-      "pageNav": "default",
       "src": "devGuide/workflow.md",
+      "title": "Workflow",
       "headings": {
         "workflow": "Workflow",
         "writing-code": "Writing code",
@@ -97,10 +83,8 @@
       "headingKeywords": {}
     },
     {
-      "title": "Writing Plugins",
-      "layout": "devGuide",
-      "pageNav": "default",
       "src": "devGuide/writingPlugins.md",
+      "title": "Writing Plugins",
       "headings": {
         "writing-plugins": "Writing Plugins",
         "rendering": "Rendering",
@@ -111,11 +95,8 @@
       "headingKeywords": {}
     },
     {
-      "title": "Showcase",
-      "header": "header.md",
-      "footer": "footer.md",
       "src": "showcase.md",
-      "layout": "default",
+      "title": "Showcase",
       "headings": {
         "examples-of-markbind-websites": "Examples of MarkBind Websites",
         "course-websites": "Course Websites",
