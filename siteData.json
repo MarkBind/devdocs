@@ -73,7 +73,6 @@
         "workflow": "Workflow",
         "writing-code": "Writing code",
         "testing": "Testing",
-        "running-tests": "Running tests",
         "updating-and-writing-tests": "Updating and writing tests",
         "adding-test-site-content": "Adding test site content",
         "adding-snapshot-tests-for-components": "Adding snapshot tests for components",
