@@ -17,7 +17,8 @@
         "project-structure": "Project structure",
         "markbind-core-library": "MarkBind core library",
         "markbind-cli": "MarkBind CLI",
-        "ui-components-library": "UI components library"
+        "ui-components-library": "UI components library",
+        "markbind-core-web-library": "MarkBind core-web library"
       },
       "headingKeywords": {}
     },
