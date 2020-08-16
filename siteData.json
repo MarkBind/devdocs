@@ -73,6 +73,8 @@
       "headings": {
         "workflow": "Workflow",
         "writing-code": "Writing code",
+        "general-tips": "General tips",
+        "editing-frontend-features": "Editing frontend features",
         "testing": "Testing",
         "updating-and-writing-tests": "Updating and writing tests",
         "adding-test-site-content": "Adding test site content",
