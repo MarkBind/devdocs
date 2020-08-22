@@ -109,9 +109,42 @@
         </ul>
         <p>MarkBind will call these functions with the respective content, and retrieve a string data that is used for the next step of the page generation process.</p>
         <p>An example of a plugin is shown below. The plugin shows two ways of appending a paragraph of text to a specific <code v-pre>div</code> in the Markdown files:</p>
-        <pre><code class="hljs js" v-pre><span><span class="hljs-comment">// myPlugin.js</span><br></span><span><br></span><span><span class="hljs-keyword">const</span> cheerio = <span class="hljs-built_in">module</span>.parent.require(<span class="hljs-string">'cheerio'</span>);<br></span><span><br></span><span><span class="hljs-built_in">module</span>.exports = {<br></span><span>  preRender: <span class="hljs-function">(<span class="hljs-params">content, pluginContext, frontMatter</span>) =&gt;</span> content.replace(<span class="hljs-string">'[Pre-render Placeholder]'</span>, <span class="hljs-string">`<span class="hljs-subst">${pluginContext.pre}</span>`</span>),<br></span><span>  postRender: <span class="hljs-function">(<span class="hljs-params">content, pluginContext, frontMatter</span>) =&gt;</span> {<br></span><span>    <span class="hljs-keyword">const</span> $ = cheerio.load(content, { <span class="hljs-attr">xmlMode</span>: <span class="hljs-literal">false</span> });<br></span><span>    <span class="hljs-comment">// Modify the page...</span><br></span><span>    $(<span class="hljs-string">'#my-div'</span>).append(pluginContext.post);<br></span><span>    <span class="hljs-keyword">return</span> $.html();<br></span><span>  },<br></span><span>};<br></span></code></pre>
-        <pre><code class="hljs js" v-pre><span><span class="hljs-comment">// site.json</span><br></span><span><br></span><span>{<br></span><span>  ...<br></span><span>  <span class="hljs-string">"plugins"</span>: [<br></span><span>    <span class="hljs-string">"myPlugin"</span><br></span><span>  ],<br></span><span>  <span class="hljs-string">"pluginsContext"</span>: {<br></span><span>    <span class="hljs-string">"myPlugin"</span>: {<br></span><span>      <span class="hljs-string">"pre"</span>: <span class="hljs-string">"&lt;p&gt;Hello&lt;/p&gt;"</span>,<br></span><span>      <span class="hljs-string">"post"</span>: <span class="hljs-string">"&lt;p&gt;Goodbye&lt;/p&gt;"</span><br></span><span>    }<br></span><span>  }<br></span><span>}<br></span></code></pre>
-        <pre><code class="hljs md" v-pre><span>// index.md<br></span><span><br></span><span>...<br></span><span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-div"</span>&gt;</span></span><br></span><span>[Pre-render Placeholder]<br></span><span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></span></code></pre>
+        <pre><code class="hljs js" v-pre><span><span class="hljs-comment">// myPlugin.js</span>
+</span><span>
+</span><span><span class="hljs-keyword">const</span> cheerio = <span class="hljs-built_in">module</span>.parent.require(<span class="hljs-string">'cheerio'</span>);
+</span><span>
+</span><span><span class="hljs-built_in">module</span>.exports = {
+</span><span>  preRender: <span class="hljs-function">(<span class="hljs-params">content, pluginContext, frontMatter</span>) =&gt;</span> content.replace(<span class="hljs-string">'[Pre-render Placeholder]'</span>, <span class="hljs-string">`<span class="hljs-subst">${pluginContext.pre}</span>`</span>),
+</span><span>  postRender: <span class="hljs-function">(<span class="hljs-params">content, pluginContext, frontMatter</span>) =&gt;</span> {
+</span><span>    <span class="hljs-keyword">const</span> $ = cheerio.load(content, { <span class="hljs-attr">xmlMode</span>: <span class="hljs-literal">false</span> });
+</span><span>    <span class="hljs-comment">// Modify the page...</span>
+</span><span>    $(<span class="hljs-string">'#my-div'</span>).append(pluginContext.post);
+</span><span>    <span class="hljs-keyword">return</span> $.html();
+</span><span>  },
+</span><span>};
+</span></code></pre>
+        <pre><code class="hljs js" v-pre><span><span class="hljs-comment">// site.json</span>
+</span><span>
+</span><span>{
+</span><span>  ...
+</span><span>  <span class="hljs-string">"plugins"</span>: [
+</span><span>    <span class="hljs-string">"myPlugin"</span>
+</span><span>  ],
+</span><span>  <span class="hljs-string">"pluginsContext"</span>: {
+</span><span>    <span class="hljs-string">"myPlugin"</span>: {
+</span><span>      <span class="hljs-string">"pre"</span>: <span class="hljs-string">"&lt;p&gt;Hello&lt;/p&gt;"</span>,
+</span><span>      <span class="hljs-string">"post"</span>: <span class="hljs-string">"&lt;p&gt;Goodbye&lt;/p&gt;"</span>
+</span><span>    }
+</span><span>  }
+</span><span>}
+</span></code></pre>
+        <pre><code class="hljs md" v-pre><span>// index.md
+</span><span>
+</span><span>...
+</span><span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-div"</span>&gt;</span></span>
+</span><span>[Pre-render Placeholder]
+</span><span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+</span></code></pre>
         <h2 id="assets">Assets<span id="assets" class="anchor"></span><a class="fa fa-anchor" href="#assets" onclick="event.stopPropagation()"></a></h2>
         <p>Plugins can implement the methods <code v-pre>getLinks</code> and <code v-pre>getScripts</code> to add additional assets to the page.</p>
         <ul>
@@ -150,7 +183,15 @@
             MarkBind will copy these assets into the output directory and change the <code v-pre>src</code> or <code v-pre>href</code> attributes automatically!
           </span></box>
         <p>An example of a plugin which adds links and scripts to the page:</p>
-        <pre><code class="hljs js" v-pre><span><span class="hljs-comment">// myPlugin.js</span><br></span><span><br></span><span><span class="hljs-built_in">module</span>.exports = {<br></span><span>  getLinks: <span class="hljs-function">(<span class="hljs-params">content, pluginContext, frontMatter, utils</span>) =&gt;</span> [utils.buildStylesheet(<span class="hljs-string">'STYLESHEET_LINK'</span>)],<br></span><span>  getScripts: <span class="hljs-function">(<span class="hljs-params">content, pluginContext, frontMatter, utils</span>) =&gt;</span><br></span><span>    [utils.buildScript(<span class="hljs-string">'SCRIPT_LINK'</span>), <span class="hljs-string">'&lt;script&gt;alert("hello")&lt;/script&gt;'</span>],<br></span><span>};<br></span><span><br></span></code></pre>
+        <pre><code class="hljs js" v-pre><span><span class="hljs-comment">// myPlugin.js</span>
+</span><span>
+</span><span><span class="hljs-built_in">module</span>.exports = {
+</span><span>  getLinks: <span class="hljs-function">(<span class="hljs-params">content, pluginContext, frontMatter, utils</span>) =&gt;</span> [utils.buildStylesheet(<span class="hljs-string">'STYLESHEET_LINK'</span>)],
+</span><span>  getScripts: <span class="hljs-function">(<span class="hljs-params">content, pluginContext, frontMatter, utils</span>) =&gt;</span>
+</span><span>    [utils.buildScript(<span class="hljs-string">'SCRIPT_LINK'</span>), <span class="hljs-string">'&lt;script&gt;alert("hello")&lt;/script&gt;'</span>],
+</span><span>};
+</span><span>
+</span></code></pre>
         <p>This will add the following link and script elements to the page:</p>
         <ul>
           <li><code v-pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;STYLESHEET_LINK&quot;&gt;</code></li>
@@ -182,7 +223,13 @@
         </ul>
         <p>Example usage of <code v-pre>getSources</code> from the PlantUML plugin, which allows insertion of PlantUML diagrams using <code v-pre>&lt;puml src=&quot;...&quot; &gt;</code> tags.
           This allows files specified by the <code v-pre>src</code> attributes of <code v-pre>&lt;puml&gt;</code> tags to be watched:</p>
-        <pre><code class="hljs js" v-pre><span>{<br></span><span>  ...<br></span><span>  getSources: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> ({<br></span><span>    tagMap: [[<span class="hljs-string">'puml'</span>, <span class="hljs-string">'src'</span>]],<br></span><span>  })<br></span><span>}<br></span></code></pre>
+        <pre><code class="hljs js" v-pre><span>{
+</span><span>  ...
+</span><span>  getSources: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> ({
+</span><span>    tagMap: [[<span class="hljs-string">'puml'</span>, <span class="hljs-string">'src'</span>]],
+</span><span>  })
+</span><span>}
+</span></code></pre>
         <h2 id="special-tags">Special tags<span id="special-tags" class="anchor"></span><a class="fa fa-anchor" href="#special-tags" onclick="event.stopPropagation()"></a></h2>
         <p>By default, content in html tags are parsed as html and markdown.</p>
         <p>However, you might want to create a plugin that has certain special tags containing conflicting syntax
@@ -224,7 +271,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.15.2</a> on Sat, Aug 22, 2020, 6:13:45 AM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.15.2</a> on Sat, Aug 22, 2020, 8:33:34 AM UTC]</small></div>
     </footer>
   </div>
 </body>
