@@ -92,7 +92,8 @@
         "rendering": "Rendering",
         "assets": "Assets",
         "live-reload": "Live reload",
-        "special-tags": "Special tags"
+        "special-tags": "Special tags",
+        "lifecycle-hooks": "Lifecycle hooks"
       },
       "headingKeywords": {}
     },
