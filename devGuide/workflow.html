@@ -85,7 +85,7 @@
 
       <div id="content-wrapper">
         <div></div>
-        <h1 id="workflow">Workflow<span id="workflow" class="anchor"></span><a class="fa fa-anchor" href="#workflow" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="workflow"><span id="workflow" class="anchor"></span>Workflow<a class="fa fa-anchor" href="#workflow" onclick="event.stopPropagation()"></a></h1>
         <div class="lead">
           <p>Our workflow is mostly based on the guidelines given at <a href="http://se-education.org/guides">se-education.org/guides</a>. This page points to the relevant parts of those guides and provide additional details specific to MarkBind.</p>
         </div>
@@ -96,8 +96,8 @@
           <li>You can refer to the <a href="/devdocs/devGuide/design.html"><em>Design</em></a> page to learn about the design and implementation of MarkBind.</li>
         </ul>
         <p>The sections below has more information about various stages of submitting a PR.</p>
-        <h2 id="writing-code">Writing code<span id="writing-code" class="anchor"></span><a class="fa fa-anchor" href="#writing-code" onclick="event.stopPropagation()"></a></h2>
-        <h4 id="general-tips">General tips<span id="general-tips" class="anchor"></span><a class="fa fa-anchor" href="#general-tips" onclick="event.stopPropagation()"></a></h4>
+        <h2 id="writing-code"><span id="writing-code" class="anchor"></span>Writing code<a class="fa fa-anchor" href="#writing-code" onclick="event.stopPropagation()"></a></h2>
+        <h4 id="general-tips"><span id="general-tips" class="anchor"></span>General tips<a class="fa fa-anchor" href="#general-tips" onclick="event.stopPropagation()"></a></h4>
         <ul>
           <li>
             <p>Use JavaScript ES6 features if possible for better performance, e.g. Promise instead of callback.</p>
@@ -197,7 +197,7 @@
             </b-modal>
           </li>
         </ul>
-        <h4 id="editing-frontend-features">Editing frontend features<span id="editing-frontend-features" class="anchor"></span><a class="fa fa-anchor" href="#editing-frontend-features" onclick="event.stopPropagation()"></a></h4>
+        <h4 id="editing-frontend-features"><span id="editing-frontend-features" class="anchor"></span>Editing frontend features<a class="fa fa-anchor" href="#editing-frontend-features" onclick="event.stopPropagation()"></a></h4>
         <p>We update the frontend <code v-pre>markbind.min.js</code> and <code v-pre>markbind.min.css</code> bundles during release only, and not in pull requests.</p>
         <p>Hence, if you need to view the latest frontend changes (relating to <code v-pre>packages/core-web</code> or <code v-pre>packages/vue-components</code>), you can either:</p>
         <ol>
@@ -207,7 +207,7 @@
             This adds the necessary webpack middlewares to the development server to compile the above bundles,
             and enables live and hot reloading for frontend source files.</li>
         </ol>
-        <h2 id="testing">Testing<span id="testing" class="anchor"></span><a class="fa fa-anchor" href="#testing" onclick="event.stopPropagation()"></a></h2>
+        <h2 id="testing"><span id="testing" class="anchor"></span>Testing<a class="fa fa-anchor" href="#testing" onclick="event.stopPropagation()"></a></h2>
         <p>Our test script does the following:</p>
         <ol>
           <li>Lints the code (<code v-pre>.js</code>, <code v-pre>.vue</code>) and stylesheets (<code v-pre>.css</code>) for any style errors using <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>.</li>
@@ -221,13 +221,13 @@
           </p>
         </box>
         <p></p>
-        <h4 id="updating-and-writing-tests">Updating and writing tests<span id="updating-and-writing-tests" class="anchor"></span><a class="fa fa-anchor" href="#updating-and-writing-tests" onclick="event.stopPropagation()"></a></h4>
+        <h4 id="updating-and-writing-tests"><span id="updating-and-writing-tests" class="anchor"></span>Updating and writing tests<a class="fa fa-anchor" href="#updating-and-writing-tests" onclick="event.stopPropagation()"></a></h4>
         <p>Whether you are adding a new feature, updating existing features or fixing bugs, make sure to update the <strong>source</strong> test files (test sites, snapshots) to reflect the changes.</p>
         <p>After which, you can update the <strong>expected</strong> test files with: <code v-pre>npm run updatetest</code></p>
         <box type="warning" seamless>
           You should always check that the generated output is correct before committing any changes to the test sites.
         </box>
-        <h5 id="adding-test-site-content">Adding test site content<span id="adding-test-site-content" class="anchor"></span><a class="fa fa-anchor" href="#adding-test-site-content" onclick="event.stopPropagation()"></a></h5>
+        <h5 id="adding-test-site-content"><span id="adding-test-site-content" class="anchor"></span>Adding test site content<a class="fa fa-anchor" href="#adding-test-site-content" onclick="event.stopPropagation()"></a></h5>
         <p>When adding new features, you should also add new site content into an existing test site or create a new test site to demonstrate the new feature. This is to ensure that your feature can be tested by building that test site.</p>
         <p>To add a page to an existing test site, for this example, to <code v-pre>test_site</code>:</p>
         <ol>
@@ -274,10 +274,10 @@
           </p>
         </box>
         <p></p>
-        <h5 id="adding-snapshot-tests-for-components">Adding snapshot tests for components<span id="adding-snapshot-tests-for-components" class="anchor"></span><a class="fa fa-anchor" href="#adding-snapshot-tests-for-components" onclick="event.stopPropagation()"></a></h5>
+        <h5 id="adding-snapshot-tests-for-components"><span id="adding-snapshot-tests-for-components" class="anchor"></span>Adding snapshot tests for components<a class="fa fa-anchor" href="#adding-snapshot-tests-for-components" onclick="event.stopPropagation()"></a></h5>
         <p>When making changes to the Vue components in <code v-pre>packages/vue-components</code>, you should add new snapshot tests or adapt existing ones as appropriate.</p>
         <p>Once you're done, be sure to run the <code v-pre>updatetest</code> script mentioned <a href="#updating-and-writing-tests">above</a>!</p>
-        <h2 id="linting">Linting<span id="linting" class="anchor"></span><a class="fa fa-anchor" href="#linting" onclick="event.stopPropagation()"></a></h2>
+        <h2 id="linting"><span id="linting" class="anchor"></span>Linting<a class="fa fa-anchor" href="#linting" onclick="event.stopPropagation()"></a></h2>
         <p>We follow <a href="/devdocs/devGuide/styleGuides.html">our style guides</a>. Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>. Here is a <a href="https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e">gist</a> with an explanation of the ESLint rules chosen in markbind-cli.</p>
         <p>Before making a commit or pull request, you should lint your code by running the following commands from the root of your project:</p>
         <ul>
@@ -290,7 +290,7 @@
           </p>
         </box>
         <p></p>
-        <h2 id="dependency-management">Dependency management<span id="dependency-management" class="anchor"></span><a class="fa fa-anchor" href="#dependency-management" onclick="event.stopPropagation()"></a></h2>
+        <h2 id="dependency-management"><span id="dependency-management" class="anchor"></span>Dependency management<a class="fa fa-anchor" href="#dependency-management" onclick="event.stopPropagation()"></a></h2>
         <p>As mentioned in the <a href="/devdocs/devGuide/settingUp.html#setting-up-the-dev-environment">setting up</a> page, MarkBind uses <a href="https://github.com/lerna/lerna">lerna</a> to manage the dependencies of its <a href="/devdocs/devGuide/design.html">various packages</a>.</p>
         <p>Hence, instead of manually updating the version numbers in the packages' <code v-pre>package.json</code> files, you may consider using the <code v-pre>lerna add</code> <a href="https://github.com/lerna/lerna/tree/master/commands/add#readme">command</a> to speed things up!</p>
         <p>Also, when updating dependencies, ensure that it is updated in <em>all</em> packages using that dependency.</p>
@@ -330,7 +330,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.16.0</a> on Thu, Sep 24, 2020, 2:42:01 PM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.16.0</a> on Fri, Sep 25, 2020, 12:22:41 PM UTC]</small></div>
     </footer>
   </div>
 </body>
