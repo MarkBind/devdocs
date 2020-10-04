@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.min.css">
   <script src="../markbind/js/polyfill.min.js"></script>
   <script src="../markbind/js/vue.min.js"></script>
@@ -112,22 +112,22 @@
               <p>Once done, see these screenshots for sample debugging configurations, and tweak them further to suit your needs.</p>
               <p><strong>1. Using the docs as a development environment</strong>, with:</p>
               <ul class="mb-3">
-                <li>the <a href="https://markbind.org/userGuide/cliCommands.html#serve-command">lazy reload <code v-pre>-o</code></a> option to speed up page building</li>
-                <li>the <code v-pre>-d</code> developer option. (see <a href="/devdocs/devGuide/(#editing-frontend-features)">below</a>)</li>
+                <li>the <a href="https://markbind.org/userGuide/cliCommands.html#serve-command">lazy reload <code class="hljs inline no-lang" v-pre>-o</code></a> option to speed up page building</li>
+                <li>the <code class="hljs inline no-lang" v-pre>-d</code> developer option. (see <a href="/devdocs/devGuide/(#editing-frontend-features)">below</a>)</li>
               </ul>
               <p class="ml-4"><a href="/devdocs/images/debugger/WebStorm_1.png" target="_self"><img src="/devdocs/images/debugger/WebStorm_1.png" alt class="img-fluid"></a></p>
-              <p><strong>2. Debugging all tests</strong> in the <code v-pre>npm run test</code> script:</p>
+              <p><strong>2. Debugging all tests</strong> in the <code class="hljs inline no-lang" v-pre>npm run test</code> script:</p>
               <p class="ml-4"><a href="/devdocs/images/debugger/WebStorm_2.png" target="_self"><img src="/devdocs/images/debugger/WebStorm_2.png" alt class="img-fluid"></a></p>
               <p><strong>3. Debugging only the cli package's tests</strong>:</p>
               <p class="ml-4"><a href="/devdocs/images/debugger/WebStorm_3.png" target="_self"><img src="/devdocs/images/debugger/WebStorm_3.png" alt class="img-fluid"></a></p>
             </b-modal>
             <b-modal id="vs-code-debug" hide-footer size="lg" modal-class="mb-zoom" ref="vs-code-debug"><template slot="modal-title">Debugging Configurations - VS Code</template>
               <p>Refer <a href="https://code.visualstudio.com/docs/editor/debugging">here</a> for a general guide on adding and running debugging configurations in VS Code.</p>
-              <p>In your <code v-pre>.vscode/launch.json</code> file, you may use these sample configurations as a baseline, and tweak them as you see fit.</p>
+              <p>In your <code class="hljs inline no-lang" v-pre>.vscode/launch.json</code> file, you may use these sample configurations as a baseline, and tweak them as you see fit.</p>
               <p><strong>1. Using the docs as a development environment</strong>, with:</p>
               <ul class="mb-3">
-                <li>the <a href="https://markbind.org/userGuide/cliCommands.html#serve-command">lazy reload <code v-pre>-o</code></a> option to speed up page building</li>
-                <li>the <code v-pre>-d</code> developer option. (see <a href="/devdocs/devGuide/(#editing-frontend-features)">below</a>)</li>
+                <li>the <a href="https://markbind.org/userGuide/cliCommands.html#serve-command">lazy reload <code class="hljs inline no-lang" v-pre>-o</code></a> option to speed up page building</li>
+                <li>the <code class="hljs inline no-lang" v-pre>-d</code> developer option. (see <a href="/devdocs/devGuide/(#editing-frontend-features)">below</a>)</li>
               </ul>
               <div class="code-block">
                 <div class="code-block-heading"><span>launch.json</span></div>
@@ -150,7 +150,7 @@
 </span></code></pre>
                 </div>
               </div>
-              <p><strong>2. Debugging all tests</strong> in the <code v-pre>npm run test</code> script:</p>
+              <p><strong>2. Debugging all tests</strong> in the <code class="hljs inline no-lang" v-pre>npm run test</code> script:</p>
               <div class="code-block">
                 <div class="code-block-heading"><span>launch.json</span></div>
                 <div class="code-block-content">
@@ -198,47 +198,47 @@
           </li>
         </ul>
         <h4 id="editing-frontend-features"><span id="editing-frontend-features" class="anchor"></span>Editing frontend features<a class="fa fa-anchor" href="#editing-frontend-features" onclick="event.stopPropagation()"></a></h4>
-        <p>We update the frontend <code v-pre>markbind.min.js</code> and <code v-pre>markbind.min.css</code> bundles during release only, and not in pull requests.</p>
-        <p>Hence, if you need to view the latest frontend changes (relating to <code v-pre>packages/core-web</code> or <code v-pre>packages/vue-components</code>), you can either:</p>
+        <p>We update the frontend <code class="hljs inline no-lang" v-pre>markbind.min.js</code> and <code class="hljs inline no-lang" v-pre>markbind.min.css</code> bundles during release only, and not in pull requests.</p>
+        <p>Hence, if you need to view the latest frontend changes (relating to <code class="hljs inline no-lang" v-pre>packages/core-web</code> or <code class="hljs inline no-lang" v-pre>packages/vue-components</code>), you can either:</p>
         <ol>
-          <li>Run <code v-pre>npm run build:web</code> in the root directory, which builds the above bundles,
+          <li>Run <code class="hljs inline no-lang" v-pre>npm run build:web</code> in the root directory, which builds the above bundles,
             then run your markbind-cli <a href="https://markbind.org/userGuide/cliCommands.html">command</a> of choice.</li>
-          <li>Run <code v-pre>markbind serve -d</code> (with any other applicable options). (<strong>recommended</strong>)<br>
+          <li>Run <code class="hljs inline no-lang" v-pre>markbind serve -d</code> (with any other applicable options). (<strong>recommended</strong>)<br>
             This adds the necessary webpack middlewares to the development server to compile the above bundles,
             and enables live and hot reloading for frontend source files.</li>
         </ol>
         <h2 id="testing"><span id="testing" class="anchor"></span>Testing<a class="fa fa-anchor" href="#testing" onclick="event.stopPropagation()"></a></h2>
         <p>Our test script does the following:</p>
         <ol>
-          <li>Lints the code (<code v-pre>.js</code>, <code v-pre>.vue</code>) and stylesheets (<code v-pre>.css</code>) for any style errors using <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>.</li>
+          <li>Lints the code (<code class="hljs inline no-lang" v-pre>.js</code>, <code class="hljs inline no-lang" v-pre>.vue</code>) and stylesheets (<code class="hljs inline no-lang" v-pre>.css</code>) for any style errors using <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>.</li>
           <li>Runs unit tests for all packages with <a href="https://jestjs.io/">Jest</a>.</li>
-          <li>Builds the test sites whose directory names are listed in <code v-pre>packages/cli/test/functional/testSites.js</code>.</li>
-          <li>For each test site, compares the HTML files generated with the HTML files in its <code v-pre>expected</code> directory.</li>
+          <li>Builds the test sites whose directory names are listed in <code class="hljs inline no-lang" v-pre>packages/cli/test/functional/testSites.js</code>.</li>
+          <li>For each test site, compares the HTML files generated with the HTML files in its <code class="hljs inline no-lang" v-pre>expected</code> directory.</li>
         </ol>
-        <p>To run the test script, use: <code v-pre>npm run test</code></p>
+        <p>To run the test script, use: <code class="hljs inline no-lang" v-pre>npm run test</code></p>
         <box type="tip" seamless>
-          <p>If you only want to run tests for one of the packages (<code v-pre>packages/*</code>), simply switch into the appropriate directory and use <code v-pre>npm run test</code> as well!
+          <p>If you only want to run tests for one of the packages (<code class="hljs inline no-lang" v-pre>packages/*</code>), simply switch into the appropriate directory and use <code class="hljs inline no-lang" v-pre>npm run test</code> as well!
           </p>
         </box>
         <p></p>
         <h4 id="updating-and-writing-tests"><span id="updating-and-writing-tests" class="anchor"></span>Updating and writing tests<a class="fa fa-anchor" href="#updating-and-writing-tests" onclick="event.stopPropagation()"></a></h4>
         <p>Whether you are adding a new feature, updating existing features or fixing bugs, make sure to update the <strong>source</strong> test files (test sites, snapshots) to reflect the changes.</p>
-        <p>After which, you can update the <strong>expected</strong> test files with: <code v-pre>npm run updatetest</code></p>
+        <p>After which, you can update the <strong>expected</strong> test files with: <code class="hljs inline no-lang" v-pre>npm run updatetest</code></p>
         <box type="warning" seamless>
           You should always check that the generated output is correct before committing any changes to the test sites.
         </box>
         <h5 id="adding-test-site-content"><span id="adding-test-site-content" class="anchor"></span>Adding test site content<a class="fa fa-anchor" href="#adding-test-site-content" onclick="event.stopPropagation()"></a></h5>
         <p>When adding new features, you should also add new site content into an existing test site or create a new test site to demonstrate the new feature. This is to ensure that your feature can be tested by building that test site.</p>
-        <p>To add a page to an existing test site, for this example, to <code v-pre>test_site</code>:</p>
+        <p>To add a page to an existing test site, for this example, to <code class="hljs inline no-lang" v-pre>test_site</code>:</p>
         <ol>
           <li>
-            <p>Add a new test page, e.g., <code v-pre>newTestPage.md</code>, containing a demonstration of the new feature.</p>
+            <p>Add a new test page, e.g., <code class="hljs inline no-lang" v-pre>newTestPage.md</code>, containing a demonstration of the new feature.</p>
           </li>
           <li>
-            <p>Open the <code v-pre>site.json</code> corresponding to the test site, i.e. <code v-pre>packages/cli/test/functional/test_site/site.json</code></p>
+            <p>Open the <code class="hljs inline no-lang" v-pre>site.json</code> corresponding to the test site, i.e. <code class="hljs inline no-lang" v-pre>packages/cli/test/functional/test_site/site.json</code></p>
           </li>
           <li>
-            <p>To include the new page, i.e. <code v-pre>newTestPage.md</code>, add it to the <code v-pre>pages</code> array.</p>
+            <p>To include the new page, i.e. <code class="hljs inline no-lang" v-pre>newTestPage.md</code>, add it to the <code class="hljs inline no-lang" v-pre>pages</code> array.</p>
             <div class="code-block">
               <div class="code-block-heading"><span>site.json</span></div>
               <div class="code-block-content">
@@ -266,25 +266,25 @@
             </div>
           </li>
           <li>
-            <p>Update the tests using <code v-pre>npm run updatetest</code>.</p>
+            <p>Update the tests using <code class="hljs inline no-lang" v-pre>npm run updatetest</code>.</p>
           </li>
         </ol>
         <box type="info" seamless>
-          <p>If creating a new test site instead, the directory name of the new test site should be added to <code v-pre>packages/cli/test/functional/testSites.js</code> file.
+          <p>If creating a new test site instead, the directory name of the new test site should be added to <code class="hljs inline no-lang" v-pre>packages/cli/test/functional/testSites.js</code> file.
           </p>
         </box>
         <p></p>
         <h5 id="adding-snapshot-tests-for-components"><span id="adding-snapshot-tests-for-components" class="anchor"></span>Adding snapshot tests for components<a class="fa fa-anchor" href="#adding-snapshot-tests-for-components" onclick="event.stopPropagation()"></a></h5>
-        <p>When making changes to the Vue components in <code v-pre>packages/vue-components</code>, you should add new snapshot tests or adapt existing ones as appropriate.</p>
-        <p>Once you're done, be sure to run the <code v-pre>updatetest</code> script mentioned <a href="#updating-and-writing-tests">above</a>!</p>
+        <p>When making changes to the Vue components in <code class="hljs inline no-lang" v-pre>packages/vue-components</code>, you should add new snapshot tests or adapt existing ones as appropriate.</p>
+        <p>Once you're done, be sure to run the <code class="hljs inline no-lang" v-pre>updatetest</code> script mentioned <a href="#updating-and-writing-tests">above</a>!</p>
         <h2 id="linting"><span id="linting" class="anchor"></span>Linting<a class="fa fa-anchor" href="#linting" onclick="event.stopPropagation()"></a></h2>
         <p>We follow <a href="/devdocs/devGuide/styleGuides.html">our style guides</a>. Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>. Here is a <a href="https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e">gist</a> with an explanation of the ESLint rules chosen in markbind-cli.</p>
         <p>Before making a commit or pull request, you should lint your code by running the following commands from the root of your project:</p>
         <ul>
-          <li>To lint a specific file: <code v-pre>eslint path/to/specificfile.js</code></li>
-          <li>To lint all files: <code v-pre>npm run lint</code></li>
+          <li>To lint a specific file: <code class="hljs inline no-lang" v-pre>eslint path/to/specificfile.js</code></li>
+          <li>To lint all files: <code class="hljs inline no-lang" v-pre>npm run lint</code></li>
         </ul>
-        <p>It is also possible to auto-fix some (not all) style errors, using <code v-pre>npm run lintfix</code>.</p>
+        <p>It is also possible to auto-fix some (not all) style errors, using <code class="hljs inline no-lang" v-pre>npm run lintfix</code>.</p>
         <box type="tip" seamless>
           <p>ESLint has <a href="https://eslint.org/docs/user-guide/integrations">integrations with popular editors</a>. They offer features such as &quot;fix errors on save&quot;, which will make development smoother.
           </p>
@@ -292,7 +292,7 @@
         <p></p>
         <h2 id="dependency-management"><span id="dependency-management" class="anchor"></span>Dependency management<a class="fa fa-anchor" href="#dependency-management" onclick="event.stopPropagation()"></a></h2>
         <p>As mentioned in the <a href="/devdocs/devGuide/settingUp.html#setting-up-the-dev-environment">setting up</a> page, MarkBind uses <a href="https://github.com/lerna/lerna">lerna</a> to manage the dependencies of its <a href="/devdocs/devGuide/design.html">various packages</a>.</p>
-        <p>Hence, instead of manually updating the version numbers in the packages' <code v-pre>package.json</code> files, you may consider using the <code v-pre>lerna add</code> <a href="https://github.com/lerna/lerna/tree/master/commands/add#readme">command</a> to speed things up!</p>
+        <p>Hence, instead of manually updating the version numbers in the packages' <code class="hljs inline no-lang" v-pre>package.json</code> files, you may consider using the <code class="hljs inline no-lang" v-pre>lerna add</code> <a href="https://github.com/lerna/lerna/tree/master/commands/add#readme">command</a> to speed things up!</p>
         <p>Also, when updating dependencies, ensure that it is updated in <em>all</em> packages using that dependency.</p>
         <box type="warning">
           Dependency updates are not trivial, and can be the source of subtle bugs. You should always check the respective dependency changelogs before doing so!
@@ -330,7 +330,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.16.0</a> on Sun, Sep 27, 2020, 7:37:40 AM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.16.0</a> on Sun, Oct 4, 2020, 3:10:21 PM UTC]</small></div>
     </footer>
   </div>
 </body>

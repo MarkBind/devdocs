@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.min.css">
   <script src="../markbind/js/polyfill.min.js"></script>
   <script src="../markbind/js/vue.min.js"></script>
@@ -96,13 +96,13 @@
             <p>The command-line interface (CLI) application, which accepts commands from users and then uses the core library to parse and generate web pages, resides in the root.</p>
           </li>
           <li>
-            <p>The core library, which parses and processes MarkBind's various syntaxes, resides in the <code v-pre>packages/core/</code> directory.</p>
+            <p>The core library, which parses and processes MarkBind's various syntaxes, resides in the <code class="hljs inline no-lang" v-pre>packages/core/</code> directory.</p>
           </li>
           <li>
-            <p>The UI components library, which MarkBind authors can use to create content with complex and interactive structure, resides in the <code v-pre>packages/vue-components/</code> directory.</p>
+            <p>The UI components library, which MarkBind authors can use to create content with complex and interactive structure, resides in the <code class="hljs inline no-lang" v-pre>packages/vue-components/</code> directory.</p>
           </li>
           <li>
-            <p>The core web library, which contains a generated web bundle from various setup scripts and the UI components library, resides in <code v-pre>packages/core-web/</code>.</p>
+            <p>The core web library, which contains a generated web bundle from various setup scripts and the UI components library, resides in <code class="hljs inline no-lang" v-pre>packages/core-web/</code>.</p>
             <p>Stack used: <em>Node.js</em>, <em>Vue.js</em></p>
           </li>
         </ul>
@@ -110,32 +110,32 @@
         <p><strong>The core library mainly houses:</strong></p>
         <ol>
           <li>
-            <p>Various key functionalities in processing a <em>singular</em> page inside <code v-pre>src/Parser</code> that transforms MarkBind syntax into valid html output.</p>
+            <p>Various key functionalities in processing a <em>singular</em> page inside <code class="hljs inline no-lang" v-pre>src/Parser</code> that transforms MarkBind syntax into valid html output.</p>
           </li>
           <li>
-            <p>The <code v-pre>src/Page</code> model, which binds the functionalities exposed by <code v-pre>Parser</code> to generate a <em>single</em> page.</p>
+            <p>The <code class="hljs inline no-lang" v-pre>src/Page</code> model, which binds the functionalities exposed by <code class="hljs inline no-lang" v-pre>Parser</code> to generate a <em>single</em> page.</p>
           </li>
           <li>
-            <p>The <code v-pre>src/Site</code> model, which uses the <code v-pre>Page</code> model's interface to generate pages, and performs various other utility-like functions related to site generation such as copying of external assets into the output folder.</p>
+            <p>The <code class="hljs inline no-lang" v-pre>src/Site</code> model, which uses the <code class="hljs inline no-lang" v-pre>Page</code> model's interface to generate pages, and performs various other utility-like functions related to site generation such as copying of external assets into the output folder.</p>
           </li>
           <li>
-            <p>MarkBind's <a href="https://markbind.org/userGuide/templates.html">templates</a>, used in the <code v-pre>markbind init</code> command.</p>
+            <p>MarkBind's <a href="https://markbind.org/userGuide/templates.html">templates</a>, used in the <code class="hljs inline no-lang" v-pre>markbind init</code> command.</p>
           </li>
         </ol>
         <p><strong>The key external libraries used are:</strong></p>
         <ol>
           <li>
-            <p><a href="https://github.com/markdown-it/markdown-it">markdown-it</a>, which does the Markdown parsing and rendering. There are also several customized markdown-it plugins used in MarkBind, which are located inside the <code v-pre>src/lib/markdown-it/</code> directory.</p>
+            <p><a href="https://github.com/markdown-it/markdown-it">markdown-it</a>, which does the Markdown parsing and rendering. There are also several customized markdown-it plugins used in MarkBind, which are located inside the <code class="hljs inline no-lang" v-pre>src/lib/markdown-it/</code> directory.</p>
           </li>
           <li>
-            <p><a href="https://github.com/fb55/htmlparser2">htmlparser2</a>, a speedy and forgiving html parser which exposes a dom-like object structure to work on. To comply with the markdown spec, and our custom requirements, <code v-pre>src/patches/htmlparser2.js</code> patches various behaviours of this library.</p>
+            <p><a href="https://github.com/fb55/htmlparser2">htmlparser2</a>, a speedy and forgiving html parser which exposes a dom-like object structure to work on. To comply with the markdown spec, and our custom requirements, <code class="hljs inline no-lang" v-pre>src/patches/htmlparser2.js</code> patches various behaviours of this library.</p>
           </li>
           <li>
             <p><a href="https://cheerio.js.org/">cheerio</a>, which is a node.js equivalent of <a href="https://jquery.com/">jQuery</a>. Cheerio uses <a href="https://github.com/fb55/htmlparser2">htmlparser2</a> to parse the html as well, hence our patches propagate here.</p>
           </li>
         </ol>
         <h3 id="markbind-cli"><span id="markbind-cli" class="anchor"></span>MarkBind CLI<a class="fa fa-anchor" href="#markbind-cli" onclick="event.stopPropagation()"></a></h3>
-        <p>The CLI application uses and further builds on the interface exposed by the core library's <code v-pre>Site</code> model to provide functionalities for the author, such as <code v-pre>markbind serve</code> which initiates a live reload workflow.</p>
+        <p>The CLI application uses and further builds on the interface exposed by the core library's <code class="hljs inline no-lang" v-pre>Site</code> model to provide functionalities for the author, such as <code class="hljs inline no-lang" v-pre>markbind serve</code> which initiates a live reload workflow.</p>
         <p>The CLI program is built using <a href="https://github.com/tj/commander.js/">commander.js</a>.</p>
         <h3 id="markbind-core-web-library"><span id="markbind-core-web-library" class="anchor"></span>MarkBind core-web library<a class="fa fa-anchor" href="#markbind-core-web-library" onclick="event.stopPropagation()"></a></h3>
         <p>This package houses the various frontend assets used in the core package.</p>
@@ -169,7 +169,7 @@
     </div>
     <footer>
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.16.0</a> on Sun, Sep 27, 2020, 7:37:40 AM UTC]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.16.0</a> on Sun, Oct 4, 2020, 3:10:21 PM UTC]</small></div>
     </footer>
   </div>
 </body>
