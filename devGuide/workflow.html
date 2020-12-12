@@ -2,7 +2,6 @@
 <html>
 
 <head>
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.17.0">
@@ -20,72 +19,78 @@
   <script src="../markbind/js/markbind.min.js"></script>
   <script src="../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
-  <link rel="stylesheet" href="../markbind/layouts/devGuide/styles.css">
+
+  <link rel="stylesheet" href="/devdocs/css/main.css">
   <link rel="icon" href="/devdocs/favicon.ico">
 </head>
 
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+<body data-spy="scroll" data-target="#mb-page-nav" data-offset="100">
   <div id="app">
-    <header fixed>
-      <link rel="stylesheet" href="/devdocs/css/main.css">
-      <navbar type="dark" class="temp-navbar">
-        <a slot="brand" href="/devdocs/index.html" title="Home" class="navbar-brand"><img src="/devdocs/images/logo-darkbackground.png" height="20"></a>
-        <li><a href="/devdocs/index.html" class="nav-link">HOME</a></li>
+    <div>
+      <header fixed>
+        <navbar type="dark" class=" temp-navbar">
+          <a slot="brand" href="/devdocs/index.html" title="Home" class="navbar-brand"><img src="/devdocs/images/logo-darkbackground.png" height="20"></a>
+          <li><a highlight-on="exact" href="/devdocs/index.html" class="nav-link">HOME</a></li>
 
-        <div tags="environment--dg">
-          <li><a href="/devdocs/devGuide/index.html" class="nav-link">DEVELOPER GUIDE</a></li>
-        </div>
-        <li><a href="/devdocs/showcase.html" class="nav-link">SHOWCASE</a></li>
-        <li><a href="/devdocs/about.html" class="nav-link">ABOUT</a></li>
-        <li>
-          <a href="https://github.com/MarkBind/markbind" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
-        <li slot="right">
-          <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
-          </form>
-        </li>
-      </navbar>
-    </header>
+          <div tags="environment--dg">
+            <li><a highlight-on="sibling-or-child" href="/devdocs/devGuide/index.html" class="nav-link">DEVELOPER GUIDE</a></li>
+          </div>
+          <li><a highlight-on="exact" href="/devdocs/showcase.html" class="nav-link">SHOWCASE</a></li>
+          <li><a highlight-on="exact" href="/devdocs/about.html" class="nav-link">ABOUT</a></li>
+          <li>
+            <a href="https://github.com/MarkBind/markbind" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
+          <li slot="right">
+            <form class="navbar-form">
+              <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            </form>
+          </li>
+        </navbar>
+      </header>
+    </div>
     <div id="flex-body">
-      <nav id="site-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-right-grey nav-inner position-sticky slim-scroll">
-          <p><span style="font-weight: bolder; font-size: 1.25em;">Developer Guide</span></p>
-          <ul class="site-nav-list site-nav-list-root">
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/devGuide.html">Contributing</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/settingUp.html">Setting up</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/workflow.html" class="current">Workflow</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/design.html">Design</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/writingPlugins.html">Writing Plugins</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/projectManagement.html">Project management</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Appendices
-                <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
-              <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/styleGuides.html">Style guides</a></div>
-                </li>
-              </ul>
-            </li>
-          </ul>
+      <nav id="site-nav" class="fixed-header-padding">
+        <div class="site-nav-top">
+          <div class="font-weight-bold mb-2" style="font-size: 1.25rem;">Developer Guide</div>
+        </div>
+        <div class="nav-component slim-scroll">
+          <site-nav>
+            <ul class="site-nav-list site-nav-list-root">
+              <li>
+                <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/devGuide.html">Contributing</a></div>
+              </li>
+              <li>
+                <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/settingUp.html">Setting up</a></div>
+              </li>
+              <li>
+                <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/workflow.html">Workflow</a></div>
+              </li>
+              <li>
+                <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/design.html">Design</a></div>
+              </li>
+              <li>
+                <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/writingPlugins.html">Writing Plugins</a></div>
+              </li>
+              <li>
+                <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/projectManagement.html">Project management</a></div>
+              </li>
+              <li>
+                <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Appendices
+
+                  <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+                <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+                  <li>
+                    <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/styleGuides.html">Style guides</a></div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </site-nav>
         </div>
       </nav>
-
-
-      <div id="content-wrapper">
+      <div id="content-wrapper" class="fixed-header-padding">
         <p><span id="title" class="d-none">Workflow</span></p>
+
         <h1 id="workflow"><span id="workflow" class="anchor"></span>Workflow<a class="fa fa-anchor" href="#workflow" onclick="event.stopPropagation()"></a></h1>
         <div class="lead">
           <p>Our workflow is mostly based on the guidelines given at <a href="http://se-education.org/guides">se-education.org/guides</a>. This page points to the relevant parts of those guides and provide additional details specific to MarkBind.</p>
@@ -298,12 +303,12 @@
         <box type="warning">
           Dependency updates are not trivial, and can be the source of subtle bugs. You should always check the respective dependency changelogs before doing so!
         </box>
-        <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-      <nav id="page-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+      <nav id="page-nav" class="fixed-header-padding">
+        <div class="nav-component slim-scroll">
 
-          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+          <nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap">
             <a class="nav-link py-1" href="#workflow">Workflow&#x200E;</a>
             <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
               <a class="nav-link py-1" href="#writing-code">Writing code&#x200E;</a>
@@ -324,13 +329,17 @@
             </nav>
 
           </nav>
+
         </div>
       </nav>
     </div>
-    <footer>
-      <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.17.0</a> on Fri, Dec 11, 2020, 7:41:37 PM UTC]</small></div>
-    </footer>
+    <div>
+      <footer>
+        <div class="text-center">
+          <small>[Generated by <a href="https://markbind.org/">MarkBind 2.17.0</a> on Sat, Dec 12, 2020, 4:09:21 AM UTC]</small><br>
+          <small>This site is powered by <a href="https://www.netlify.com/">Netlify</a>.</small></div>
+      </footer>
+    </div>
   </div>
 </body>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
@@ -338,7 +347,6 @@
   const baseUrl = '/devdocs'
   MarkBind.setupWithSearch()
 </script>
-<script src="../markbind/layouts/devGuide/scripts.js"></script>
 <script>
   if (MarkBind.AfterSetup) MarkBind.AfterSetup()
 </script>
