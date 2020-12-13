@@ -133,18 +133,18 @@
         <p>An example of a plugin is shown below. The plugin shows two ways of appending a paragraph of text to a specific <code class="hljs inline no-lang" v-pre>div</code> in the Markdown files:</p>
         <pre><code class="hljs js" v-pre><span><span class="hljs-comment">// myPlugin.js</span>
 </span><span>
-</span><span><span class="hljs-keyword">const</span> cheerio = <span class="hljs-built_in">module</span>.parent.require(<span class="hljs-string">'cheerio'</span>);
+</span><span><span class="hljs-keyword">const</span> cheerio = <span class="hljs-built_in">module</span>.parent.require(<span class="hljs-string">&#x27;cheerio&#x27;</span>);
 </span><span>
 </span><span><span class="hljs-built_in">module</span>.exports = {
 </span><span>  processNode: <span class="hljs-function">(<span class="hljs-params">pluginContext, node</span>) =&gt;</span> {
-</span><span>    <span class="hljs-keyword">if</span> (node.attribs.id === <span class="hljs-string">'my-div'</span>) {
+</span><span>    <span class="hljs-keyword">if</span> (node.attribs.id === <span class="hljs-string">&#x27;my-div&#x27;</span>) {
 </span><span>      cheerio(node).append(pluginContext.content);
 </span><span>    }
 </span><span>  },
 </span><span>  postRender: <span class="hljs-function">(<span class="hljs-params">pluginContext, frontMatter, content</span>) =&gt;</span> {
 </span><span>    <span class="hljs-keyword">const</span> $ = cheerio.load(content, { <span class="hljs-attr">xmlMode</span>: <span class="hljs-literal">false</span> });
 </span><span>    <span class="hljs-comment">// Modify the page...</span>
-</span><span>    $(<span class="hljs-string">'#my-div'</span>).append(pluginContext.content);
+</span><span>    $(<span class="hljs-string">&#x27;#my-div&#x27;</span>).append(pluginContext.content);
 </span><span>    <span class="hljs-keyword">return</span> $.html();
 </span><span>  },
 </span><span>};
@@ -153,12 +153,12 @@
 </span><span>
 </span><span>{
 </span><span>  ...
-</span><span>  <span class="hljs-string">"plugins"</span>: [
-</span><span>    <span class="hljs-string">"myPlugin"</span>
+</span><span>  <span class="hljs-string">&quot;plugins&quot;</span>: [
+</span><span>    <span class="hljs-string">&quot;myPlugin&quot;</span>
 </span><span>  ],
-</span><span>  <span class="hljs-string">"pluginsContext"</span>: {
-</span><span>    <span class="hljs-string">"myPlugin"</span>: {
-</span><span>      <span class="hljs-string">"content"</span>: <span class="hljs-string">"&lt;p&gt;Hello World&lt;/p&gt;"</span>,
+</span><span>  <span class="hljs-string">&quot;pluginsContext&quot;</span>: {
+</span><span>    <span class="hljs-string">&quot;myPlugin&quot;</span>: {
+</span><span>      <span class="hljs-string">&quot;content&quot;</span>: <span class="hljs-string">&quot;&lt;p&gt;Hello World&lt;/p&gt;&quot;</span>,
 </span><span>    }
 </span><span>  }
 </span><span>}
@@ -166,7 +166,7 @@
         <pre><code class="hljs md" v-pre><span>// index.md
 </span><span>
 </span><span>...
-</span><span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-div"</span>&gt;</span></span>
+</span><span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;my-div&quot;</span>&gt;</span></span>
 </span><span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
 </span></code></pre>
         <h2 id="assets"><span id="assets" class="anchor"></span>Assets<a class="fa fa-anchor" href="#assets" onclick="event.stopPropagation()"></a></h2>
@@ -200,10 +200,10 @@
         <pre><code class="hljs js" v-pre><span><span class="hljs-comment">// myPlugin.js</span>
 </span><span>
 </span><span><span class="hljs-built_in">module</span>.exports = {
-</span><span>  getLinks: <span class="hljs-function">(<span class="hljs-params">pluginContext, frontMatter, content</span>) =&gt;</span> [<span class="hljs-string">'&lt;link rel="STYLESHEET_LINK"&gt;'</span>],
+</span><span>  getLinks: <span class="hljs-function">(<span class="hljs-params">pluginContext, frontMatter, content</span>) =&gt;</span> [<span class="hljs-string">&#x27;&lt;link rel=&quot;STYLESHEET_LINK&quot;&gt;&#x27;</span>],
 </span><span>  getScripts: <span class="hljs-function">(<span class="hljs-params">pluginContext, frontMatter, content</span>) =&gt;</span> [
-</span><span>    <span class="hljs-string">'&lt;script src="SCRIPT_LINK"&gt;&lt;/script&gt;'</span>,
-</span><span>    <span class="hljs-string">'&lt;script&gt;alert("hello")&lt;/script&gt;'</span>
+</span><span>    <span class="hljs-string">&#x27;&lt;script src=&quot;SCRIPT_LINK&quot;&gt;&lt;/script&gt;&#x27;</span>,
+</span><span>    <span class="hljs-string">&#x27;&lt;script&gt;alert(&quot;hello&quot;)&lt;/script&gt;&#x27;</span>
 </span><span>  ],
 </span><span>};
 </span><span>
@@ -223,7 +223,7 @@
 </span><span>      isSpecial: <span class="hljs-literal">true</span>,
 </span><span>      attributes: [
 </span><span>        {
-</span><span>          name: <span class="hljs-string">'src'</span>,
+</span><span>          name: <span class="hljs-string">&#x27;src&#x27;</span>,
 </span><span>          isRelative: <span class="hljs-literal">true</span>,
 </span><span>          isSourceFile: <span class="hljs-literal">true</span>,
 </span><span>        },
@@ -326,7 +326,7 @@
     <div>
       <footer>
         <div class="text-center">
-          <small>[Generated by <a href="https://markbind.org/">MarkBind 2.17.0</a> on Sun, Dec 13, 2020, 12:46:00 PM UTC]</small><br>
+          <small>[Generated by <a href="https://markbind.org/">MarkBind 2.17.0</a> on Sun, Dec 13, 2020, 1:19:26 PM UTC]</small><br>
           <small>This site is powered by <a href="https://www.netlify.com/">Netlify</a>.</small></div>
       </footer>
     </div>
