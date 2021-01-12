@@ -6,18 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.17.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MarkBind - Design</title>
-  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
-  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
-  <link rel="stylesheet" href="../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css">
-  <link rel="stylesheet" href="../markbind/css/markbind.min.css">
-  <script src="../markbind/js/polyfill.min.js"></script>
-  <script src="../markbind/js/vue.min.js"></script>
-  <script src="../markbind/js/markbind.min.js"></script>
-  <script src="../markbind/js/jquery.min.js"></script>
+  <title>MarkBind - Project Structure</title>
+  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
+  <script src="../../markbind/js/polyfill.min.js"></script>
+  <script src="../../markbind/js/vue.min.js"></script>
+  <script src="../../markbind/js/markbind.min.js"></script>
+  <script src="../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
 
   <link rel="stylesheet" href="/devdocs/css/main.css">
@@ -65,7 +65,18 @@
                 <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/workflow.html">Workflow</a></div>
               </li>
               <li>
-                <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/design.html">Design</a></div>
+                <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Design
+
+                  <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+                <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+                  <li>
+                    <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/design/projectStructure.html">Project Structure</a></div>
+                  </li>
+                  <li>
+                    <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/design/architecture.html">Architecture</a></div>
+                  </li>
+                </ul>
               </li>
               <li>
                 <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/devdocs/devGuide/writingPlugins.html">Writing Plugins</a></div>
@@ -89,13 +100,13 @@
         </div>
       </nav>
       <div id="content-wrapper" class="fixed-header-padding">
-        <p><span id="title" class="d-none">Design</span></p>
+        <p><span id="title" class="d-none">Project Structure</span></p>
 
-        <h1 id="design"><span id="design" class="anchor"></span>Design<a class="fa fa-anchor" href="#design" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="project-structure"><span id="project-structure" class="anchor"></span>Project Structure<a class="fa fa-anchor" href="#project-structure" onclick="event.stopPropagation()"></a></h1>
         <div class="lead">
-          <p>This page gives you an overview of the MarkBind's internal design.</p>
+          <p>This page gives you an overview of the MarkBind's internal project structure.</p>
         </div>
-        <h2 id="project-structure"><span id="project-structure" class="anchor"></span>Project structure<a class="fa fa-anchor" href="#project-structure" onclick="event.stopPropagation()"></a></h2>
+        <h2 id="packages"><span id="packages" class="anchor"></span>Packages<a class="fa fa-anchor" href="#packages" onclick="event.stopPropagation()"></a></h2>
         <p>The MarkBind project is developed in a monorepo (<a href="https://github.com/MarkBind/markbind">MarkBind/markbind</a>) of 4 packages:</p>
         <ul>
           <li>
@@ -156,9 +167,9 @@
         <div class="nav-component slim-scroll">
 
           <nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#design">Design&#x200E;</a>
+            <a class="nav-link py-1" href="#project-structure">Project Structure&#x200E;</a>
             <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#project-structure">Project structure&#x200E;</a>
+              <a class="nav-link py-1" href="#packages">Packages&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                 <a class="nav-link py-1" href="#markbind-core-library">MarkBind core library&#x200E;</a>
                 <a class="nav-link py-1" href="#markbind-cli">MarkBind CLI&#x200E;</a>
@@ -175,13 +186,13 @@
     <div>
       <footer>
         <div class="text-center">
-          <small>[Generated by <a href="https://markbind.org/">MarkBind 2.17.0</a> on Tue, Jan 12, 2021, 9:12:02 AM UTC]</small><br>
+          <small>[Generated by <a href="https://markbind.org/">MarkBind 2.17.0</a> on Tue, Jan 12, 2021, 10:13:14 AM UTC]</small><br>
           <small>This site is powered by <a href="https://www.netlify.com/">Netlify</a>.</small></div>
       </footer>
     </div>
   </div>
 </body>
-<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/devdocs'
   MarkBind.setupWithSearch()

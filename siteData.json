@@ -10,11 +10,21 @@
       "headingKeywords": {}
     },
     {
-      "src": "devGuide/design.md",
-      "title": "Design",
+      "src": "devGuide/design/architecture.md",
+      "title": "Architecture",
       "headings": {
-        "design": "Design",
-        "project-structure": "Project structure",
+        "architecture": "Architecture",
+        "key-classes": "Key classes",
+        "content-processing-flow": "Content processing flow"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "devGuide/design/projectStructure.md",
+      "title": "Project Structure",
+      "headings": {
+        "project-structure": "Project Structure",
+        "packages": "Packages",
         "markbind-core-library": "MarkBind core library",
         "markbind-cli": "MarkBind CLI",
         "markbind-core-web-library": "MarkBind core-web library",
