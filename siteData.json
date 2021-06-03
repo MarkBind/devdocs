@@ -33,6 +33,21 @@
       "headingKeywords": {}
     },
     {
+      "src": "devGuide/design/serverSideRendering.md",
+      "title": "Server Side Rendering",
+      "headings": {
+        "server-side-rendering": "Server Side Rendering",
+        "pre-requisite-knowledge": "Pre-requisite Knowledge",
+        "understanding-vue": "Understanding Vue",
+        "markbind-s-packages": "MarkBind's Packages",
+        "what-is-server-side-rendering-and-why": "What is Server-side Rendering and Why?",
+        "client-side-hydration": "Client-side Hydration",
+        "penalties-of-hydration-issue": "Penalties of Hydration Issue",
+        "avoiding-hydration-issue": "Avoiding Hydration Issue"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "devGuide/devGuide.md",
       "title": "Contributing",
       "headings": {
