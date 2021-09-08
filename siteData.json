@@ -72,7 +72,10 @@
         "managing-prs": "Managing PRs",
         "approval": "Approval",
         "merging": "Merging",
-        "doing-a-release": "Doing a Release"
+        "doing-a-release": "Doing a Release",
+        "acknowledging-contributors": "Acknowledging Contributors",
+        "view-all-contributors": "View all contributors",
+        "add-new-contributors": "Add new contributors"
       },
       "headingKeywords": {}
     },
