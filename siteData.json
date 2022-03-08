@@ -59,12 +59,6 @@
       "headingKeywords": {}
     },
     {
-      "src": "devGuide/index.md",
-      "title": "",
-      "headings": {},
-      "headingKeywords": {}
-    },
-    {
       "src": "devGuide/projectManagement.md",
       "title": "Project management",
       "headings": {
