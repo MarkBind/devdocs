@@ -79,7 +79,8 @@
       "headings": {
         "setting-up": "Setting up",
         "prerequisites": "Prerequisites",
-        "setting-up-the-dev-environment": "Setting up the dev environment"
+        "setting-up-the-dev-environment": "Setting up the dev environment",
+        "common-setup-questions": "Common setup questions"
       },
       "headingKeywords": {}
     },
