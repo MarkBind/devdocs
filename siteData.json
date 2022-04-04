@@ -114,6 +114,25 @@
       "headingKeywords": {}
     },
     {
+      "src": "devGuide/writingComponents.md",
+      "title": "Writing Components",
+      "headings": {
+        "writing-components": "Writing Components",
+        "implementing-components": "Implementing Components",
+        "transforming-the-node-directly": "Transforming the Node Directly",
+        "vue-components": "Vue Components",
+        "as-a-plugin": "As a Plugin",
+        "testing-components": "Testing Components",
+        "additional-considerations": "Additional Considerations",
+        "reactivity": "Reactivity",
+        "ssr": "SSR",
+        "bundle-size": "Bundle size",
+        "dependencies": "Dependencies",
+        "attributes-and-slots": "Attributes and Slots"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "devGuide/writingPlugins.md",
       "title": "Writing Plugins",
       "headings": {
