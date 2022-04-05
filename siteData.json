@@ -59,26 +59,6 @@
       "headingKeywords": {}
     },
     {
-      "src": "devGuide/githubActions/markbindAction.md",
-      "title": "GitHub Actions: markbind-action",
-      "headings": {
-        "github-actions-markbind-action": "GitHub Actions: markbind-action",
-        "setting-up": "Setting Up",
-        "modifying-the-action": "Modifying the action",
-        "testing-the-action": "Testing the action",
-        "release-management": "Release Management"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "devGuide/githubActions/overview.md",
-      "title": "GitHub Actions: Overview",
-      "headings": {
-        "github-actions-overview": "GitHub Actions: Overview"
-      },
-      "headingKeywords": {}
-    },
-    {
       "src": "devGuide/projectManagement.md",
       "title": "Project management",
       "headings": {
