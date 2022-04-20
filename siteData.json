@@ -79,6 +79,23 @@
       "headingKeywords": {}
     },
     {
+      "src": "devGuide/migratingToTypeScript.md",
+      "title": "Migrating to TypeScript",
+      "headings": {
+        "migrating-to-typescript": "Migrating to TypeScript",
+        "migration-steps": "Migration Steps",
+        "step-1-preparation": "Step 1: Preparation",
+        "step-2-and-quot-rename-and-quot-commit": "Step 2: &quot;Rename&quot; Commit",
+        "step-3-and-quot-adapt-and-quot-commit": "Step 3: &quot;Adapt&quot; Commit",
+        "example-of-migrated-works": "Example of Migrated Works",
+        "import-export-syntax-reference": "Import/Export Syntax Reference",
+        "explanation-notes": "Explanation Notes",
+        "why-do-we-need-to-separate-and-quot-rename-and-quot-and-and-quot-adapt-and-quot-commits": "Why do we need to separate &quot;Rename&quot; and &quot;Adapt&quot; commits",
+        "why-do-we-need-a-normal-merge-commit": "Why do we need a normal merge commit"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "devGuide/projectManagement.md",
       "title": "Project management",
       "headings": {
@@ -119,6 +136,7 @@
         "workflow": "Workflow",
         "writing-code": "Writing code",
         "general-tips": "General tips",
+        "editing-backend-features": "Editing backend features",
         "editing-frontend-features": "Editing frontend features",
         "testing": "Testing",
         "updating-and-writing-tests": "Updating and writing tests",
