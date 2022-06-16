@@ -5,7 +5,8 @@
       "src": "about.md",
       "title": "About Us",
       "headings": {
-        "about-us": "About Us"
+        "about-us": "About Us",
+        "contributors": "Contributors ✨"
       },
       "headingKeywords": {}
     },
