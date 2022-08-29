@@ -149,6 +149,8 @@
         "editing-frontend-features": "Editing frontend features",
         "testing": "Testing",
         "updating-and-writing-tests": "Updating and writing tests",
+        "updating-unit-tests": "Updating unit tests",
+        "updating-functional-tests": "Updating functional tests",
         "adding-test-site-content": "Adding test site content",
         "adding-snapshot-tests-for-components": "Adding snapshot tests for components",
         "linting": "Linting",
