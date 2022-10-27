@@ -126,6 +126,7 @@
         "setting-up": "Setting up",
         "prerequisites": "Prerequisites",
         "setting-up-the-dev-environment": "Setting up the dev environment",
+        "setting-up-the-git-hooks-optional-but-recommended": "Setting up the git hooks (optional but recommended)",
         "common-setup-questions": "Common setup questions"
       },
       "headingKeywords": {}
@@ -154,6 +155,7 @@
         "adding-test-site-content": "Adding test site content",
         "adding-snapshot-tests-for-components": "Adding snapshot tests for components",
         "linting": "Linting",
+        "git-hooks": "Git hooks",
         "dependency-management": "Dependency management",
         "to-add-a-dependency": "To add a dependency",
         "to-delete-a-dependency": "To delete a dependency",
