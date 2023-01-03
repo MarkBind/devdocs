@@ -17,6 +17,71 @@
       "headingKeywords": {}
     },
     {
+      "src": "devGuide/bootcamp/contributeToDocs.md",
+      "title": "Contribute to MarkBind Docs",
+      "headings": {
+        "contribute-to-markbind-docs": "Contribute to MarkBind Docs",
+        "tldr": "TLDR",
+        "reviewing-markbind-documentation": "Reviewing MarkBind Documentation",
+        "make-modifications-to-the-documentation": "Make Modifications to the Documentation",
+        "make-a-pull-request-and-amp-verify-the-pr-preview": "Make a Pull Request &amp; Verify the PR Preview",
+        "summary": "Summary"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "devGuide/bootcamp/exploreMarkBind.md",
+      "title": "Explore MarkBind as a User",
+      "headings": {
+        "explore-markbind-as-a-user": "Explore MarkBind as a User",
+        "tldr": "TLDR",
+        "setup-the-master-branch-of-markbind": "Setup the master branch of MarkBind",
+        "create-a-markbind-site": "Create a MarkBind site",
+        "create-content-with-markbind": "Create Content with MarkBind",
+        "modify-site-structure-and-configuration": "Modify Site Structure and Configuration",
+        "deploy-your-markbind-site": "Deploy your MarkBind site",
+        "summary": "Summary"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "devGuide/bootcamp/fixABug.md",
+      "title": "Fix a Bug",
+      "headings": {
+        "fix-a-bug": "Fix a Bug",
+        "tldr": "TLDR",
+        "triage": "Triage",
+        "make-experimental-changes": "Make Experimental Changes",
+        "add-tests": "Add tests",
+        "update-documentation": "Update Documentation",
+        "create-pr-and-amp-follow-up-with-the-reviews": "Create PR &amp; Follow up with the Reviews",
+        "summary": "Summary"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "devGuide/bootcamp/implementAFeature.md",
+      "title": "Implement a New Feature",
+      "headings": {
+        "implement-a-new-feature": "Implement a New Feature",
+        "tldr": "TLDR",
+        "feature-proposal": "Feature Proposal",
+        "design-and-amp-iterate": "Design &amp; Iterate",
+        "add-tests-and-amp-update-documentation": "Add Tests &amp; Update Documentation",
+        "create-pr-and-amp-follow-up-with-the-reviews": "Create PR &amp; Follow up with the Reviews",
+        "summary": "Summary"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "devGuide/bootcamp/intro.md",
+      "title": "Onboarding Bootcamp",
+      "headings": {
+        "onboarding-bootcamp": "Onboarding Bootcamp"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "devGuide/design/architecture.md",
       "title": "Architecture",
       "headings": {
@@ -66,6 +131,91 @@
       "headingKeywords": {}
     },
     {
+      "src": "devGuide/development/migratingToTypeScript.md",
+      "title": "Migrating to TypeScript",
+      "headings": {
+        "migrating-to-typescript": "Migrating to TypeScript",
+        "migration-steps": "Migration Steps",
+        "step-1-preparation": "Step 1: Preparation",
+        "step-2-and-quot-rename-and-quot-commit": "Step 2: &quot;Rename&quot; Commit",
+        "step-3-and-quot-adapt-and-quot-commit": "Step 3: &quot;Adapt&quot; Commit",
+        "example-of-migrated-works": "Example of Migrated Works",
+        "import-export-syntax-reference": "Import/Export Syntax Reference",
+        "explanation-notes": "Explanation Notes",
+        "why-do-we-need-to-separate-and-quot-rename-and-quot-and-and-quot-adapt-and-quot-commits": "Why do we need to separate &quot;Rename&quot; and &quot;Adapt&quot; commits",
+        "why-do-we-need-a-normal-merge-commit": "Why do we need a normal merge commit"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "devGuide/development/settingUp.md",
+      "title": "Setting up",
+      "headings": {
+        "setting-up": "Setting up",
+        "prerequisites": "Prerequisites",
+        "setting-up-the-dev-environment": "Setting up the dev environment",
+        "setting-up-the-git-hooks-optional-but-recommended": "Setting up the git hooks (optional but recommended)",
+        "common-setup-questions": "Common setup questions"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "devGuide/development/workflow.md",
+      "title": "Workflow",
+      "headings": {
+        "workflow": "Workflow",
+        "writing-code": "Writing code",
+        "general-tips": "General tips",
+        "editing-backend-features": "Editing backend features",
+        "editing-frontend-features": "Editing frontend features",
+        "testing": "Testing",
+        "updating-and-writing-tests": "Updating and writing tests",
+        "updating-unit-tests": "Updating unit tests",
+        "updating-functional-tests": "Updating functional tests",
+        "adding-test-site-content": "Adding test site content",
+        "adding-snapshot-tests-for-components": "Adding snapshot tests for components",
+        "linting": "Linting",
+        "git-hooks": "Git hooks",
+        "dependency-management": "Dependency management",
+        "to-add-a-dependency": "To add a dependency",
+        "to-delete-a-dependency": "To delete a dependency",
+        "to-update-a-dependency": "To update a dependency",
+        "points-for-consideration": "Points for consideration"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "devGuide/development/writingComponents.md",
+      "title": "Writing Components",
+      "headings": {
+        "writing-components": "Writing Components",
+        "implementing-components": "Implementing Components",
+        "transforming-the-node-directly": "Transforming the Node Directly",
+        "vue-components": "Vue Components",
+        "as-a-plugin": "As a Plugin",
+        "testing-components": "Testing Components",
+        "additional-considerations": "Additional Considerations",
+        "reactivity": "Reactivity",
+        "ssr": "SSR",
+        "bundle-size": "Bundle size",
+        "dependencies": "Dependencies",
+        "attributes-and-slots": "Attributes and Slots"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "devGuide/development/writingPlugins.md",
+      "title": "Writing Plugins",
+      "headings": {
+        "writing-plugins": "Writing Plugins",
+        "rendering": "Rendering",
+        "assets": "Assets",
+        "tag-behaviour": "Tag Behaviour",
+        "lifecycle-hooks": "Lifecycle hooks"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "devGuide/githubActions/markbindAction.md",
       "title": "GitHub Actions: markbind-action",
       "headings": {
@@ -94,23 +244,6 @@
       "headingKeywords": {}
     },
     {
-      "src": "devGuide/migratingToTypeScript.md",
-      "title": "Migrating to TypeScript",
-      "headings": {
-        "migrating-to-typescript": "Migrating to TypeScript",
-        "migration-steps": "Migration Steps",
-        "step-1-preparation": "Step 1: Preparation",
-        "step-2-and-quot-rename-and-quot-commit": "Step 2: &quot;Rename&quot; Commit",
-        "step-3-and-quot-adapt-and-quot-commit": "Step 3: &quot;Adapt&quot; Commit",
-        "example-of-migrated-works": "Example of Migrated Works",
-        "import-export-syntax-reference": "Import/Export Syntax Reference",
-        "explanation-notes": "Explanation Notes",
-        "why-do-we-need-to-separate-and-quot-rename-and-quot-and-and-quot-adapt-and-quot-commits": "Why do we need to separate &quot;Rename&quot; and &quot;Adapt&quot; commits",
-        "why-do-we-need-a-normal-merge-commit": "Why do we need a normal merge commit"
-      },
-      "headingKeywords": {}
-    },
-    {
       "src": "devGuide/projectManagement.md",
       "title": "Project management",
       "headings": {
@@ -126,78 +259,10 @@
       "headingKeywords": {}
     },
     {
-      "src": "devGuide/settingUp.md",
-      "title": "Setting up",
-      "headings": {
-        "setting-up": "Setting up",
-        "prerequisites": "Prerequisites",
-        "setting-up-the-dev-environment": "Setting up the dev environment",
-        "setting-up-the-git-hooks-optional-but-recommended": "Setting up the git hooks (optional but recommended)",
-        "common-setup-questions": "Common setup questions"
-      },
-      "headingKeywords": {}
-    },
-    {
       "src": "devGuide/styleGuides.md",
       "title": "Appendix: Style guides",
       "headings": {
         "appendix-style-guides": "Appendix: Style guides"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "devGuide/workflow.md",
-      "title": "Workflow",
-      "headings": {
-        "workflow": "Workflow",
-        "writing-code": "Writing code",
-        "general-tips": "General tips",
-        "editing-backend-features": "Editing backend features",
-        "editing-frontend-features": "Editing frontend features",
-        "testing": "Testing",
-        "updating-and-writing-tests": "Updating and writing tests",
-        "updating-unit-tests": "Updating unit tests",
-        "updating-functional-tests": "Updating functional tests",
-        "adding-test-site-content": "Adding test site content",
-        "adding-snapshot-tests-for-components": "Adding snapshot tests for components",
-        "linting": "Linting",
-        "git-hooks": "Git hooks",
-        "dependency-management": "Dependency management",
-        "to-add-a-dependency": "To add a dependency",
-        "to-delete-a-dependency": "To delete a dependency",
-        "to-update-a-dependency": "To update a dependency",
-        "points-for-consideration": "Points for consideration"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "devGuide/writingComponents.md",
-      "title": "Writing Components",
-      "headings": {
-        "writing-components": "Writing Components",
-        "implementing-components": "Implementing Components",
-        "transforming-the-node-directly": "Transforming the Node Directly",
-        "vue-components": "Vue Components",
-        "as-a-plugin": "As a Plugin",
-        "testing-components": "Testing Components",
-        "additional-considerations": "Additional Considerations",
-        "reactivity": "Reactivity",
-        "ssr": "SSR",
-        "bundle-size": "Bundle size",
-        "dependencies": "Dependencies",
-        "attributes-and-slots": "Attributes and Slots"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "devGuide/writingPlugins.md",
-      "title": "Writing Plugins",
-      "headings": {
-        "writing-plugins": "Writing Plugins",
-        "rendering": "Rendering",
-        "assets": "Assets",
-        "tag-behaviour": "Tag Behaviour",
-        "lifecycle-hooks": "Lifecycle hooks"
       },
       "headingKeywords": {}
     },
