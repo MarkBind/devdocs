@@ -18,9 +18,9 @@
     },
     {
       "src": "devGuide/bootcamp/contributeToDocs.md",
-      "title": "Contribute to MarkBind Docs",
+      "title": "Contribute to Documentation",
       "headings": {
-        "contribute-to-markbind-docs": "Contribute to MarkBind Docs",
+        "contribute-to-documentation": "Contribute to Documentation",
         "tldr": "TLDR",
         "reviewing-markbind-documentation": "Reviewing MarkBind Documentation",
         "make-modifications-to-the-documentation": "Make Modifications to the Documentation",
