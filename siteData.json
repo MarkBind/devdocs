@@ -139,11 +139,12 @@
         "step-1-preparation": "Step 1: Preparation",
         "step-2-and-quot-rename-and-quot-commit": "Step 2: &quot;Rename&quot; Commit",
         "step-3-and-quot-adapt-and-quot-commit": "Step 3: &quot;Adapt&quot; Commit",
+        "optional-step-4-changing-the-commit": "(Optional) Step 4: Changing the commit",
         "example-of-migrated-works": "Example of Migrated Works",
         "import-export-syntax-reference": "Import/Export Syntax Reference",
         "explanation-notes": "Explanation Notes",
         "why-do-we-need-to-separate-and-quot-rename-and-quot-and-and-quot-adapt-and-quot-commits": "Why do we need to separate &quot;Rename&quot; and &quot;Adapt&quot; commits",
-        "why-do-we-need-a-normal-merge-commit": "Why do we need a normal merge commit"
+        "why-do-we-need-a-rebase-and-merge-commit": "Why do we need a rebase and merge commit"
       },
       "headingKeywords": {}
     },
