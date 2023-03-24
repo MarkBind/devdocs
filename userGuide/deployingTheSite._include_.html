@@ -47,8 +47,9 @@ Format: <code class="hljs inline no-lang" v-pre>&quot;https://github.com/&lt;org
 <p><strong><code class="hljs inline no-lang" v-pre>branch</code></strong> [Optional. Default: <code class="hljs inline no-lang" v-pre>&quot;gh-pages&quot;</code>]<br>
 The branch that will be deployed to in the remote repo.</p></li></ul></div></panel>
 <br>
-<box type="warning">
-<p><code class="hljs inline no-lang" v-pre>markbind deploy</code> does not generate the static site from your source; it simply deploys the files that are already in the <code class="hljs inline no-lang" v-pre>_site</code> directory. You need to run <code class="hljs inline no-lang" v-pre>markbind build</code> first if you want to generate the site before deploying.</p></box>
+<box type="info">
+<p><code class="hljs inline no-lang" v-pre>markbind deploy</code> generates the static site from your source by default; hence, it is not necessary to run <code class="hljs inline no-lang" v-pre>markbind build</code> first to generate the site before deploying. To skip the site generation, you can use the <code class="hljs inline no-lang" v-pre>--no-build</code> option for <code class="hljs inline no-lang" v-pre>markbind deploy</code>.</p>
+<p>More information can be found in the <a href="/devdocs/userGuide/cliCommands.html">CLI Commands</a> section.</p></box>
 <h3 id="using-ci-platforms"><span id="using-ci-platforms" class="anchor"></span>Using CI Platforms<a class="fa fa-anchor" href="#using-ci-platforms" onclick="event.stopPropagation()"></a></h3>
 <p><strong>You can setup CI Platforms to automatically build and deploy your site on GitHub Pages every time your GitHub repo is updated.</strong></p>
 <panel type="seamless" expanded panelId="generating-a-github-personal-access-token"><template #header><h4 id="generating-a-github-personal-access-token"><span id="generating-a-github-personal-access-token" class="anchor"></span>Generating a GitHub Personal Access Token<a class="fa fa-anchor" href="#generating-a-github-personal-access-token" onclick="event.stopPropagation()"></a></h4></template>
@@ -75,7 +76,6 @@ The branch that will be deployed to in the remote repo.</p></li></ul></div></pan
 </span><span>        <span class="hljs-attr">with:</span>
 </span><span>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">&#x27;14&#x27;</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">i</span> <span class="hljs-string">-g</span> <span class="hljs-string">markbind-cli</span>
-</span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">markbind</span> <span class="hljs-string">build</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">markbind</span> <span class="hljs-string">deploy</span> <span class="hljs-string">--ci</span>
 </span></code></pre><box type="info">
 <p>The sample <code class="hljs inline no-lang" v-pre>deploy.yml</code> workflow above uses the <a href="https://docs.github.com/en/actions/reference/authentication-in-a-workflow">default GitHub Token secret</a> that is generated automatically for each GitHub Actions workflow. You may also use a <a href="#generating-a-github-personal-access-token">GitHub Personal Access Token</a> in place of the default GitHub Token.</p></box>
@@ -195,7 +195,6 @@ If you want Travis CI to only deploy from a specific repository (eg. only from y
 </span><span><span class="hljs-attr">install:</span>
 </span><span>  <span class="hljs-bullet">-</span> <span class="hljs-attr">ps:</span> <span class="hljs-string">Install-Product</span> <span class="hljs-string">node</span> <span class="hljs-string">$env:nodejs_version</span>
 </span><span>  <span class="hljs-bullet">-</span> <span class="hljs-string">npm</span> <span class="hljs-string">i</span> <span class="hljs-string">-g</span> <span class="hljs-string">markbind-cli</span>
-</span><span>  <span class="hljs-bullet">-</span> <span class="hljs-string">markbind</span> <span class="hljs-string">build</span>
 </span><span>  <span class="hljs-bullet">-</span> <span class="hljs-string">markbind</span> <span class="hljs-string">deploy</span> <span class="hljs-string">--ci</span>
 </span><span>
 </span><span><span class="hljs-attr">test:</span> <span class="hljs-string">off</span>
@@ -234,7 +233,6 @@ If you want Travis CI to only deploy from a specific repository (eg. only from y
 </span><span>          <span class="hljs-attr">install-yarn:</span> <span class="hljs-literal">false</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">node</span> <span class="hljs-string">--version</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">i</span> <span class="hljs-string">-g</span> <span class="hljs-string">markbind-cli</span>
-</span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">markbind</span> <span class="hljs-string">build</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">markbind</span> <span class="hljs-string">deploy</span> <span class="hljs-string">--ci</span>
 </span><span><span class="hljs-attr">version:</span> <span class="hljs-number">2.1</span>
 </span><span><span class="hljs-attr">orbs:</span>
