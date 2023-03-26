@@ -1,6 +1,6 @@
 <p><span id="title" class="d-none">Workflow</span></p>
 
-<h1 id="workflow"><span id="workflow" class="anchor"></span>Workflow<a class="fa fa-anchor" href="#workflow" onclick="event.stopPropagation()"></a></h1>
+<h1 id="workflow">Workflow<a class="fa fa-anchor" href="#workflow" onclick="event.stopPropagation()"></a></h1>
 <div class="lead">
 <p>Our workflow is mostly based on the guidelines given at se-education.org/guides. This page points to the relevant parts of those guides and provide additional details specific to MarkBind.</p></div>
 <p><strong>To submit a PR</strong>, follow <a href="https://se-education.org/guides/guidelines/PRs.html">this guide</a>, but note the following:</p>
@@ -9,8 +9,8 @@
 <li>As we squash the commits when merging a PR, there is <mark>no need to follow a strict commit organization or write elaborate commit messages for each commit</mark>.</li>
 <li>You can refer to the <a href="/devdocs/devGuide/design/projectStructure.html"><em>Design</em></a> page to learn about the design and implementation of MarkBind.</li></ul>
 <p>The sections below has more information about various stages of submitting a PR.</p>
-<h2 id="writing-code"><span id="writing-code" class="anchor"></span>Writing code<a class="fa fa-anchor" href="#writing-code" onclick="event.stopPropagation()"></a></h2>
-<h4 id="general-tips"><span id="general-tips" class="anchor"></span>General tips<a class="fa fa-anchor" href="#general-tips" onclick="event.stopPropagation()"></a></h4>
+<h2 id="writing-code">Writing code<a class="fa fa-anchor" href="#writing-code" onclick="event.stopPropagation()"></a></h2>
+<h4 id="general-tips">General tips<a class="fa fa-anchor" href="#general-tips" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>
 <p>Use JavaScript ES6 features if possible for better performance, e.g. Promise instead of callback.</p></li>
@@ -92,7 +92,7 @@
 </span><span>    ]
 </span><span>}
 </span></code></pre></div></div></modal></li></ul>
-<h4 id="editing-backend-features"><span id="editing-backend-features" class="anchor"></span>Editing backend features<a class="fa fa-anchor" href="#editing-backend-features" onclick="event.stopPropagation()"></a></h4>
+<h4 id="editing-backend-features">Editing backend features<a class="fa fa-anchor" href="#editing-backend-features" onclick="event.stopPropagation()"></a></h4>
 <p>Some of our backend code files in <code class="hljs inline no-lang" v-pre>packages/core</code> are written in TypeScript, and you will need to compile those into JavaScript for local execution with our command-line module <code class="hljs inline no-lang" v-pre>packages/cli</code>.</p>
 <p>You can run <code class="hljs inline no-lang" v-pre>npm run build:backend</code> in the root directory to compile the files, but in some cases, it might be tedious to manually execute the command many times. We recommend you to either:</p>
 <ol>
@@ -102,7 +102,7 @@
 <li>
 <p>Configure your IDE to perform automatic compilation on file change/save. (<em>Recommended for general development</em>)</p>
 <p>Refer to your IDE's guides to set this up. For instance, here are the guides for <a href="https://www.jetbrains.com/help/webstorm/compiling-typescript-to-javascript.html#ts_compiler_compile_code_automatically">WebStorm</a> and <a href="https://code.visualstudio.com/docs/typescript/typescript-compiling#_step-2-run-the-typescript-build">Visual Studio Code</a>.</p></li></ol>
-<h4 id="editing-frontend-features"><span id="editing-frontend-features" class="anchor"></span>Editing frontend features<a class="fa fa-anchor" href="#editing-frontend-features" onclick="event.stopPropagation()"></a></h4>
+<h4 id="editing-frontend-features">Editing frontend features<a class="fa fa-anchor" href="#editing-frontend-features" onclick="event.stopPropagation()"></a></h4>
 <p>We update the frontend <code class="hljs inline no-lang" v-pre>markbind.min.js</code> and <code class="hljs inline no-lang" v-pre>markbind.min.css</code> bundles during release only, and not in pull requests.</p>
 <p>Hence, if you need to view the latest frontend changes (relating to <code class="hljs inline no-lang" v-pre>packages/core-web</code> or <code class="hljs inline no-lang" v-pre>packages/vue-components</code>), you can either:</p>
 <ol>
@@ -112,7 +112,7 @@ and enables live and hot reloading for frontend source files.</li>
 <li>Run <code class="hljs inline no-lang" v-pre>npm run build:web</code> in the root directory, which builds the above bundles,
 then run your markbind-cli <a href="https://markbind.org/userGuide/cliCommands.html">command</a> of choice.</li></ol>
 <div id="workflow-testing">
-<h2 id="testing"><span id="testing" class="anchor"></span>Testing<a class="fa fa-anchor" href="#testing" onclick="event.stopPropagation()"></a></h2>
+<h2 id="testing">Testing<a class="fa fa-anchor" href="#testing" onclick="event.stopPropagation()"></a></h2>
 <p>Our test script does the following:</p>
 <ol>
 <li>Lints the code (<code class="hljs inline no-lang" v-pre>.js</code>, <code class="hljs inline no-lang" v-pre>.vue</code>) and stylesheets (<code class="hljs inline no-lang" v-pre>.css</code>) for any style errors using <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>.</li>
@@ -122,17 +122,17 @@ then run your markbind-cli <a href="https://markbind.org/userGuide/cliCommands.h
 <p>To run the test script, use: <code class="hljs inline no-lang" v-pre>npm run test</code></p>
 <box type="tip" seamless>
 <p>If you only want to run tests for one of the packages (<code class="hljs inline no-lang" v-pre>packages/*</code>), simply switch into the appropriate directory and use <code class="hljs inline no-lang" v-pre>npm run test</code> as well!</p></box>
-<h4 id="updating-and-writing-tests"><span id="updating-and-writing-tests" class="anchor"></span>Updating and writing tests<a class="fa fa-anchor" href="#updating-and-writing-tests" onclick="event.stopPropagation()"></a></h4>
-<h5 id="updating-unit-tests"><span id="updating-unit-tests" class="anchor"></span>Updating unit tests<a class="fa fa-anchor" href="#updating-unit-tests" onclick="event.stopPropagation()"></a></h5>
+<h4 id="updating-and-writing-tests">Updating and writing tests<a class="fa fa-anchor" href="#updating-and-writing-tests" onclick="event.stopPropagation()"></a></h4>
+<h5 id="updating-unit-tests">Updating unit tests<a class="fa fa-anchor" href="#updating-unit-tests" onclick="event.stopPropagation()"></a></h5>
 <p>Our unit tests perform fast, stable, and comprehensive checks on important behaviors of our classes and functions. Some existing tests can be found in the <code class="hljs inline no-lang" v-pre>packages/cli/test/unit</code> and <code class="hljs inline no-lang" v-pre>packages/core/test/unit</code> directory. Where appropriate, unit tests should be added/modified to account for any new/changed functionality.</p>
-<h5 id="updating-functional-tests"><span id="updating-functional-tests" class="anchor"></span>Updating functional tests<a class="fa fa-anchor" href="#updating-functional-tests" onclick="event.stopPropagation()"></a></h5>
+<h5 id="updating-functional-tests">Updating functional tests<a class="fa fa-anchor" href="#updating-functional-tests" onclick="event.stopPropagation()"></a></h5>
 <p>Whether you are adding a new feature, updating existing features or fixing bugs, make sure to update the <strong>source</strong> test files (test sites, snapshots) to reflect the changes.</p>
 <p>After which, you can update the <strong>expected</strong> test files with: <code class="hljs inline no-lang" v-pre>npm run updatetest</code></p>
 <box type="warning" seamless>
 <p>You should always check that the generated output is correct before committing any changes to the test sites.</p>
 <p>Note that some binary files such as images (e.g. <code class="hljs inline no-lang" v-pre>inline-output.png</code>) or fonts (e.g. <code class="hljs inline no-lang" v-pre>material-icons-outlined.woff</code>) could show up
 as uncommitted changes due to the way they are generated. If you are not directly modifying those files in your PR, you should <strong>discard those changes</strong> and <strong>do not commit</strong> them.</p></box>
-<h5 id="adding-test-site-content"><span id="adding-test-site-content" class="anchor"></span>Adding test site content<a class="fa fa-anchor" href="#adding-test-site-content" onclick="event.stopPropagation()"></a></h5>
+<h5 id="adding-test-site-content">Adding test site content<a class="fa fa-anchor" href="#adding-test-site-content" onclick="event.stopPropagation()"></a></h5>
 <p>When adding new features, you should also add new site content into an existing test site or create a new test site to demonstrate the new feature. This is to ensure that your feature can be tested by building that test site.</p>
 <p>To add a page to an existing test site, for this example, to <code class="hljs inline no-lang" v-pre>test_site</code>:</p>
 <ol>
@@ -170,10 +170,10 @@ as uncommitted changes due to the way they are generated. If you are not directl
 <p>We do not commit the generated plantuml images in our <code class="hljs inline no-lang" v-pre>test_site</code> to avoid non-related file changes after <code class="hljs inline no-lang" v-pre>npm run updatetest</code>.
 The existing list of images to be ignored is maintained in <code class="hljs inline no-lang" v-pre>packages/cli/test/functional/testSites.js</code> and <code class="hljs inline no-lang" v-pre>.gitignore</code>.
 They should be updated accordingly if you are making changes to the plantuml content in our <code class="hljs inline no-lang" v-pre>test_site</code>.</p></box>
-<h5 id="adding-snapshot-tests-for-components"><span id="adding-snapshot-tests-for-components" class="anchor"></span>Adding snapshot tests for components<a class="fa fa-anchor" href="#adding-snapshot-tests-for-components" onclick="event.stopPropagation()"></a></h5>
+<h5 id="adding-snapshot-tests-for-components">Adding snapshot tests for components<a class="fa fa-anchor" href="#adding-snapshot-tests-for-components" onclick="event.stopPropagation()"></a></h5>
 <p>When making changes to the Vue components in <code class="hljs inline no-lang" v-pre>packages/vue-components</code>, you should add new snapshot tests or adapt existing ones as appropriate.</p>
 <p>Once you're done, be sure to run the <code class="hljs inline no-lang" v-pre>updatetest</code> script mentioned <a href="#updating-and-writing-tests">above</a>!</p></div>
-<h2 id="linting"><span id="linting" class="anchor"></span>Linting<a class="fa fa-anchor" href="#linting" onclick="event.stopPropagation()"></a></h2>
+<h2 id="linting">Linting<a class="fa fa-anchor" href="#linting" onclick="event.stopPropagation()"></a></h2>
 <p>We follow <a href="/devdocs/devGuide/styleGuides.html">our style guides</a>. Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>. Here is a <a href="https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e">gist</a> with an explanation of the ESLint rules chosen in markbind-cli.</p>
 <p>Before making a commit or pull request, you should lint your code by running the following commands from the root of your project:</p>
 <ul>
@@ -182,7 +182,7 @@ They should be updated accordingly if you are making changes to the plantuml con
 <p>It is also possible to auto-fix some (not all) style errors, using <code class="hljs inline no-lang" v-pre>npm run lintfix</code>.</p>
 <box type="tip" seamless>
 <p>ESLint has <a href="https://eslint.org/docs/user-guide/integrations">integrations with popular editors</a>. They offer features such as &quot;fix errors on save&quot;, which will make development smoother.</p></box>
-<h2 id="git-hooks"><span id="git-hooks" class="anchor"></span>Git hooks<a class="fa fa-anchor" href="#git-hooks" onclick="event.stopPropagation()"></a></h2>
+<h2 id="git-hooks">Git hooks<a class="fa fa-anchor" href="#git-hooks" onclick="event.stopPropagation()"></a></h2>
 <p>We have three git hooks in our project. We use <a href="https://pre-commit.com/">pre-commit</a> to manage our git hooks.<br>
 The pre-commit scripts are located in <code class="hljs inline no-lang" v-pre>./pre-commit/pre-commit-scripts</code> and the config is found in <code class="hljs inline no-lang" v-pre>./pre-commit-config.yaml</code>.</p>
 <p>To skip running the pre-commit hook or pre-push hook, you can use the --no-verify flag (e.g. git push --no-verify origin fork_branch).</p>
@@ -190,18 +190,18 @@ The pre-commit scripts are located in <code class="hljs inline no-lang" v-pre>./
 <li><code class="hljs inline no-lang" v-pre>post-checkout</code>: When you checkout to another branch, this hook will run clean and build the backend.</li>
 <li><code class="hljs inline no-lang" v-pre>pre-commit</code>: This hook will run clean, build the backend, and run lintfix on all the files.</li>
 <li><code class="hljs inline no-lang" v-pre>pre-push</code>: This hook will run clean, build the backend, and run all the test cases.</li></ul>
-<h2 id="dependency-management"><span id="dependency-management" class="anchor"></span>Dependency management<a class="fa fa-anchor" href="#dependency-management" onclick="event.stopPropagation()"></a></h2>
+<h2 id="dependency-management">Dependency management<a class="fa fa-anchor" href="#dependency-management" onclick="event.stopPropagation()"></a></h2>
 <p>As mentioned in the <a href="/devdocs/devGuide/development/settingUp.html#setting-up-the-dev-environment">setting up</a> page, MarkBind uses <a href="https://github.com/lerna/lerna">lerna</a> to manage the dependencies of its <a href="/devdocs/devGuide/design/projectStructure.html">various packages</a>.</p>
-<h3 id="to-add-a-dependency"><span id="to-add-a-dependency" class="anchor"></span>To add a dependency<a class="fa fa-anchor" href="#to-add-a-dependency" onclick="event.stopPropagation()"></a></h3>
+<h3 id="to-add-a-dependency">To add a dependency<a class="fa fa-anchor" href="#to-add-a-dependency" onclick="event.stopPropagation()"></a></h3>
 <p>Add your dependency into the appropriate <code class="hljs inline no-lang" v-pre>package.json</code> file inside <code class="hljs inline no-lang" v-pre>packages/*</code>. If this is a development dependency to be used across all packages (e.g. ESLint), add it the the root <code class="hljs inline no-lang" v-pre>package.json</code>.</p>
 <p>Then, simply rerun the <code class="hljs inline no-lang" v-pre>npm run setup</code> command to update the <code class="hljs inline no-lang" v-pre>package-lock.json</code> files.</p>
-<h3 id="to-delete-a-dependency"><span id="to-delete-a-dependency" class="anchor"></span>To delete a dependency<a class="fa fa-anchor" href="#to-delete-a-dependency" onclick="event.stopPropagation()"></a></h3>
+<h3 id="to-delete-a-dependency">To delete a dependency<a class="fa fa-anchor" href="#to-delete-a-dependency" onclick="event.stopPropagation()"></a></h3>
 <p>The safest way is to first remove the particular dependency entry from the <code class="hljs inline no-lang" v-pre>package.json</code> file of the respective directory. Then, run <code class="hljs inline no-lang" v-pre>npm run setup</code> in the root directory to clean up the local dependencies and update the <code class="hljs inline no-lang" v-pre>package-lock.json</code> file.</p>
-<h3 id="to-update-a-dependency"><span id="to-update-a-dependency" class="anchor"></span>To update a dependency<a class="fa fa-anchor" href="#to-update-a-dependency" onclick="event.stopPropagation()"></a></h3>
+<h3 id="to-update-a-dependency">To update a dependency<a class="fa fa-anchor" href="#to-update-a-dependency" onclick="event.stopPropagation()"></a></h3>
 <p>First, follow the instruction to <a href="#to-delete-a-dependency">delete the dependency</a>. Then, follow the instruction to <a href="#to-add-a-dependency">add the latest dependency</a> back. Also, when updating dependencies, ensure that it is updated in <em>all</em> packages using that dependency.</p>
 <box type="warning">
 <p>Dependency updates are not trivial, and can be the source of subtle bugs. You should always check the respective dependency changelogs before doing so!</p></box>
-<h3 id="points-for-consideration"><span id="points-for-consideration" class="anchor"></span>Points for consideration<a class="fa fa-anchor" href="#points-for-consideration" onclick="event.stopPropagation()"></a></h3>
+<h3 id="points-for-consideration">Points for consideration<a class="fa fa-anchor" href="#points-for-consideration" onclick="event.stopPropagation()"></a></h3>
 <p>There are a few ways to incorporate external packages into MarkBind, each with its pros and cons. The following table shows some of the common trade-offs:</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>

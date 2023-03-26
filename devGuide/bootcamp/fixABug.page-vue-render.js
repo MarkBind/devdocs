@@ -8,19 +8,19 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('p',[_c('span',{staticClass:"d-none",attrs:{"id":"title"}},[_v("Fix a Bug")])])}
 },function anonymous(
 ) {
-with(this){return _c('h1',{attrs:{"id":"fix-a-bug"}},[_c('span',{staticClass:"anchor",attrs:{"id":"fix-a-bug"}}),_v("Fix a Bug"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#fix-a-bug","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h1',{attrs:{"id":"fix-a-bug"}},[_v("Fix a Bug"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#fix-a-bug","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('div',{staticClass:"lead"},[_c('p',[_v("Bug fixes are a great way to improve MarkBind. As the project evolves, bugs are inevitably introduced, reported, and waiting to be fixed.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"tldr"}},[_c('span',{staticClass:"anchor",attrs:{"id":"tldr"}}),_v("TLDR"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#tldr","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"tldr"}},[_v("TLDR"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#tldr","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ul',{staticClass:"contains-task-list"},[_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Triage")]),_v(" "),_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Make experimental changes")]),_v(" "),_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Add tests")]),_v(" "),_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Update documentation")]),_v(" "),_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Create PR & Follow up with the reviews")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"triage"}},[_c('span',{staticClass:"anchor",attrs:{"id":"triage"}}),_v("Triage"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#triage","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"triage"}},[_v("Triage"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#triage","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_c('span',{staticClass:"underline"},[_v("Let's suppose we want to fix the bug reported in "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/issues/1954"}},[_v("issue #1954")]),_v(".")])])])}
@@ -38,7 +38,7 @@ with(this){return _c('p',[_v("Now, let's use the test site generated in "),_c('a
 with(this){return _c('ol',[_c('li',[_v("Read the steps to reproduce the bug in the bug report.")]),_v(" "),_c('li',[_v("Copy the markdown content from the bug report into the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("contents/topic1.md")]),_v(" file in the test site.")]),_v(" "),_c('li',[_v("Run "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("markbind serve -d")]),_v(" to serve the test site.")]),_v(" "),_c('li',[_v("View the topic1 page in the browser, and observe the browser console output.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"make-experimental-changes"}},[_c('span',{staticClass:"anchor",attrs:{"id":"make-experimental-changes"}}),_v("Make Experimental Changes"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#make-experimental-changes","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"make-experimental-changes"}},[_v("Make Experimental Changes"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#make-experimental-changes","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("For the given example, the required changes can be found "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/pull/2054/commits/83a3c275732fa4127315b3730f791db5b2f29cb1"}},[_v("here")]),_v(". In gist, changes\nare made to "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/core/src/Page/index.js")]),_v(" and "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/core/src/Page/page.njk")]),_v(" to redefine how "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("hasPageNavHeadings")]),_v(" is computed and used.")])}
@@ -50,7 +50,7 @@ with(this){return _c('pre',[_c('code',{pre:true,attrs:{"class":"hljs bash"}},[_c
 with(this){return _c('ol',[_c('li',[_v("Run "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("markbind serve -d")]),_v(" to serve the test site again.")]),_v(" "),_c('li',[_v("View the topic1 page in the browser, and observe the browser console output.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"add-tests"}},[_c('span',{staticClass:"anchor",attrs:{"id":"add-tests"}}),_v("Add tests"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#add-tests","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"add-tests"}},[_v("Add tests"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#add-tests","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("In this case, we will add a functional test to capture the bug. The required changes can be found "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/pull/2054/commits/c9368a35f8e2eb35ca71cabbe7e455fe05771215"}},[_v("here")]),_v(".")])}
@@ -68,10 +68,10 @@ with(this){return _c('p',[_v("At last, we need to update the expected output via
 with(this){return _c('pre',[_c('code',{pre:true,attrs:{"class":"hljs bash"}},[_c('span',[_v("git checkout b64b632d359d41d9ca662fe15f1de665760becbf\n")])])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"update-documentation"}},[_c('span',{staticClass:"anchor",attrs:{"id":"update-documentation"}}),_v("Update Documentation"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#update-documentation","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"update-documentation"}},[_v("Update Documentation"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#update-documentation","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"create-pr-and-amp-follow-up-with-the-reviews"}},[_c('span',{staticClass:"anchor",attrs:{"id":"create-pr-and-amp-follow-up-with-the-reviews"}}),_v("Create PR & Follow up with the Reviews"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#create-pr-and-amp-follow-up-with-the-reviews","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"create-pr-and-amp-follow-up-with-the-reviews"}},[_v("Create PR & Follow up with the Reviews"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#create-pr-and-amp-follow-up-with-the-reviews","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("Similar to "),_c('a',{attrs:{"href":"/devdocs/devGuide/bootcamp/contributeToDocs.html"}},[_v("Contribute to Documentation")]),_v(", we will need to:")])}
@@ -80,7 +80,7 @@ with(this){return _c('p',[_v("Similar to "),_c('a',{attrs:{"href":"/devdocs/devG
 with(this){return _c('li',[_v("Wait for the CI checks to pass.\n"),_c('ol',[_c('li',[_v("For first-time contributors, you may need to wait for the MarkBind team to approve your PR before the CI checks can run.")])])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"summary"}},[_c('span',{staticClass:"anchor",attrs:{"id":"summary"}}),_v("Summary"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#summary","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"summary"}},[_v("Summary"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#summary","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ul',{staticClass:"contains-task-list"},[_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Review "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/issues/1954"}},[_v("issue #1954")]),_v(" and "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/pull/2054"}},[_v("PR #2054")]),_v(" for the example bug report and fix.")]),_v(" "),_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Look through "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/issues?q=is%3Aissue+sort%3Aupdated-desc+label%3A%22c.Bug+%F0%9F%90%9B%22+is%3Aclosed"}},[_v("closed bug reports")]),_v(" and see how they were fixed.")]),_v(" "),_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Triage "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/issues?q=is%3Aissue+sort%3Aupdated-desc+is%3Aopen+label%3A%22c.Bug+%F0%9F%90%9B%22"}},[_v("open bug reports")]),_v(" and see if you can fix them!")])])}
@@ -89,6 +89,6 @@ with(this){return _c('ul',{staticClass:"contains-task-list"},[_c('li',{staticCla
 with(this){return _c('div',{staticClass:"clearfix"},[_c('p',[_c('span',{staticClass:"float-start"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/bootcamp/contributeToDocs.html"}},[_c('span',[_c('span',{staticClass:"far fa-arrow-alt-circle-left",attrs:{"aria-hidden":"true"}}),_v(" "),_c('span',[_v("Contribute to Documentation")])])])])]),_v(" "),_c('p',[_c('span',{staticClass:"float-end"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/bootcamp/implementAFeature.html"}},[_c('span',[_c('span',[_v("Implement a New Feature")]),_v(" "),_c('span',{staticClass:"far fa-arrow-alt-circle-right",attrs:{"aria-hidden":"true"}})])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sat, 25 Mar 2023, 15:52:42 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
+with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sun, 26 Mar 2023, 16:33:24 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
 }];
   

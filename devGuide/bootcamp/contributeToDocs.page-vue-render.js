@@ -8,19 +8,19 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('p',[_c('span',{staticClass:"d-none",attrs:{"id":"title"}},[_v("Contribute to Documentation")])])}
 },function anonymous(
 ) {
-with(this){return _c('h1',{attrs:{"id":"contribute-to-documentation"}},[_c('span',{staticClass:"anchor",attrs:{"id":"contribute-to-documentation"}}),_v("Contribute to Documentation"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#contribute-to-documentation","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h1',{attrs:{"id":"contribute-to-documentation"}},[_v("Contribute to Documentation"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#contribute-to-documentation","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('div',{staticClass:"lead"},[_c('p',[_v("Making contributions to MarkBind is not limited to code. You can also contribute to our documentation by fixing typos, improving the clarity of our explanations, or adding new content.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"tldr"}},[_c('span',{staticClass:"anchor",attrs:{"id":"tldr"}}),_v("TLDR"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#tldr","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"tldr"}},[_v("TLDR"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#tldr","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ul',{staticClass:"contains-task-list"},[_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Reviewing MarkBind documentation")]),_v(" "),_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Make modifications to the documentation")]),_v(" "),_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Make a pull request & verify the PR preview")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"reviewing-markbind-documentation"}},[_c('span',{staticClass:"anchor",attrs:{"id":"reviewing-markbind-documentation"}}),_v("Reviewing MarkBind Documentation"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#reviewing-markbind-documentation","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"reviewing-markbind-documentation"}},[_v("Reviewing MarkBind Documentation"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#reviewing-markbind-documentation","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("Assuming that you have completed the "),_c('a',{attrs:{"href":"/devdocs/devGuide/bootcamp/exploreMarkBind.html"}},[_v("Explore MarkBind as a user")]),_v(" task, you should have a working local MarkBind setup.")])}
@@ -29,7 +29,7 @@ with(this){return _c('p',[_v("Assuming that you have completed the "),_c('a',{at
 with(this){return _c('ol',[_c('li',[_v("Open the MarkBind repository in your favorite code editor.")]),_v(" "),_c('li',[_v("Change directory to "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("docs")]),_v(" by running "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("cd docs")]),_v(".")]),_v(" "),_c('li',[_v("Serve the documentation in development mode with "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("markbind serve -d")]),_v(".")]),_v(" "),_c('li',[_v("Review both the user guide and the developer guide.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"make-modifications-to-the-documentation"}},[_c('span',{staticClass:"anchor",attrs:{"id":"make-modifications-to-the-documentation"}}),_v("Make Modifications to the Documentation"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#make-modifications-to-the-documentation","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"make-modifications-to-the-documentation"}},[_v("Make Modifications to the Documentation"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#make-modifications-to-the-documentation","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_c('span',{staticClass:"underline"},[_v("Let's suppose we want to change the use of \"Pop-Up\" in our "),_c('a',{attrs:{"href":"/devdocs/userGuide/components/popups.html"}},[_v("user guide")]),_v(" to \"Popup\" (i.e. remove the hyphen).")])])])}
@@ -44,7 +44,7 @@ with(this){return _c('ol',[_c('li',[_v("Check that the issue has been resolved i
 with(this){return _c('ol',[_c('li',[_v("Check out a new branch from the latest master branch.")]),_v(" "),_c('li',[_v("Open the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("docs/userGuide/components/popups.md")]),_v(" file.")]),_v(" "),_c('li',[_v("Replace "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Pop-Up")]),_v("/"),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("pop-up")]),_v(" with "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Popup")]),_v("/"),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("popup")]),_v(" in the file.")]),_v(" "),_c('li',[_v("Update the layout in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("docs/_markbind/layouts/userGuide.md")]),_v(" to modify the site navigation item under "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Using Components")]),_v(" from "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Pop-Ups")]),_v(" to "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Popups")]),_v(".")]),_v(" "),_c('li',[_v("Search for "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Pop-Up")]),_v("/"),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("pop-up")]),_v(" in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("docs")]),_v(" directory to ensure that there are no other occurrences of the word. Else, replace them as well.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"make-a-pull-request-and-amp-verify-the-pr-preview"}},[_c('span',{staticClass:"anchor",attrs:{"id":"make-a-pull-request-and-amp-verify-the-pr-preview"}}),_v("Make a Pull Request & Verify the PR Preview"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#make-a-pull-request-and-amp-verify-the-pr-preview","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"make-a-pull-request-and-amp-verify-the-pr-preview"}},[_v("Make a Pull Request & Verify the PR Preview"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#make-a-pull-request-and-amp-verify-the-pr-preview","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("Once you have made the changes, commit them and push them to your forked repository.\nNow, you can make a pull request targeting the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("master")]),_v(" branch of the MarkBind repository.")])}
@@ -56,7 +56,7 @@ with(this){return _c('li',[_v("Wait for the CI checks to pass.\n"),_c('ol',[_c('
 with(this){return _c('p',[_v("Since this is a hypothetical change, you do not need to raise a PR. You can refer to PR "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/pull/1924"}},[_v("#1924")]),_v(" for an example.")])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"summary"}},[_c('span',{staticClass:"anchor",attrs:{"id":"summary"}}),_v("Summary"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#summary","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"summary"}},[_v("Summary"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#summary","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ul',{staticClass:"contains-task-list"},[_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Review a real documentation change (e.g "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/issues/1772"}},[_v("issue #1772")]),_v(" was resolved in "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/pull/1924"}},[_v("PR #1924")]),_v(" to improve the user guide)")]),_v(" "),_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" Check if there are "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/issues?q=is%3Aopen+label%3A%22a-Documentation+%F0%9F%93%9D%22+sort%3Aupdated-desc"}},[_v("existing issues")]),_v(" tagged with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("a-Documentation")]),_v(" label\n"),_c('ul',{staticClass:"contains-task-list"},[_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" If there are, try to resolve them!")]),_v(" "),_c('li',{staticClass:"task-list-item enabled"},[_c('input',{staticClass:"task-list-item-checkbox",attrs:{"type":"checkbox"}}),_v(" If there are not, raise an issue when you discover a documentation bug or improvement (e.g make this bootcamp documentation better)!")])])])])}
@@ -65,6 +65,6 @@ with(this){return _c('ul',{staticClass:"contains-task-list"},[_c('li',{staticCla
 with(this){return _c('div',{staticClass:"clearfix"},[_c('p',[_c('span',{staticClass:"float-start"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/bootcamp/exploreMarkBind.html"}},[_c('span',[_c('span',{staticClass:"far fa-arrow-alt-circle-left",attrs:{"aria-hidden":"true"}}),_v(" "),_c('span',[_v("Explore MarkBind as a User")])])])])]),_v(" "),_c('p',[_c('span',{staticClass:"float-end"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/bootcamp/fixABug.html"}},[_c('span',[_c('span',[_v("Fix a Bug")]),_v(" "),_c('span',{staticClass:"far fa-arrow-alt-circle-right",attrs:{"aria-hidden":"true"}})])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sat, 25 Mar 2023, 15:52:42 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
+with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sun, 26 Mar 2023, 16:33:24 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
 }];
   

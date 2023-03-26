@@ -8,7 +8,7 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('p',[_c('span',{staticClass:"d-none",attrs:{"id":"title"}},[_v("Workflow")])])}
 },function anonymous(
 ) {
-with(this){return _c('h1',{attrs:{"id":"workflow"}},[_c('span',{staticClass:"anchor",attrs:{"id":"workflow"}}),_v("Workflow"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#workflow","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h1',{attrs:{"id":"workflow"}},[_v("Workflow"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#workflow","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('div',{staticClass:"lead"},[_c('p',[_v("Our workflow is mostly based on the guidelines given at se-education.org/guides. This page points to the relevant parts of those guides and provide additional details specific to MarkBind.")])])}
@@ -20,10 +20,10 @@ with(this){return _c('p',[_c('strong',[_v("To submit a PR")]),_v(", follow "),_c
 with(this){return _c('ul',[_c('li',[_v("You can start by looking through "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22+sort%3Acomments-desc"}},[_v("these issues")]),_v(" marked "),_c('span',{staticClass:"badge",staticStyle:{"color":"white","background-color":"#7057FF"},attrs:{"href":""}},[_v("good first issue")]),_v(". Don't do more than one of them though.")]),_v(" "),_c('li',[_v("As we squash the commits when merging a PR, there is "),_c('mark',[_v("no need to follow a strict commit organization or write elaborate commit messages for each commit")]),_v(".")]),_v(" "),_c('li',[_v("You can refer to the "),_c('a',{attrs:{"href":"/devdocs/devGuide/design/projectStructure.html"}},[_c('em',[_v("Design")])]),_v(" page to learn about the design and implementation of MarkBind.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"writing-code"}},[_c('span',{staticClass:"anchor",attrs:{"id":"writing-code"}}),_v("Writing code"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#writing-code","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"writing-code"}},[_v("Writing code"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#writing-code","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"general-tips"}},[_c('span',{staticClass:"anchor",attrs:{"id":"general-tips"}}),_v("General tips"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#general-tips","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"general-tips"}},[_v("General tips"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#general-tips","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('li',[_c('p',[_v("Use JavaScript ES6 features if possible for better performance, e.g. Promise instead of callback.")])])}
@@ -32,7 +32,7 @@ with(this){return _c('li',[_c('p',[_v("Use JavaScript ES6 features if possible f
 with(this){return _c('li',[_c('p',[_v("Do note "),_c('a',{attrs:{"href":"/devdocs/devGuide/styleGuides.html"}},[_v("our style guides")]),_v(".")])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"editing-backend-features"}},[_c('span',{staticClass:"anchor",attrs:{"id":"editing-backend-features"}}),_v("Editing backend features"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#editing-backend-features","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"editing-backend-features"}},[_v("Editing backend features"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#editing-backend-features","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("Some of our backend code files in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/core")]),_v(" are written in TypeScript, and you will need to compile those into JavaScript for local execution with our command-line module "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/cli")]),_v(".")])}
@@ -44,7 +44,7 @@ with(this){return _c('p',[_v("You can run "),_c('code',{pre:true,attrs:{"class":
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Run "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm run dev")]),_v(" in the root directory. ("),_c('em',[_v("Recommended for TypeScript migration")]),_v(")")]),_v(" "),_c('p',[_v("This command starts the compiler's file watcher which will rebuild the relavant files when file changes are detected.")])]),_v(" "),_c('li',[_c('p',[_v("Configure your IDE to perform automatic compilation on file change/save. ("),_c('em',[_v("Recommended for general development")]),_v(")")]),_v(" "),_c('p',[_v("Refer to your IDE's guides to set this up. For instance, here are the guides for "),_c('a',{attrs:{"href":"https://www.jetbrains.com/help/webstorm/compiling-typescript-to-javascript.html#ts_compiler_compile_code_automatically"}},[_v("WebStorm")]),_v(" and "),_c('a',{attrs:{"href":"https://code.visualstudio.com/docs/typescript/typescript-compiling#_step-2-run-the-typescript-build"}},[_v("Visual Studio Code")]),_v(".")])])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"editing-frontend-features"}},[_c('span',{staticClass:"anchor",attrs:{"id":"editing-frontend-features"}}),_v("Editing frontend features"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#editing-frontend-features","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"editing-frontend-features"}},[_v("Editing frontend features"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#editing-frontend-features","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("We update the frontend "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("markbind.min.js")]),_v(" and "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("markbind.min.css")]),_v(" bundles during release only, and not in pull requests.")])}
@@ -56,7 +56,7 @@ with(this){return _c('p',[_v("Hence, if you need to view the latest frontend cha
 with(this){return _c('ol',[_c('li',[_v("Run "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("markbind serve -d")]),_v(" (with any other applicable options). ("),_c('strong',[_v("recommended")]),_v(")"),_c('br'),_v("\nThis adds the necessary webpack middlewares to the development server to compile the above bundles,\nand enables live and hot reloading for frontend source files.")]),_v(" "),_c('li',[_v("Run "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm run build:web")]),_v(" in the root directory, which builds the above bundles,\nthen run your markbind-cli "),_c('a',{attrs:{"href":"https://markbind.org/userGuide/cliCommands.html"}},[_v("command")]),_v(" of choice.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"testing"}},[_c('span',{staticClass:"anchor",attrs:{"id":"testing"}}),_v("Testing"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#testing","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"testing"}},[_v("Testing"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#testing","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ol',[_c('li',[_v("Lints the code ("),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".js")]),_v(", "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".vue")]),_v(") and stylesheets ("),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".css")]),_v(") for any style errors using "),_c('a',{attrs:{"href":"https://eslint.org/"}},[_v("ESLint")]),_v(" and "),_c('a',{attrs:{"href":"https://stylelint.io/"}},[_v("StyleLint")]),_v(".")]),_v(" "),_c('li',[_v("Runs unit tests for all packages with "),_c('a',{attrs:{"href":"https://jestjs.io/"}},[_v("Jest")]),_v(".")]),_v(" "),_c('li',[_v("Builds the test sites whose directory names are listed in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/cli/test/functional/testSites.js")]),_v(".")]),_v(" "),_c('li',[_v("For each test site, compares the HTML files generated with the HTML files in its "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("expected")]),_v(" directory.")])])}
@@ -65,16 +65,16 @@ with(this){return _c('ol',[_c('li',[_v("Lints the code ("),_c('code',{pre:true,a
 with(this){return _c('p',[_v("To run the test script, use: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm run test")])])}
 },function anonymous(
 ) {
-with(this){return _c('h4',{attrs:{"id":"updating-and-writing-tests"}},[_c('span',{staticClass:"anchor",attrs:{"id":"updating-and-writing-tests"}}),_v("Updating and writing tests"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#updating-and-writing-tests","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h4',{attrs:{"id":"updating-and-writing-tests"}},[_v("Updating and writing tests"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#updating-and-writing-tests","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('h5',{attrs:{"id":"updating-unit-tests"}},[_c('span',{staticClass:"anchor",attrs:{"id":"updating-unit-tests"}}),_v("Updating unit tests"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#updating-unit-tests","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h5',{attrs:{"id":"updating-unit-tests"}},[_v("Updating unit tests"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#updating-unit-tests","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("Our unit tests perform fast, stable, and comprehensive checks on important behaviors of our classes and functions. Some existing tests can be found in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/cli/test/unit")]),_v(" and "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/core/test/unit")]),_v(" directory. Where appropriate, unit tests should be added/modified to account for any new/changed functionality.")])}
 },function anonymous(
 ) {
-with(this){return _c('h5',{attrs:{"id":"updating-functional-tests"}},[_c('span',{staticClass:"anchor",attrs:{"id":"updating-functional-tests"}}),_v("Updating functional tests"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#updating-functional-tests","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h5',{attrs:{"id":"updating-functional-tests"}},[_v("Updating functional tests"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#updating-functional-tests","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("Whether you are adding a new feature, updating existing features or fixing bugs, make sure to update the "),_c('strong',[_v("source")]),_v(" test files (test sites, snapshots) to reflect the changes.")])}
@@ -83,7 +83,7 @@ with(this){return _c('p',[_v("Whether you are adding a new feature, updating exi
 with(this){return _c('p',[_v("After which, you can update the "),_c('strong',[_v("expected")]),_v(" test files with: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm run updatetest")])])}
 },function anonymous(
 ) {
-with(this){return _c('h5',{attrs:{"id":"adding-test-site-content"}},[_c('span',{staticClass:"anchor",attrs:{"id":"adding-test-site-content"}}),_v("Adding test site content"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#adding-test-site-content","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h5',{attrs:{"id":"adding-test-site-content"}},[_v("Adding test site content"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#adding-test-site-content","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("To add a page to an existing test site, for this example, to "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("test_site")]),_v(":")])}
@@ -92,7 +92,7 @@ with(this){return _c('p',[_v("To add a page to an existing test site, for this e
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Add a new test page, e.g., "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("newTestPage.md")]),_v(", containing a demonstration of the new feature.")])]),_v(" "),_c('li',[_c('p',[_v("Open the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("site.json")]),_v(" corresponding to the test site, i.e. "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/cli/test/functional/test_site/site.json")])])]),_v(" "),_c('li',[_c('p',[_v("To include the new page, i.e. "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("newTestPage.md")]),_v(", add it to the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("pages")]),_v(" array.")]),_v(" "),_c('div',{staticClass:"code-block"},[_c('div',{staticClass:"code-block-heading"},[_c('span',[_v("site.json")])]),_c('div',{staticClass:"code-block-content"},[_c('pre',[_c('code',{pre:true,attrs:{"heading":"site.json","class":"hljs"}},[_c('span',[_v("\"pages\": [\n")]),_c('span',[_v("  {\n")]),_c('span',[_v("    \"src\": \"index.md\",\n")]),_c('span',[_v("    \"title\": \"Hello World\",\n")]),_c('span',[_v("    \"frontmatter\": {\n")]),_c('span',[_v("      \"frontmatterOverrideProperty\": \"Overridden by frontmatter override\",\n")]),_c('span',[_v("      \"globalAndFrontmatterOverrideProperty\":  \"Overridden by frontmatter override\"\n")]),_c('span',[_v("    }\n")]),_c('span',[_v("  },\n")]),_c('span',[_v("  ...\n")]),_c('span',[_v("  {\n")]),_c('span',[_v("    \"src\": \"testLayouts.md\",\n")]),_c('span',[_v("    \"title\": \"Hello World\"\n")]),_c('span',[_v("  },\n")]),_c('span',[_v("  {,\n")]),_c('span',[_v("    "),_c('span',{pre:true,attrs:{"class":"highlighted"}},[_v("\"src\": \"newTestPage.md\",")]),_v("\n")]),_c('span',[_v("    "),_c('span',{pre:true,attrs:{"class":"highlighted"}},[_v("\"title\": [some title you see fit]")]),_v("\n")]),_c('span',[_v("  },\n")]),_c('span',[_v("  ...\n")])])])])])]),_v(" "),_c('li',[_c('p',[_v("Update the tests using "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm run updatetest")]),_v(".")])])])}
 },function anonymous(
 ) {
-with(this){return _c('h5',{attrs:{"id":"adding-snapshot-tests-for-components"}},[_c('span',{staticClass:"anchor",attrs:{"id":"adding-snapshot-tests-for-components"}}),_v("Adding snapshot tests for components"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#adding-snapshot-tests-for-components","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h5',{attrs:{"id":"adding-snapshot-tests-for-components"}},[_v("Adding snapshot tests for components"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#adding-snapshot-tests-for-components","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("When making changes to the Vue components in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/vue-components")]),_v(", you should add new snapshot tests or adapt existing ones as appropriate.")])}
@@ -101,7 +101,7 @@ with(this){return _c('p',[_v("When making changes to the Vue components in "),_c
 with(this){return _c('p',[_v("Once you're done, be sure to run the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("updatetest")]),_v(" script mentioned "),_c('a',{attrs:{"href":"#updating-and-writing-tests"}},[_v("above")]),_v("!")])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"linting"}},[_c('span',{staticClass:"anchor",attrs:{"id":"linting"}}),_v("Linting"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#linting","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"linting"}},[_v("Linting"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#linting","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("We follow "),_c('a',{attrs:{"href":"/devdocs/devGuide/styleGuides.html"}},[_v("our style guides")]),_v(". Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is "),_c('a',{attrs:{"href":"https://eslint.org/"}},[_v("ESLint")]),_v(" and "),_c('a',{attrs:{"href":"https://stylelint.io/"}},[_v("StyleLint")]),_v(". Here is a "),_c('a',{attrs:{"href":"https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e"}},[_v("gist")]),_v(" with an explanation of the ESLint rules chosen in markbind-cli.")])}
@@ -113,7 +113,7 @@ with(this){return _c('ul',[_c('li',[_v("To lint a specific file: "),_c('code',{p
 with(this){return _c('p',[_v("It is also possible to auto-fix some (not all) style errors, using "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm run lintfix")]),_v(".")])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"git-hooks"}},[_c('span',{staticClass:"anchor",attrs:{"id":"git-hooks"}}),_v("Git hooks"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#git-hooks","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"git-hooks"}},[_v("Git hooks"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#git-hooks","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("We have three git hooks in our project. We use "),_c('a',{attrs:{"href":"https://pre-commit.com/"}},[_v("pre-commit")]),_v(" to manage our git hooks."),_c('br'),_v("\nThe pre-commit scripts are located in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("./pre-commit/pre-commit-scripts")]),_v(" and the config is found in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("./pre-commit-config.yaml")]),_v(".")])}
@@ -122,13 +122,13 @@ with(this){return _c('p',[_v("We have three git hooks in our project. We use "),
 with(this){return _c('ul',[_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("post-checkout")]),_v(": When you checkout to another branch, this hook will run clean and build the backend.")]),_v(" "),_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("pre-commit")]),_v(": This hook will run clean, build the backend, and run lintfix on all the files.")]),_v(" "),_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("pre-push")]),_v(": This hook will run clean, build the backend, and run all the test cases.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"dependency-management"}},[_c('span',{staticClass:"anchor",attrs:{"id":"dependency-management"}}),_v("Dependency management"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#dependency-management","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"dependency-management"}},[_v("Dependency management"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#dependency-management","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("As mentioned in the "),_c('a',{attrs:{"href":"/devdocs/devGuide/development/settingUp.html#setting-up-the-dev-environment"}},[_v("setting up")]),_v(" page, MarkBind uses "),_c('a',{attrs:{"href":"https://github.com/lerna/lerna"}},[_v("lerna")]),_v(" to manage the dependencies of its "),_c('a',{attrs:{"href":"/devdocs/devGuide/design/projectStructure.html"}},[_v("various packages")]),_v(".")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"to-add-a-dependency"}},[_c('span',{staticClass:"anchor",attrs:{"id":"to-add-a-dependency"}}),_v("To add a dependency"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#to-add-a-dependency","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"to-add-a-dependency"}},[_v("To add a dependency"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#to-add-a-dependency","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("Add your dependency into the appropriate "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("package.json")]),_v(" file inside "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/*")]),_v(". If this is a development dependency to be used across all packages (e.g. ESLint), add it the the root "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("package.json")]),_v(".")])}
@@ -137,19 +137,19 @@ with(this){return _c('p',[_v("Add your dependency into the appropriate "),_c('co
 with(this){return _c('p',[_v("Then, simply rerun the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm run setup")]),_v(" command to update the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("package-lock.json")]),_v(" files.")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"to-delete-a-dependency"}},[_c('span',{staticClass:"anchor",attrs:{"id":"to-delete-a-dependency"}}),_v("To delete a dependency"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#to-delete-a-dependency","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"to-delete-a-dependency"}},[_v("To delete a dependency"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#to-delete-a-dependency","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("The safest way is to first remove the particular dependency entry from the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("package.json")]),_v(" file of the respective directory. Then, run "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm run setup")]),_v(" in the root directory to clean up the local dependencies and update the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("package-lock.json")]),_v(" file.")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"to-update-a-dependency"}},[_c('span',{staticClass:"anchor",attrs:{"id":"to-update-a-dependency"}}),_v("To update a dependency"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#to-update-a-dependency","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"to-update-a-dependency"}},[_v("To update a dependency"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#to-update-a-dependency","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("First, follow the instruction to "),_c('a',{attrs:{"href":"#to-delete-a-dependency"}},[_v("delete the dependency")]),_v(". Then, follow the instruction to "),_c('a',{attrs:{"href":"#to-add-a-dependency"}},[_v("add the latest dependency")]),_v(" back. Also, when updating dependencies, ensure that it is updated in "),_c('em',[_v("all")]),_v(" packages using that dependency.")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"points-for-consideration"}},[_c('span',{staticClass:"anchor",attrs:{"id":"points-for-consideration"}}),_v("Points for consideration"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#points-for-consideration","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"points-for-consideration"}},[_v("Points for consideration"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#points-for-consideration","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('div',{staticClass:"table-responsive"},[_c('table',{staticClass:"markbind-table table table-bordered table-striped"},[_c('thead',[_c('tr',[_c('th',{staticStyle:{"text-align":"left"}},[_v("Approach")]),_v(" "),_c('th',{staticStyle:{"text-align":"left"}},[_v("Pros")]),_v(" "),_c('th',{staticStyle:{"text-align":"left"}},[_v("Cons")])])]),_v(" "),_c('tbody',[_c('tr',[_c('td',{staticStyle:{"text-align":"left"}},[_v("Installing")]),_v(" "),_c('td',{staticStyle:{"text-align":"left"}},[_c('ul',[_c('li',[_v("Ease of upgrade")]),_c('li',[_v("Traceable in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("package.json")])])])]),_v(" "),_c('td',{staticStyle:{"text-align":"left"}},[_c('ul',[_c('li',[_v("May not satisfy custom behavior")]),_c('li',[_v("Become vulnerable if the source repo is no longer actively maintained")])])])]),_v(" "),_c('tr',[_c('td',{staticStyle:{"text-align":"left"}},[_v("Forking")]),_v(" "),_c('td',{staticStyle:{"text-align":"left"}},[_c('ul',[_c('li',[_v("Relatively easy to upgrade")]),_c('li',[_v("Leverage upstream testing procedures")]),_c('li',[_v("Benefit others who share the same use cases")])])]),_v(" "),_c('td',{staticStyle:{"text-align":"left"}},[_c('ul',[_c('li',[_v("May become out-of-sync with the latest version")]),_c('li',[_v("Difficult to maintain it externally in the long run")])])])]),_v(" "),_c('tr',[_c('td',{staticStyle:{"text-align":"left"}},[_v("Patching")]),_v(" "),_c('td',{staticStyle:{"text-align":"left"}},[_c('ul',[_c('li',[_v("Quick - no need to maintain / publish more npm packages or setup release procedures etc")]),_c('li',[_v("Ensure the changes propagate to other dependencies")]),_c('li',[_v("Enjoy the benefits of monorepo")])])]),_v(" "),_c('td',{staticStyle:{"text-align":"left"}},[_c('ul',[_c('li',[_v("Difficult to upgrade")])])])])])])])}
@@ -161,6 +161,6 @@ with(this){return _c('ul',[_c('li',[_v("Is the package actively maintained?")]),
 with(this){return _c('div',{staticClass:"clearfix"},[_c('p',[_c('span',{staticClass:"float-start"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/development/settingUp.html"}},[_c('span',[_c('span',{staticClass:"far fa-arrow-alt-circle-left",attrs:{"aria-hidden":"true"}}),_v(" "),_c('span',[_v("Setting up")])])])])]),_v(" "),_c('p',[_c('span',{staticClass:"float-end"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/development/writingComponents.html"}},[_c('span',[_c('span',[_v("Writing Components")]),_v(" "),_c('span',{staticClass:"far fa-arrow-alt-circle-right",attrs:{"aria-hidden":"true"}})])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sat, 25 Mar 2023, 15:52:42 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
+with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sun, 26 Mar 2023, 16:33:24 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
 }];
   

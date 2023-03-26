@@ -8,19 +8,19 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('p',[_c('span',{staticClass:"d-none",attrs:{"id":"title"}},[_v("Project management")])])}
 },function anonymous(
 ) {
-with(this){return _c('h1',{attrs:{"id":"project-management"}},[_c('span',{staticClass:"anchor",attrs:{"id":"project-management"}}),_v("Project management"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#project-management","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h1',{attrs:{"id":"project-management"}},[_v("Project management"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#project-management","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('div',{staticClass:"lead"},[_c('p',[_v("This page contains information about project management tasks. The target audience is senior developers (and above).")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"managing-prs"}},[_c('span',{staticClass:"anchor",attrs:{"id":"managing-prs"}}),_v("Managing PRs"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#managing-prs","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"managing-prs"}},[_v("Managing PRs"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#managing-prs","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("For general best practices, refer to the guide "),_c('a',{attrs:{"href":"https://se-education.org/guides/guidelines/PRs.html"}},[_c('em',[_v("Working with PRs")]),_v(" @SE-EDU")]),_v(".")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"approval"}},[_c('span',{staticClass:"anchor",attrs:{"id":"approval"}}),_v("Approval"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#approval","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"approval"}},[_v("Approval"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#approval","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('li',[_c('p',[_c('strong',[_v("If the PR is very simple")]),_v(" (e.g. correcting a simple typo), one approval is sufficient for merging. Other PRs need two approvals.")])])}
@@ -32,7 +32,7 @@ with(this){return _c('p',[_c('strong',[_v("Once the first approval is given")]),
 with(this){return _c('p',[_c('strong',[_v("Once the second approval is given")]),_v(" from a "),_c('mark',[_v("senior developer")]),_v(" (or there are >= 3 approvals given from anyone), the PR can be merged immediately."),_c('br'),_v("\nIf there is no second approval yet, wait for a day before merging the PR without the second approval.")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"merging"}},[_c('span',{staticClass:"anchor",attrs:{"id":"merging"}}),_v("Merging"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#merging","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"merging"}},[_v("Merging"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#merging","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Re-sync the PR branch with master to trigger the CI pipeline.")])])}
@@ -50,7 +50,7 @@ with(this){return _c('p',[_v("Tip: how to "),_c('strong',[_v("undo an accidental
 with(this){return _c('ul',[_c('li',[_v("In the event of a wrong commit strategy chosen, you can undo the merge to master by:\n"),_c('ol',[_c('li',[_v("Switch to the master branch locally.")]),_v(" "),_c('li',[_v("Run "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("git reset --hard HEAD~1")]),_v(".")]),_v(" "),_c('li',[_v("Run "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("git push --force")]),_v(".")]),_v(" "),_c('li',[_v("Create a new PR from the previous PR branch and merge the PR with the correct merge strategy.")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"doing-a-release"}},[_c('span',{staticClass:"anchor",attrs:{"id":"doing-a-release"}}),_v("Doing a Release"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#doing-a-release","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"doing-a-release"}},[_v("Doing a Release"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#doing-a-release","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('li',[_c('p',[_c('strong',[_v("Make sure to start with a \"clean slate\"")]),_v(" by running "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npx lerna clean")]),_v(" and then "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm run setup")]),_v(" in the root MarkBind directory.")])])}
@@ -95,19 +95,19 @@ with(this){return _c('li',[_c('p',[_c('strong',[_v("Release on GitHub")]),_v("."
 with(this){return _c('li',[_c('p',[_c('strong',[_v("Announce the new release")]),_v(" on our Slack channel (replace "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("A.B.C")]),_v(" with the new version). Congrats!")]),_v(" "),_c('blockquote',[_c('p',[_v("Published: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm i -g markbind-cli@A.B.C")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"acknowledging-contributors"}},[_c('span',{staticClass:"anchor",attrs:{"id":"acknowledging-contributors"}}),_v("Acknowledging Contributors"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#acknowledging-contributors","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"acknowledging-contributors"}},[_v("Acknowledging Contributors"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#acknowledging-contributors","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("This project follows the "),_c('a',{attrs:{"href":"https://allcontributors.org/"}},[_v("all-contributors")]),_v(" specification.")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"view-all-contributors"}},[_c('span',{staticClass:"anchor",attrs:{"id":"view-all-contributors"}}),_v("View all contributors"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#view-all-contributors","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"view-all-contributors"}},[_v("View all contributors"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#view-all-contributors","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("Besides the contributors list provided by GitHub, the list of all MarkBind contributors is available in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("README.md")]),_v(".\nThe table shown in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("README.md")]),_v(" is based on the entries from "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".all-contributorsrc")]),_v(".")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"add-new-contributors"}},[_c('span',{staticClass:"anchor",attrs:{"id":"add-new-contributors"}}),_v("Add new contributors"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#add-new-contributors","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"add-new-contributors"}},[_v("Add new contributors"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#add-new-contributors","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ol',[_c('li',[_v("A new contributor 'tlylt'(GitHub username) has opened a PR to committed code changes to the repository.")]),_v(" "),_c('li',[_v("A senior dev reviews and approves the PR.")]),_v(" "),_c('li',[_v("The senior dev comments in that PR with the line \"@all-contributors please add tlylt for code\" to trigger an automatic PR that will apply relevant changes\nto include 'tlylt' in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".all-contributorsrc")]),_v(" and "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("README.md")]),_v(".")]),_v(" "),_c('li',[_v("The senior dev approves and merge the automatic PR.")]),_v(" "),_c('li',[_v("The senior dev deletes the automatic PR.")])])}
@@ -119,6 +119,6 @@ with(this){return _c('ul',[_c('li',[_v("All contribution types specified "),_c('
 with(this){return _c('div',{staticClass:"clearfix"},[_c('p',[_c('span',{staticClass:"float-start"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/githubActions/markbindReusableWorkflows.html"}},[_c('span',[_c('span',{staticClass:"far fa-arrow-alt-circle-left",attrs:{"aria-hidden":"true"}}),_v(" "),_c('span',[_v("GitHub Actions: markbind-reusable-workflows")])])])])]),_v(" "),_c('p',[_c('span',{staticClass:"float-end"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/styleGuides.html"}},[_c('span',[_c('span',[_v("Appendix: Style guides")]),_v(" "),_c('span',{staticClass:"far fa-arrow-alt-circle-right",attrs:{"aria-hidden":"true"}})])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sat, 25 Mar 2023, 15:52:42 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
+with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sun, 26 Mar 2023, 16:33:24 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
 }];
   

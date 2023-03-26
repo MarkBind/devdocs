@@ -8,13 +8,13 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('p',[_c('span',{staticClass:"d-none",attrs:{"id":"title"}},[_v("Migrating to TypeScript")])])}
 },function anonymous(
 ) {
-with(this){return _c('h1',{attrs:{"id":"migrating-to-typescript"}},[_c('span',{staticClass:"anchor",attrs:{"id":"migrating-to-typescript"}}),_v("Migrating to TypeScript"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#migrating-to-typescript","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h1',{attrs:{"id":"migrating-to-typescript"}},[_v("Migrating to TypeScript"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#migrating-to-typescript","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('div',{staticClass:"lead"},[_c('p',[_v("In order to improve the quality and security of our backend code, we are introducing TypeScript to our codebase to leverage the type-checking system. This page outlines the steps of migrating existing files into TypeScript.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"migration-steps"}},[_c('span',{staticClass:"anchor",attrs:{"id":"migration-steps"}}),_v("Migration Steps"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#migration-steps","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"migration-steps"}},[_v("Migration Steps"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#migration-steps","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("The TypeScript migration process is a little different than normal development work, as maintainers would not follow the normal procedure of creating a squash commit. Instead, they will do a "),_c('strong',[_v("rebase and merge")]),_v(", and therefore migration developers will need to structure the commits in a particular way.")])}
@@ -23,7 +23,7 @@ with(this){return _c('p',[_v("The TypeScript migration process is a little diffe
 with(this){return _c('p',[_v("We have decided on structuring the commits as two commits: a \"Rename\" commit and an \"Adapt\" commit. If you need further context on the approach, feel free to read the "),_c('a',{attrs:{"href":"#explanation-notes"}},[_v("Explanation Notes")]),_v(" section below.")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"step-1-preparation"}},[_c('span',{staticClass:"anchor",attrs:{"id":"step-1-preparation"}}),_v("Step 1: Preparation"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#step-1-preparation","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"step-1-preparation"}},[_v("Step 1: Preparation"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#step-1-preparation","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('li',[_c('p',[_c('strong',[_v("If running, stop automatic compilation on change/save")]),_v(". More on this at "),_c('a',{attrs:{"href":"/devdocs/devGuide/development/workflow.html#editing-backend-features"}},[_v("Editing backend features")]),_v(" section in the Workflow page.")])])}
@@ -47,7 +47,7 @@ with(this){return _c('p',[_v("After installing all necessary typings, delete the
 with(this){return _c('li',[_c('p',[_c('strong',[_v("Stash the changes")]),_v(" ("),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/core/package.json")]),_v(" and root "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("package-lock.json")]),_v(").\n"),_c('br'),_v("\nThis will be added back during the \"Adapt\" commit later.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"step-2-and-quot-rename-and-quot-commit"}},[_c('span',{staticClass:"anchor",attrs:{"id":"step-2-and-quot-rename-and-quot-commit"}}),_v("Step 2: \"Rename\" Commit"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#step-2-and-quot-rename-and-quot-commit","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"step-2-and-quot-rename-and-quot-commit"}},[_v("Step 2: \"Rename\" Commit"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#step-2-and-quot-rename-and-quot-commit","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('li',[_c('p',[_c('strong',[_v("Add the paths of the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".js")]),_v(" files to "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".gitignore")]),_v(" and "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".eslintignore")])]),_v(".\n"),_c('br'),_v("\nThis instructs Git and ESLint to ignore the compiled JavaScript from the files that are going to be renamed.")])])}
@@ -62,22 +62,22 @@ with(this){return _c('li',[_c('p',[_c('strong',[_v("Stage the changes")]),_v(" (
 with(this){return _c('p',[_c('strong',[_v("Commit the staged changes")]),_v(" with the message "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Rename <file-or-folder> to TypeScript")]),_v(".\n"),_c('br'),_v("\nFor example: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Rename core/src/html to TypeScript")]),_v(".")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"step-3-and-quot-adapt-and-quot-commit"}},[_c('span',{staticClass:"anchor",attrs:{"id":"step-3-and-quot-adapt-and-quot-commit"}}),_v("Step 3: \"Adapt\" Commit"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#step-3-and-quot-adapt-and-quot-commit","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"step-3-and-quot-adapt-and-quot-commit"}},[_v("Step 3: \"Adapt\" Commit"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#step-3-and-quot-adapt-and-quot-commit","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ol',[_c('li',[_c('p',[_c('strong',[_v("Start automatic compilation on change/save")]),_v(". More on this at "),_c('a',{attrs:{"href":"/devdocs/devGuide/development/workflow.html#editing-backend-features"}},[_v("Editing backend features")]),_v(" section in the Workflow page.")])]),_v(" "),_c('li',[_c('p',[_c('strong',[_v("Change the CommonJS module import/export syntax")]),_v(" to TypeScript's equivalent syntax (use ES6 syntax only if possible).")]),_v(" "),_c('p',[_v("A common error in newly renamed files comes from the way modules are imported/exported. Those statements can be converted according to the "),_c('a',{attrs:{"href":"#import-export-syntax-reference"}},[_v("Import/Export Syntax Reference")]),_v(" section below. The steps are as follows:")]),_v(" "),_c('ol',[_c('li',[_c('p',[_v("Start by changing the import/export statements into TypeScript equivalent syntax. Be careful with imports as you have to match them with the export syntax that the modules use, be it TypeScript equivalent or ES6.")])]),_v(" "),_c('li',[_c('p',[_v("Check whether it is possible to change the export to use ES6 syntax. As mentioned in the syntax reference, ES6 should not be used if the module only exports a single thing. Change to ES6 syntax only if possible, otherwise keep with TypeScript equivalent syntax.")])]),_v(" "),_c('li',[_c('p',[_v("You might have to "),_c('strong',[_v("adjust how the files are imported by other TypeScript ("),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".ts")]),_v(") files")]),_v(". If you are changing the export to the TypeScript equivalent syntax, then it must be imported the same way as well. The same goes for the ES6 syntax.")])])])]),_v(" "),_c('li',[_c('p',[_c('strong',[_v("Adapt the files")]),_v(" fully to TypeScript.")]),_v(" "),_c('p',[_v("The errors from TypeScript and "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("typescript-eslint")]),_v(" can guide you on what to fix. Only fix what is necessary and be careful with accidentally modifying any code functionality. Avoid using "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("any")]),_v(" as best as you can.")]),_v(" "),_c('p',[_v("If you happen to encounter type errors related to using names (of constant, properties, members, etc.) from another MarkBind import that is still in JavaScript ("),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".js")]),_v("), you can try to infer simple types in your file first as a \"stand-in\" of the more robust types when that internal dependency is eventually migrated.")]),_v(" "),_c('p',[_v("On the flip side of the above situation, once you have developed a robust type for your own file, "),_c('strong',[_v("adjust how other TypeScript ("),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".ts")]),_v(") files type names referenced from your files")]),_v(" as applicable. Some type declarations might need to be made stricter, or can be removed if it's not necessary anymore, and so on. This will ensure that the files will be incrementally stricter.")])]),_v(" "),_c('li',[_c('p',[_c('strong',[_v("Make sure everything is in order")]),_v(" by running "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm run test")]),_v(" in the root directory.")]),_v(" "),_c('p',[_v("The "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("core")]),_v(" package tests can directly run on the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".ts")]),_v(" files (powered by "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("ts-jest")]),_v("), and the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("cli")]),_v(" package tests uses the compiled files from "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("core")]),_v(". Therefore, passing the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("cli")]),_v(" tests means that it is very likely the compiled files work as expected.")])]),_v(" "),_c('li',[_c('p',[_c('strong',[_v("Stage the adapted files and the typings from Step 1")]),_v(" for commit. Verify the changes before committing.")])]),_v(" "),_c('li',[_c('p',[_c('strong',[_v("Commit the changes")]),_v(" with the message "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Adapt <file-or-folder> to TypeScript")]),_v(".\n"),_c('br'),_v("\nFor example, "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Adapt core/src/html to TypeScript")]),_v(".")])])])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"optional-step-4-changing-the-commit"}},[_c('span',{staticClass:"anchor",attrs:{"id":"optional-step-4-changing-the-commit"}}),_v("(Optional) Step 4: Changing the commit"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#optional-step-4-changing-the-commit","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"optional-step-4-changing-the-commit"}},[_v("(Optional) Step 4: Changing the commit"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#optional-step-4-changing-the-commit","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"example-of-migrated-works"}},[_c('span',{staticClass:"anchor",attrs:{"id":"example-of-migrated-works"}}),_v("Example of Migrated Works"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#example-of-migrated-works","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"example-of-migrated-works"}},[_v("Example of Migrated Works"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#example-of-migrated-works","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind/pull/1877"}},[_v("#1877: Adopt TypeScript for core package")])])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"import-export-syntax-reference"}},[_c('span',{staticClass:"anchor",attrs:{"id":"import-export-syntax-reference"}}),_v("Import/Export Syntax Reference"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#import-export-syntax-reference","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"import-export-syntax-reference"}},[_v("Import/Export Syntax Reference"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#import-export-syntax-reference","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("The TypeScript equivalent syntax is designed to compile to the exact same code as CommonJS. You can read more about this syntax in the "),_c('a',{attrs:{"href":"https://www.typescriptlang.org/docs/handbook/modules.html#export--and-import--require"}},[_v("official documentation")]),_v(".")])}
@@ -113,10 +113,10 @@ with(this){return _c('div',{staticClass:"table-responsive"},[_c('table',{staticC
 with(this){return _c('p',[_c('strong',[_v("^")]),_v(": While not equivalent on the compile-level, this can be achieved by importing the entire object then destructuring the object.")])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"explanation-notes"}},[_c('span',{staticClass:"anchor",attrs:{"id":"explanation-notes"}}),_v("Explanation Notes"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#explanation-notes","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"explanation-notes"}},[_v("Explanation Notes"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#explanation-notes","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"why-do-we-need-to-separate-and-quot-rename-and-quot-and-and-quot-adapt-and-quot-commits"}},[_c('span',{staticClass:"anchor",attrs:{"id":"why-do-we-need-to-separate-and-quot-rename-and-quot-and-and-quot-adapt-and-quot-commits"}}),_v("Why do we need to separate \"Rename\" and \"Adapt\" commits"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#why-do-we-need-to-separate-and-quot-rename-and-quot-and-and-quot-adapt-and-quot-commits","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"why-do-we-need-to-separate-and-quot-rename-and-quot-and-and-quot-adapt-and-quot-commits"}},[_v("Why do we need to separate \"Rename\" and \"Adapt\" commits"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#why-do-we-need-to-separate-and-quot-rename-and-quot-and-and-quot-adapt-and-quot-commits","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("We want to keep the file history intact throughout this migration, meaning that we should still be able to see the change history of the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".ts")]),_v(" files even from the time when they were still in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".js")]),_v(".")])}
@@ -125,12 +125,12 @@ with(this){return _c('p',[_v("We want to keep the file history intact throughout
 with(this){return _c('p',[_v("The solution to this is to make the rename and adapt commits separate, in order for Git to recognize first that the file has changed into "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".ts")]),_v(", and so the changes are compared not against the old "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".js")]),_v(" file, but to the renamed "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v(".ts")]),_v(" file instead.")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"why-do-we-need-a-rebase-and-merge-commit"}},[_c('span',{staticClass:"anchor",attrs:{"id":"why-do-we-need-a-rebase-and-merge-commit"}}),_v("Why do we need a rebase and merge commit"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#why-do-we-need-a-rebase-and-merge-commit","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"why-do-we-need-a-rebase-and-merge-commit"}},[_v("Why do we need a rebase and merge commit"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#why-do-we-need-a-rebase-and-merge-commit","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('div',{staticClass:"clearfix"},[_c('p',[_c('span',{staticClass:"float-start"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/development/writingPlugins.html"}},[_c('span',[_c('span',{staticClass:"far fa-arrow-alt-circle-left",attrs:{"aria-hidden":"true"}}),_v(" "),_c('span',[_v("Writing Plugins")])])])])]),_v(" "),_c('p',[_c('span',{staticClass:"float-end"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/design/projectStructure.html"}},[_c('span',[_c('span',[_v("Project Structure")]),_v(" "),_c('span',{staticClass:"far fa-arrow-alt-circle-right",attrs:{"aria-hidden":"true"}})])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sat, 25 Mar 2023, 15:52:42 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
+with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sun, 26 Mar 2023, 16:33:24 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
 }];
   

@@ -8,13 +8,13 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('p',[_c('span',{staticClass:"d-none",attrs:{"id":"title"}},[_v("Setting up")])])}
 },function anonymous(
 ) {
-with(this){return _c('h1',{attrs:{"id":"setting-up"}},[_c('span',{staticClass:"anchor",attrs:{"id":"setting-up"}}),_v("Setting up"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#setting-up","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h1',{attrs:{"id":"setting-up"}},[_v("Setting up"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#setting-up","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('div',{staticClass:"lead"},[_c('p',[_v("This page explains how to set up your development environment to start contributing to MarkBind.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"prerequisites"}},[_c('span',{staticClass:"anchor",attrs:{"id":"prerequisites"}}),_v("Prerequisites"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#prerequisites","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"prerequisites"}},[_v("Prerequisites"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#prerequisites","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('li',[_c('p',[_c('strong',[_v("Java")]),_v(" 8 or later, and"),_c('br'),_v(" "),_c('strong',[_v("Graphviz")]),_v(" v2.38 or later"),_c('br'),_v(" "),_c('span',{staticClass:"dimmed"},[_v("(The above two are required for one of the third-party libraries used by MarkBind)")])])])}
@@ -26,7 +26,7 @@ with(this){return _c('li',[_c('p',[_c('strong',[_v("Python")]),_v(" 3 or later, 
 with(this){return _c('li',[_c('p',[_c('strong',[_v("Verify")]),_v(" that all tools are accessible and the versions are as expected by running these commands in the console.")]),_v(" "),_c('ul',[_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("node --version")])]),_v(" "),_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm --version")])]),_v(" "),_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("java --version")])]),_v(" "),_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("dot -V")]),_v(" (for Graphviz)")]),_v(" "),_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("python3 -V")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"setting-up-the-dev-environment"}},[_c('span',{staticClass:"anchor",attrs:{"id":"setting-up-the-dev-environment"}}),_v("Setting up the dev environment"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#setting-up-the-dev-environment","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"setting-up-the-dev-environment"}},[_v("Setting up the dev environment"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#setting-up-the-dev-environment","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('li',[_c('p',[_c('strong',[_v("Fork and clone")]),_v(" the MarkBind repo.")])])}
@@ -38,7 +38,7 @@ with(this){return _c('li',[_c('p',[_c('strong',[_v("Bind your cloned version of 
 with(this){return _c('li',[_c('p',[_c('strong',[_v("Congratulations!")]),_v(" Now you are ready to start modifying MarkBind code.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"setting-up-the-git-hooks-optional-but-recommended"}},[_c('span',{staticClass:"anchor",attrs:{"id":"setting-up-the-git-hooks-optional-but-recommended"}}),_v("Setting up the git hooks (optional but recommended)"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#setting-up-the-git-hooks-optional-but-recommended","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"setting-up-the-git-hooks-optional-but-recommended"}},[_v("Setting up the git hooks (optional but recommended)"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#setting-up-the-git-hooks-optional-but-recommended","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("There are a few "),_c('a',{attrs:{"href":"/devdocs/devGuide/development/workflow.html#git-hooks"}},[_v("Git hooks")]),_v(" implemented using the "),_c('a',{attrs:{"href":"https://pre-commit.com/"}},[_v("pre-commit")]),_v(" tool that runs common tasks like linting, automated tests and compiling typescript files.")])}
@@ -50,7 +50,7 @@ with(this){return _c('p',[_c('strong',[_v("Install the hooks")]),_v(" by running
 with(this){return _c('p',[_v("If you ever need to uninstall the hooks, simply run "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("uninstall")]),_v(" instead of "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("install")]),_v(".")])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"common-setup-questions"}},[_c('span',{staticClass:"anchor",attrs:{"id":"common-setup-questions"}}),_v("Common setup questions"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#common-setup-questions","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"common-setup-questions"}},[_v("Common setup questions"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#common-setup-questions","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Does MarkBind work with all operating systems?")]),_v(" "),_c('p',[_v("Yes! We support all operating systems.")])]),_v(" "),_c('li',[_c('p',[_v("How does MarkBind manage dependencies?")]),_v(" "),_c('p',[_v("MarkBind uses "),_c('a',{attrs:{"href":"https://github.com/lerna/lerna"}},[_v("lerna")]),_v(", a popular\nmulti-package development tool, to manage its dependencies. It is\nessentially a high level wrapper over node and npm's functionalities.")])]),_v(" "),_c('li',[_c('p',[_v("How do I move back to the released version of MarkBind?")]),_v(" "),_c('p',[_v("To go back to the released version of MarkBind, run\n"),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm un -g markbind-cli")]),_v(", followed by "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm i -g markbind-cli")]),_v(".")])]),_v(" "),_c('li',[_c('p',[_v("Some of my front-end components are not working as expected when running "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("markbind serve")]),_v(".")]),_v(" "),_c('p',[_v("Try running either "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("markbind serve -d")]),_v(" or "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("npm run build:web")]),_v(" to view frontend changes (especially after pulling a frontend update that someone else may have pushed). You can see more details "),_c('a',{attrs:{"href":"/devdocs/devGuide/development/workflow.html#editing-frontend-features"}},[_v("here")]),_v(".")])])])}
@@ -59,6 +59,6 @@ with(this){return _c('ol',[_c('li',[_c('p',[_v("Does MarkBind work with all oper
 with(this){return _c('div',{staticClass:"clearfix"},[_c('p',[_c('span',{staticClass:"float-start"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/bootcamp/implementAFeature.html"}},[_c('span',[_c('span',{staticClass:"far fa-arrow-alt-circle-left",attrs:{"aria-hidden":"true"}}),_v(" "),_c('span',[_v("Implement a New Feature")])])])])]),_v(" "),_c('p',[_c('span',{staticClass:"float-end"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/development/workflow.html"}},[_c('span',[_c('span',[_v("Workflow")]),_v(" "),_c('span',{staticClass:"far fa-arrow-alt-circle-right",attrs:{"aria-hidden":"true"}})])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sat, 25 Mar 2023, 15:52:42 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
+with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sun, 26 Mar 2023, 16:33:24 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
 }];
   

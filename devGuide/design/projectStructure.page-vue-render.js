@@ -8,19 +8,19 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('p',[_c('span',{staticClass:"d-none",attrs:{"id":"title"}},[_v("Project Structure")])])}
 },function anonymous(
 ) {
-with(this){return _c('h1',{attrs:{"id":"project-structure"}},[_c('span',{staticClass:"anchor",attrs:{"id":"project-structure"}}),_v("Project Structure"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#project-structure","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h1',{attrs:{"id":"project-structure"}},[_v("Project Structure"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#project-structure","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('div',{staticClass:"lead"},[_c('p',[_v("This page gives you an overview of the MarkBind's internal project structure.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"packages"}},[_c('span',{staticClass:"anchor",attrs:{"id":"packages"}}),_v("Packages"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#packages","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"packages"}},[_v("Packages"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#packages","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_c('p',[_v("The core library, which parses and processes MarkBind's various syntaxes, resides in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/core/")]),_v(" directory.")])]),_v(" "),_c('li',[_c('p',[_v("The command-line interface (CLI) application, which accepts commands from users and then uses the core library to parse and generate web pages, resides in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/cli/")]),_v(" directory.")])]),_v(" "),_c('li',[_c('p',[_v("The core web library, which contains a generated web bundle from various setup scripts and the UI components library, resides in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/core-web/")]),_v(".")])]),_v(" "),_c('li',[_c('p',[_v("The UI components library, which MarkBind authors can use to create content with complex and interactive structure, resides in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("packages/vue-components/")]),_v(" directory.")]),_v(" "),_c('p',[_v("Stack used: "),_c('em',[_v("Node.js")]),_v(", "),_c('em',[_v("Vue.js")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"markbind-core-library"}},[_c('span',{staticClass:"anchor",attrs:{"id":"markbind-core-library"}}),_v("MarkBind core library"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#markbind-core-library","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"markbind-core-library"}},[_v("MarkBind core library"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#markbind-core-library","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("The core library mainly houses:")])])}
@@ -35,7 +35,7 @@ with(this){return _c('p',[_c('strong',[_v("The key external libraries used are:"
 with(this){return _c('ul',[_c('li',[_c('p',[_c('a',{attrs:{"href":"https://github.com/markdown-it/markdown-it"}},[_v("markdown-it")]),_v(", which does the Markdown parsing and rendering. There are also several customized markdown-it plugins used in MarkBind, which are located inside the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("src/lib/markdown-it/")]),_v(" directory.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("Several markdown-it plugins are installed to enhance the existing Markdown syntax. They can be found in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("src/package.json")]),_v(". Some of them are patched in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("src/lib/markdown-it/patches/")]),_v(" directory to fit MarkBind's needs.")])]),_v(" "),_c('li',[_c('p',[_v("Additionally, there are some markdown-it plugins in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("src/lib/markdown-it/plugins/")]),_v(" directory (either forked, modified or written to enhance existing functionalities).")])])])]),_v(" "),_c('li',[_c('p',[_c('a',{attrs:{"href":"https://github.com/fb55/htmlparser2"}},[_v("htmlparser2")]),_v(", a speedy and forgiving HTML parser which exposes a DOM-like object structure to work on. To comply with the markdown spec, and our custom requirements, "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("src/patches/htmlparser2.js")]),_v(" patches various behaviours of this library.")])]),_v(" "),_c('li',[_c('p',[_c('a',{attrs:{"href":"https://cheerio.js.org/"}},[_v("cheerio")]),_v(", which is a node.js equivalent of "),_c('a',{attrs:{"href":"https://jquery.com/"}},[_v("jQuery")]),_v(". Cheerio uses "),_c('a',{attrs:{"href":"https://github.com/fb55/htmlparser2"}},[_v("htmlparser2")]),_v(" to parse the HTML as well, hence our patches propagate here.")])]),_v(" "),_c('li',[_c('p',[_c('a',{attrs:{"href":"https://mozilla.github.io/nunjucks/"}},[_v("Nunjucks")]),_v(", which is a JavaScript templating engine. Nunjucks is used to support our variable system to help with reusing small bits of code in multiple places. The package is patched and stored in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("src/patches/nunjucks")]),_v(" to make it compatible with other MarkBind syntax processing steps.")])])])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"markbind-cli"}},[_c('span',{staticClass:"anchor",attrs:{"id":"markbind-cli"}}),_v("MarkBind CLI"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#markbind-cli","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"markbind-cli"}},[_v("MarkBind CLI"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#markbind-cli","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("The CLI application uses and further builds on the interface exposed by the core library's "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Site")]),_v(" model to provide functionalities for the author, such as "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("markbind serve")]),_v(" which initiates a live reload workflow.")])}
@@ -47,10 +47,10 @@ with(this){return _c('p',[_c('strong',[_v("The key external libraries used are:"
 with(this){return _c('ul',[_c('li',[_c('p',[_c('a',{attrs:{"href":"https://github.com/tj/commander.js/"}},[_v("commander.js")]),_v(", which is a node.js CLI framework.")])]),_v(" "),_c('li',[_c('p',[_c('a',{attrs:{"href":"https://github.com/tapio/live-server"}},[_v("live-server")]),_v(", which is a simple web server for local development and preview of a MarkBind site. The package is patched and stored in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("src/lib/live-server")]),_v(" with our custom fine tuning.")])])])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"markbind-core-web-library"}},[_c('span',{staticClass:"anchor",attrs:{"id":"markbind-core-web-library"}}),_v("MarkBind core-web library"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#markbind-core-web-library","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"markbind-core-web-library"}},[_v("MarkBind core-web library"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#markbind-core-web-library","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('h3',{attrs:{"id":"ui-components-library"}},[_c('span',{staticClass:"anchor",attrs:{"id":"ui-components-library"}}),_v("UI components library"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#ui-components-library","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h3',{attrs:{"id":"ui-components-library"}},[_v("UI components library"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#ui-components-library","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("This package consists of a mix of "),_c('a',{attrs:{"href":"https://getbootstrap.com/components/"}},[_v("Bootstrap")]),_v(" and proprietary components rewritten in "),_c('a',{attrs:{"href":"https://vuejs.org"}},[_v("Vue.js")]),_v(" based on our needs for educational websites.")])}
@@ -71,6 +71,6 @@ with(this){return _c('ul',[_c('li',[_c('p',[_c('strong',[_v("MarkBind components
 with(this){return _c('div',{staticClass:"clearfix"},[_c('p',[_c('span',{staticClass:"float-start"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/development/migratingToTypeScript.html"}},[_c('span',[_c('span',{staticClass:"far fa-arrow-alt-circle-left",attrs:{"aria-hidden":"true"}}),_v(" "),_c('span',[_v("Migrating to TypeScript")])])])])]),_v(" "),_c('p',[_c('span',{staticClass:"float-end"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/design/architecture.html"}},[_c('span',[_c('span',[_v("Architecture")]),_v(" "),_c('span',{staticClass:"far fa-arrow-alt-circle-right",attrs:{"aria-hidden":"true"}})])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sat, 25 Mar 2023, 15:52:42 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
+with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sun, 26 Mar 2023, 16:33:24 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
 }];
   

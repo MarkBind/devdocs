@@ -8,13 +8,13 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('p',[_c('span',{staticClass:"d-none",attrs:{"id":"title"}},[_v("Writing Plugins")])])}
 },function anonymous(
 ) {
-with(this){return _c('h1',{attrs:{"id":"writing-plugins"}},[_c('span',{staticClass:"anchor",attrs:{"id":"writing-plugins"}}),_v("Writing Plugins"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#writing-plugins","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h1',{attrs:{"id":"writing-plugins"}},[_v("Writing Plugins"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#writing-plugins","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("MarkBind plugins are "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("js")]),_v(" scripts that are loaded and run during the page generation. MarkBind allows plugins to modify a page's content during the page generation process, amongst other things.")])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"rendering"}},[_c('span',{staticClass:"anchor",attrs:{"id":"rendering"}}),_v("Rendering"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#rendering","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"rendering"}},[_v("Rendering"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#rendering","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('a',{attrs:{"href":"/devdocs/images/rendering.png","target":"_self"}},[_c('img',{staticClass:"img-fluid",attrs:{"src":"/devdocs/images/rendering.png","alt":"MarkBind Rendering"}})])])}
@@ -44,7 +44,7 @@ with(this){return _c('pre',[_c('code',{pre:true,attrs:{"class":"hljs js"}},[_c('
 with(this){return _c('pre',[_c('code',{pre:true,attrs:{"class":"hljs md"}},[_c('span',[_v("// index.md\n")]),_c('span',[_v("\n")]),_c('span',[_v("...\n")]),_c('span',[_c('span',{pre:true,attrs:{"class":"xml"}},[_c('span',{pre:true,attrs:{"class":"hljs-tag"}},[_v("<"),_c('span',{pre:true,attrs:{"class":"hljs-name"}},[_v("div")]),_v(" "),_c('span',{pre:true,attrs:{"class":"hljs-attr"}},[_v("id")]),_v("="),_c('span',{pre:true,attrs:{"class":"hljs-string"}},[_v("\"my-div\"")]),_v(">")])]),_v("\n")]),_c('span',[_c('span',{pre:true,attrs:{"class":"xml"}},[_c('span',{pre:true,attrs:{"class":"hljs-tag"}},[_v("</"),_c('span',{pre:true,attrs:{"class":"hljs-name"}},[_v("div")]),_v(">")])]),_v("\n")])])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"assets"}},[_c('span',{staticClass:"anchor",attrs:{"id":"assets"}}),_v("Assets"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#assets","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"assets"}},[_v("Assets"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#assets","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("Plugins can implement the methods "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("getLinks")]),_v(" and "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("getScripts")]),_v(" to add additional assets to any page.")])}
@@ -59,7 +59,7 @@ with(this){return _c('pre',[_c('code',{pre:true,attrs:{"class":"hljs js"}},[_c('
 with(this){return _c('ul',[_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("<link rel=\"stylesheet\" href=\"STYLESHEET_LINK\">")])]),_v(" "),_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("<script src=\"SCRIPT_LINK\"></script>")])]),_v(" "),_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("<script>alert(\"hello\")</script>")])])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"tag-behaviour"}},[_c('span',{staticClass:"anchor",attrs:{"id":"tag-behaviour"}}),_v("Tag Behaviour"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#tag-behaviour","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"tag-behaviour"}},[_v("Tag Behaviour"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#tag-behaviour","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("MarkBind also provides several convenient interfaces that can be used alone, or in conjunction with the "),_c('a',{attrs:{"href":"#rendering"}},[_v("rendering")]),_v(" interfaces to modify how tags are processed.")])}
@@ -83,7 +83,7 @@ with(this){return _c('p',[_c('strong',[_v("Attribute Properties")])])}
 with(this){return _c('div',{staticClass:"table-responsive"},[_c('table',{staticClass:"markbind-table table table-bordered table-striped"},[_c('thead',[_c('tr',[_c('th',{staticStyle:{"text-align":"left"}},[_v("Property")]),_v(" "),_c('th',[_v("Values")]),_v(" "),_c('th',[_v("Default")]),_v(" "),_c('th',[_v("Remarks")])])]),_v(" "),_c('tbody',[_c('tr',[_c('td',{staticStyle:{"text-align":"left"}},[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("name")])]),_v(" "),_c('td',[_v("attribute name")]),_v(" "),_c('td',[_v("none")]),_v(" "),_c('td',[_v("The string name of the attribute.")])]),_v(" "),_c('tr',[_c('td',{staticStyle:{"text-align":"left"}},[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("isRelative")])]),_v(" "),_c('td',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("true")]),_v(" or "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("false")])]),_v(" "),_c('td',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("false")])]),_v(" "),_c('td',[_v("Should be "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("true")]),_v(" if this attribute may contain a relative link. This tells MarkBind to properly resolve such relative links when used in "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("<include>")]),_v("s, by converting the link into a "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("baseUrl")]),_v(" preceded absolute link.")])]),_v(" "),_c('tr',[_c('td',{staticStyle:{"text-align":"left"}},[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("isSourceFile")])]),_v(" "),_c('td',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("true")]),_v(" or "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("false")])]),_v(" "),_c('td',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("false")])]),_v(" "),_c('td',[_v("Should be "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("true")]),_v(" if the attribute points to a source file. This allows flagging other source files to trigger page regeneration during live reload.")])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"lifecycle-hooks"}},[_c('span',{staticClass:"anchor",attrs:{"id":"lifecycle-hooks"}}),_v("Lifecycle hooks"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#lifecycle-hooks","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"lifecycle-hooks"}},[_v("Lifecycle hooks"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#lifecycle-hooks","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("To do this, you may implement the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("beforeSiteGenerate")]),_v(" method.")])}
@@ -95,6 +95,6 @@ with(this){return _c('ul',[_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inl
 with(this){return _c('div',{staticClass:"clearfix"},[_c('p',[_c('span',{staticClass:"float-start"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/development/writingComponents.html"}},[_c('span',[_c('span',{staticClass:"far fa-arrow-alt-circle-left",attrs:{"aria-hidden":"true"}}),_v(" "),_c('span',[_v("Writing Components")])])])])]),_v(" "),_c('p',[_c('span',{staticClass:"float-end"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/development/migratingToTypeScript.html"}},[_c('span',[_c('span',[_v("Migrating to TypeScript")]),_v(" "),_c('span',{staticClass:"far fa-arrow-alt-circle-right",attrs:{"aria-hidden":"true"}})])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sat, 25 Mar 2023, 15:52:42 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
+with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sun, 26 Mar 2023, 16:33:24 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
 }];
   

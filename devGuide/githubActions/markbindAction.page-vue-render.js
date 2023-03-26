@@ -8,7 +8,7 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('p',[_c('span',{staticClass:"d-none",attrs:{"id":"title"}},[_v("GitHub Actions: markbind-action")])])}
 },function anonymous(
 ) {
-with(this){return _c('h1',{attrs:{"id":"github-actions-markbind-action"}},[_c('span',{staticClass:"anchor",attrs:{"id":"github-actions-markbind-action"}}),_v("GitHub Actions: markbind-action"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#github-actions-markbind-action","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h1',{attrs:{"id":"github-actions-markbind-action"}},[_v("GitHub Actions: markbind-action"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#github-actions-markbind-action","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('div',{staticClass:"lead"},[_c('p',[_v("A GitHub Action that builds and deploys a MarkBind site. It helps users to streamline their workflow by:")]),_v(" "),_c('ul',[_c('li',[_v("Making it easier to deploy without having to write their own actions from scratch.")]),_v(" "),_c('li',[_v("Making the workflows consistent and up to date with any changes specific to MarkBind.")])]),_v(" "),_c('p',[_v("The source code is at "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind-action"}},[_v("MarkBind/markbind-action")]),_v(".")])])}
@@ -17,25 +17,25 @@ with(this){return _c('div',{staticClass:"lead"},[_c('p',[_v("A GitHub Action tha
 with(this){return _c('p',[_c('strong',[_v("Follow the steps below to get started on modifying the source code.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"setting-up"}},[_c('span',{staticClass:"anchor",attrs:{"id":"setting-up"}}),_v("Setting Up"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#setting-up","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"setting-up"}},[_v("Setting Up"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#setting-up","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ol',[_c('li',[_v("Fork the "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind-action"}},[_v("action repository")]),_v(".")]),_v(" "),_c('li',[_v("Familiarise with the existing workflow syntax/options provided in the repository's "),_c('a',{attrs:{"href":"https://github.com/MarkBind/markbind-action#readme"}},[_v("README.md")]),_v(".")]),_v(" "),_c('li',[_v("Set up a repository that contains a MarkBind site to test the action:\n"),_c('ol',[_c('li',[_v("Create a repository.")]),_v(" "),_c('li',[_v("Set up MarkBind and run "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("markbind init")]),_v(" to populate with default content.")]),_v(" "),_c('li',[_v("Push your repository to GitHub.\n"),_c('ul',[_c('li',[_c('a',{attrs:{"href":"https://github.com/MarkBind/init-typical"}},[_v("Example")])])])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"modifying-the-action"}},[_c('span',{staticClass:"anchor",attrs:{"id":"modifying-the-action"}}),_v("Modifying the action"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#modifying-the-action","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"modifying-the-action"}},[_v("Modifying the action"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#modifying-the-action","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ol',[_c('li',[_v("Create a new branch from master to work on your changes.")]),_v(" "),_c('li',[_v("Make necessary modifications to the workflow files.")]),_v(" "),_c('li',[_v("Update the repository's README.md to reflect the changes.")])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"testing-the-action"}},[_c('span',{staticClass:"anchor",attrs:{"id":"testing-the-action"}}),_v("Testing the action"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#testing-the-action","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"testing-the-action"}},[_v("Testing the action"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#testing-the-action","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('ul',[_c('li',[_v("Instead of using "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("uses: MarkBind/markbind-action@v2")]),_v(" in the workflow file, use "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("uses: yourGithubName/markbind-action@yourBranch")]),_v(" to reference the unpublished version of the action that you are currently developing.\n"),_c('ul',[_c('li',[_v("e.g. "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("uses: tlylt/markbind-action@main")])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('h2',{attrs:{"id":"release-management"}},[_c('span',{staticClass:"anchor",attrs:{"id":"release-management"}}),_v("Release Management"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#release-management","onclick":"event.stopPropagation()"}})])}
+with(this){return _c('h2',{attrs:{"id":"release-management"}},[_v("Release Management"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#release-management","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("Based on the "),_c('a',{attrs:{"href":"https://docs.github.com/en/actions/creating-actions/about-custom-actions#using-release-management-for-actions"}},[_v("GitHub Actions documentation")]),_v(", we are using tags for release management.")])}
@@ -47,6 +47,6 @@ with(this){return _c('blockquote',[_c('ul',[_c('li',[_v("Create and validate a r
 with(this){return _c('div',{staticClass:"clearfix"},[_c('p',[_c('span',{staticClass:"float-start"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/githubActions/overview.html"}},[_c('span',[_c('span',{staticClass:"far fa-arrow-alt-circle-left",attrs:{"aria-hidden":"true"}}),_v(" "),_c('span',[_v("GitHub Actions: Overview")])])])])]),_v(" "),_c('p',[_c('span',{staticClass:"float-end"},[_c('a',{staticClass:"btn btn-light",attrs:{"href":"/devdocs/devGuide/githubActions/markbindReusableWorkflows.html"}},[_c('span',[_c('span',[_v("GitHub Actions: markbind-reusable-workflows")]),_v(" "),_c('span',{staticClass:"far fa-arrow-alt-circle-right",attrs:{"aria-hidden":"true"}})])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sat, 25 Mar 2023, 15:52:42 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
+with(this){return _c('div',[_c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("[Generated by "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(" on Sun, 26 Mar 2023, 16:33:24 UTC]")]),_c('br'),_v(" "),_c('small',[_v("This site is powered by "),_c('a',{attrs:{"href":"https://www.netlify.com/"}},[_v("Netlify")]),_v(".")])])])])}
 }];
   
