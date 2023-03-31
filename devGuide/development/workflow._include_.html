@@ -115,7 +115,7 @@ then run your markbind-cli <a tags="environment--dg" href="https://markbind.org/
 <h2 id="testing">Testing<a class="fa fa-anchor" href="#testing" onclick="event.stopPropagation()"></a></h2>
 <p>Our test script does the following:</p>
 <ol>
-<li>Lints the code (<code class="hljs inline no-lang" v-pre>.js</code>, <code class="hljs inline no-lang" v-pre>.vue</code>) and stylesheets (<code class="hljs inline no-lang" v-pre>.css</code>) for any style errors using <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>.</li>
+<li>Lints the code (<code class="hljs inline no-lang" v-pre>.ts</code>, <code class="hljs inline no-lang" v-pre>.js</code>, <code class="hljs inline no-lang" v-pre>.vue</code>) and stylesheets (<code class="hljs inline no-lang" v-pre>.css</code>) for any style errors using <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>.</li>
 <li>Runs unit tests for all packages with <a href="https://jestjs.io/">Jest</a>.</li>
 <li>Builds the test sites whose directory names are listed in <code class="hljs inline no-lang" v-pre>packages/cli/test/functional/testSites.js</code>.</li>
 <li>For each test site, compares the HTML files generated with the HTML files in its <code class="hljs inline no-lang" v-pre>expected</code> directory.</li></ol>
