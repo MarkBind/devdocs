@@ -127,11 +127,26 @@ then run your markbind-cli <a tags="environment--dg" href="https://markbind.org/
 <p>Our unit tests perform fast, stable, and comprehensive checks on important behaviors of our classes and functions. Some existing tests can be found in the <code class="hljs inline no-lang" v-pre>packages/cli/test/unit</code> and <code class="hljs inline no-lang" v-pre>packages/core/test/unit</code> directory. Where appropriate, unit tests should be added/modified to account for any new/changed functionality.</p>
 <h5 id="updating-functional-tests">Updating functional tests<a class="fa fa-anchor" href="#updating-functional-tests" onclick="event.stopPropagation()"></a></h5>
 <p>Whether you are adding a new feature, updating existing features or fixing bugs, make sure to update the <strong>source</strong> test files (test sites, snapshots) to reflect the changes.</p>
-<p>After which, you can update the <strong>expected</strong> test files with: <code class="hljs inline no-lang" v-pre>npm run updatetest</code></p>
+<p>After which, you can update the <tooltip><template #content>These are located in <code class="hljs inline no-lang" v-pre>expected</code> folder in the test sites and <code class="hljs inline no-lang" v-pre>__snapshots__</code> folder for unit tests</template><strong>expected</strong> test files</tooltip> with: <code class="hljs inline no-lang" v-pre>npm run updatetest</code></p>
 <box type="warning" seamless>
 <p>You should always check that the generated output is correct before committing any changes to the test sites.</p>
 <p>Note that some binary files such as images (e.g. <code class="hljs inline no-lang" v-pre>inline-output.png</code>) or fonts (e.g. <code class="hljs inline no-lang" v-pre>material-icons-outlined.woff</code>) could show up
 as uncommitted changes due to the way they are generated. If you are not directly modifying those files in your PR, you should <strong>discard those changes</strong> and <strong>do not commit</strong> them.</p></box>
+<box type="tip" seamless><template #header><p>Here are the steps to solve merge conflicts in expected test files:</p></template>
+<ol>
+<li>Ensure that your fork is synced with the upstream repository.</li>
+<li>Ensure that the master branch of your local repository is in sync with the master branch of your fork.
+Pull from the fork into your local repository as needed.</li>
+<li>Checkout from your master branch to your PR branch.
+<ul>
+<li><code class="hljs inline no-lang" v-pre>git checkout [BRANCH NAME]</code></li></ul></li>
+<li>Merge your master branch into your PR branch.
+<ul>
+<li><code class="hljs inline no-lang" v-pre>git merge master</code></li></ul></li>
+<li>Accept all changes to any merge conflicts in the generated <strong>expected</strong> test files.
+<ul>
+<li>It does not matter which changes are accepted, as they will be overridden in the following step.</li></ul></li>
+<li>Once your master branch has been successfully merged into your PR branch, run <code class="hljs inline no-lang" v-pre>npm run updatetest</code> to generate the latest test files.</li></ol></box>
 <h5 id="adding-test-site-content">Adding test site content<a class="fa fa-anchor" href="#adding-test-site-content" onclick="event.stopPropagation()"></a></h5>
 <p>When adding new features, you should also add new site content into an existing test site or create a new test site to demonstrate the new feature. This is to ensure that your feature can be tested by building that test site.</p>
 <p>To add a page to an existing test site, for this example, to <code class="hljs inline no-lang" v-pre>test_site</code>:</p>
