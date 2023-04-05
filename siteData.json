@@ -131,6 +131,18 @@
       "headingKeywords": {}
     },
     {
+      "src": "devGuide/development/migratingNodeJs.md",
+      "title": "Migrating Node.js",
+      "headings": {
+        "migrating-node-js": "Migrating Node.js",
+        "preparation": "Preparation",
+        "choosing-node-js-version": "Choosing Node.js version",
+        "setup": "Setup",
+        "migration-steps": "Migration steps"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "devGuide/development/migratingToTypeScript.md",
       "title": "Migrating to TypeScript",
       "headings": {
