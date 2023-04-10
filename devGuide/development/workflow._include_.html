@@ -188,7 +188,28 @@ They should be updated accordingly if you are making changes to the plantuml con
 <h5 id="adding-snapshot-tests-for-components">Adding snapshot tests for components<a class="fa fa-anchor" href="#adding-snapshot-tests-for-components" onclick="event.stopPropagation()"></a></h5>
 <p>When making changes to the Vue components in <code class="hljs inline no-lang" v-pre>packages/vue-components</code>, you should add new snapshot tests or adapt existing ones as appropriate.</p>
 <p>Once you're done, be sure to run the <code class="hljs inline no-lang" v-pre>updatetest</code> script mentioned <a href="#updating-and-writing-tests">above</a>!</p></div>
-<h2 id="linting">Linting<a class="fa fa-anchor" href="#linting" onclick="event.stopPropagation()"></a></h2>
+<h2 id="documenting">Documenting<a class="fa fa-anchor" href="#documenting" onclick="event.stopPropagation()"></a></h2>
+<h3 id="adding-intra-site-links-to-documentation">Adding Intra-Site Links to Documentation<a class="fa fa-anchor" href="#adding-intra-site-links-to-documentation" onclick="event.stopPropagation()"></a></h3>
+<p>In MarkBind, we use <a tags="environment--dg" href="https://markbind.org/userGuide/tweakingThePageStructure.html#plugin-tags">tags</a> to differentiate between links in the developer guide referring to the user guide versus links in the user guide referring to the developer guide. Note that intra-site links within either guides need not have tags.</p>
+<p>MarkBind's documentation currently has 3 tags:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>environment--combined</code> for deploying the User Guide and Developer Guide together</li>
+<li><code class="hljs inline no-lang" v-pre>environment--ug</code> for deployed User Guide</li>
+<li><code class="hljs inline no-lang" v-pre>environment--dg</code> for deployed Developer Guide</li></ul>
+<p>To ensure that correct links are created, use tags with the links to selectively filter the correct link to be rendered for the right environment. When both the User Guide and the Developer Guide are deployed together, they have access to the files from each other, allowing the relative link to work. However, when they are deployed individually, this is not the case. Using absolute links creates the same effect as the relative link without having to have access to the files from the other guide.</p>
+<h4 id="developer-guide">Developer Guide<a class="fa fa-anchor" href="#developer-guide" onclick="event.stopPropagation()"></a></h4>
+<p><span class="dimmed">LINK:</span></p>
+<pre><code class="hljs markdown" v-pre><span>[<span class="hljs-string">Link Title</span>](<span class="hljs-link">/userGuide/newPage.html</span>)
+</span></code></pre><p><span class="dimmed">REPLACED WITH:</span></p>
+<pre><code class="hljs html" v-pre><span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">tags</span>=<span class="hljs-string">&quot;environment--combined&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/userGuide/newPage.html&quot;</span>&gt;</span>Link Title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</span><span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">tags</span>=<span class="hljs-string">&quot;environment--dg&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://markbind.org/userGuide/newPage.html&quot;</span>&gt;</span>Link Title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</span></code></pre><h4 id="user-guide">User Guide<a class="fa fa-anchor" href="#user-guide" onclick="event.stopPropagation()"></a></h4>
+<p><span class="dimmed">LINK:</span></p>
+<pre><code class="hljs markdown" v-pre><span>[<span class="hljs-string">Link Title</span>](<span class="hljs-link">/devGuide/newPage.html</span>)
+</span></code></pre><p><span class="dimmed">REPLACED WITH:</span></p>
+<pre><code class="hljs html" v-pre><span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">tags</span>=<span class="hljs-string">&quot;environment--combined&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/devGuide/newPage.html&quot;</span>&gt;</span>Link Title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</span><span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">tags</span>=<span class="hljs-string">&quot;environment--ug&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://markbind.org/devdocs/devGuide/newPage.html&quot;</span>&gt;</span>Link Title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</span></code></pre><h2 id="linting">Linting<a class="fa fa-anchor" href="#linting" onclick="event.stopPropagation()"></a></h2>
 <p>We follow <a href="/devdocs/devGuide/styleGuides.html">our style guides</a>. Using a linter will help check and fix some of the code style errors in your code. It will save time for both you and your code reviewer. The linting tool we use is <a href="https://eslint.org/">ESLint</a> and <a href="https://stylelint.io/">StyleLint</a>. Here is a <a href="https://gist.github.com/nicholaschuayunzhi/bfe53dbb5f1a0f02d545d55956f9ab7e">gist</a> with an explanation of the ESLint rules chosen in markbind-cli.</p>
 <p>Before making a commit or pull request, you should lint your code by running the following commands from the root of your project:</p>
 <ul>
