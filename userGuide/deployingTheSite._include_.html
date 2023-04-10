@@ -369,7 +369,7 @@ to automatically build and deploy your site on their platform every time your Gi
 </span><span>          <span class="hljs-attr">path:</span> <span class="hljs-string">.</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Extract</span> <span class="hljs-string">PR</span> <span class="hljs-string">number</span>
 </span><span>        <span class="hljs-attr">id:</span> <span class="hljs-string">pr-number</span>
-</span><span>        <span class="hljs-attr">run:</span> <span class="hljs-string">echo</span> <span class="hljs-string">&#x27;::set-output name=ACTIONS_PR_NUMBER::&#x27;</span><span class="hljs-string">$(cat</span> <span class="hljs-string">./pr/NUMBER)</span>
+</span><span>        <span class="hljs-attr">run:</span> <span class="hljs-string">echo</span> <span class="hljs-string">&quot;ACTIONS_PR_NUMBER=$(cat ./pr/NUMBER)&quot;</span> <span class="hljs-string">&gt;&gt;</span> <span class="hljs-string">$GITHUB_OUTPUT</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">Node</span>
 </span><span>        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span>
 </span><span>        <span class="hljs-attr">with:</span>
@@ -378,7 +378,7 @@ to automatically build and deploy your site on their platform every time your Gi
 </span><span>        <span class="hljs-attr">id:</span> <span class="hljs-string">pr-url</span>
 </span><span>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span>
 </span><span><span class="highlighted"><span class="hljs-string">          PR_URL=&quot;https://pr-${{ steps.pr-number.outputs.ACTIONS_PR_NUMBER }}-&lt;YOUR_BASE_URL&gt;.surge.sh/&quot;</span></span>
-</span><span><span class="hljs-string">          echo &#x27;::set-output name=ACTIONS_PREVIEW_URL::&#x27;$PR_URL</span>
+</span><span><span class="hljs-string">          echo &quot;ACTIONS_PREVIEW_URL=${PR_URL}&quot; &gt;&gt; $GITHUB_OUTPUT</span>
 </span><span><span class="hljs-string"></span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">surge</span> <span class="hljs-string">and</span> <span class="hljs-string">deploy</span> <span class="hljs-string">PR</span> <span class="hljs-string">to</span> <span class="hljs-string">surge</span>
 </span><span>        <span class="hljs-attr">run:</span> <span class="hljs-string">|</span>
 </span><span><span class="hljs-string">          npm i -g surge</span>
