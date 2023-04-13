@@ -59,57 +59,57 @@ If there is no second approval yet, wait for a day before merging the PR without
 </span><span>$ git push upstream vA.B.C
 </span></code></pre></li> <li><p><strong>Publish</strong> by running <code class="hljs inline no-lang">npx lerna publish from-git</code>. You should receive a notification by <code class="hljs inline no-lang">npm</code> that the publish is successful.</p></li> <li><p><strong>Smoke test</strong> the new version by installing the new version (run <code class="hljs inline no-lang">npm i -g markbind-cli@A.B.C</code>) and playing around with it a bit to ensure that it works.</p> <div class="alert box-container seamless" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><div class="icon-wrapper  text-info" data-v-4d146e2c><i class="fas fa-info" data-v-4d146e2c></i></div> <div aria-hidden="true" class="vertical-divider alert-info" data-v-4d146e2c></div> <div class="contents" data-v-4d146e2c><ul data-v-4d146e2c><li data-v-4d146e2c>If you used <code class="hljs inline no-lang" data-v-4d146e2c>npm link</code> for your project, ensure that you <mark data-v-4d146e2c>try the new release on another platform</mark> that doesn't use <code class="hljs inline no-lang" data-v-4d146e2c>npm link</code>, so that we can be sure the end-users can install and use the new version.</li> <li data-v-4d146e2c>You can also try the new release on a project that uses MarkBind as a local dev-dependency.</li></ul></div> <!----></div></div></div></li> <li><p><strong>Verify the website</strong> at markbind.org has been updated. For example, you can look at the footer of the website to see if the version number is updated.</p> <div class="alert box-container seamless" data-v-4d146e2c><!----> <div class="header-and-body" data-v-4d146e2c><!----> <div class="box-body-wrapper" data-v-4d146e2c><div class="icon-wrapper  text-info" data-v-4d146e2c><i class="fas fa-info" data-v-4d146e2c></i></div> <div aria-hidden="true" class="vertical-divider alert-info" data-v-4d146e2c></div> <div class="contents" data-v-4d146e2c><p data-v-4d146e2c>Note that it may take a few minutes for the website to be updated and you may need to check it in an incognito window to avoid caching.</p></div> <!----></div></div></div> <p>The deployment is automated. However, if it doesn't deploy properly for the release, do the following:</p> <pre><code class="hljs sh"><span>$ npm run build:ug
 </span><span>$ npm run deploy:ug
-</span></code></pre></li> <li><p><strong>Update milestones</strong>. Close the <a href="https://github.com/MarkBind/markbind/milestones">milestone on GitHub</a> and all issues in that milestone.</p> <p>Also create a new milestone for the next iterations. Recommended to have at least two upcoming milestones opened. Use the format <code class="hljs inline no-lang">vA.B.C</code> for the milestone title.</p></li> <li><p><strong>Release on GitHub</strong>.</p> <p>a. Go to the MarkBind release page at <a href="https://github.com/MarkBind/markbind/releases">https://github.com/MarkBind/markbind/releases</a>.</p> <p>b. Click &quot;Draft a new release&quot;.</p> <p>c. For the tag version, enter <code class="hljs inline no-lang">vA.B.C</code>. (The newly released version should be recognized by GitHub, with an &quot;Existing Tag&quot; indicator, otherwise, ensure that you have pushed the version commit and tag in step 4).</p> <p>d. For the release title, leave it blank.</p> <p>e. For the main body, use the following template:</p> <pre><code class="hljs markdown"><span><span class="hljs-section"># markbind-cli</span>
+</span></code></pre></li> <li><p><strong>Update milestones</strong>. Close the <a href="https://github.com/MarkBind/markbind/milestones">milestone on GitHub</a> and all issues in that milestone.</p> <p>Also create a new milestone for the next iterations. Recommended to have at least two upcoming milestones opened. Use the format <code class="hljs inline no-lang">vA.B.C</code> for the milestone title.</p></li> <li><p><strong>Release on GitHub</strong>.</p> <p>a. Go to the MarkBind release page at <a href="https://github.com/MarkBind/markbind/releases">https://github.com/MarkBind/markbind/releases</a>.</p> <p>b. Click &quot;Draft a new release&quot;.</p> <p>c. For the tag version, enter <code class="hljs inline no-lang">vA.B.C</code>. (The newly released version should be recognized by GitHub, with an &quot;Existing Tag&quot; indicator, otherwise, ensure that you have pushed the version commit and tag in step 4).</p> <p>d. For the release title, leave it blank.</p> <p>e. Press the &quot;Generate release notes&quot; button to automatically add the list of PRs merged for this release.</p> <p>f. For the main body, use the following template:</p> <pre><code class="hljs markdown"><span><span class="hljs-section"># markbind-cli</span>
 </span><span>
 </span><span>&lt;!-- List out each of the PR for this version in the following format: --&gt;
-</span><span>&lt;!-- #ISSUE<span class="hljs-emphasis">_NUMBER ISSUE_</span>TITLE (#PR<span class="hljs-emphasis">_NUMBER) --&gt;</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">## User Facing Changes</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">### Breaking Changes</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">&lt;!-- Any feature that is made obsolete --&gt;</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">&gt; Also give a brief explanation note about:</span>
-</span><span><span class="hljs-emphasis">&gt;   - what was the old feature that was made obsolete</span>
-</span><span><span class="hljs-emphasis">&gt;   - any replacement feature (if any), and</span>
-</span><span><span class="hljs-emphasis">&gt;   - how the author should modify his website to migrate from the old feature to the replacement feature (if possible).</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">### Features</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">&lt;!-- Features enable users (authors/readers) to do something new. --&gt;</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">### Enhancements</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">&lt;!-- Enhances any existing features --&gt;</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">### Fixes</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">&lt;!-- Fixes correct a programming error/assumption. --&gt;</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">### Documentation</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">&lt;!-- Pure changes to the documentation, such as typo, restructuring, etc --&gt;</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">## Other Changes</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">### Code Quality</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">&lt;!-- Refactoring, etc. --&gt;</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">### DevOps Changes</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">&lt;!-- Tooling, etc. --&gt;</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">### Dependencies</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">&lt;!-- Dependency version upgrades of the main or any subpackages --&gt;</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">### Miscellaneous</span>
-</span><span><span class="hljs-emphasis"></span>
-</span><span><span class="hljs-emphasis">&lt;!-- Any other changes --&gt;</span>
-</span><span><span class="hljs-emphasis"></span>
-</span></code></pre><p>Use the list of PRs merged in the milestone to write the release notes. You may omit any sections that do not have a single PR under it.</p> <p>An example of a release note draft (taken from v1.18.0):</p> <pre><code class="hljs"><span># markbind-cli
+</span><span>&lt;!-- PR<span class="hljs-emphasis">_TITLE by @username in #PR_</span>NUMBER --&gt;
+</span><span>
+</span><span><span class="hljs-section">## User Facing Changes</span>
+</span><span>
+</span><span><span class="hljs-section">### Breaking Changes</span>
+</span><span>
+</span><span>&lt;!-- Any feature that is made obsolete --&gt;
+</span><span>
+</span><span><span class="hljs-quote">&gt; Also give a brief explanation note about:</span>
+</span><span><span class="hljs-quote">&gt;   - what was the old feature that was made obsolete</span>
+</span><span><span class="hljs-quote">&gt;   - any replacement feature (if any), and</span>
+</span><span><span class="hljs-quote">&gt;   - how the author should modify his website to migrate from the old feature to the replacement feature (if possible).</span>
+</span><span>
+</span><span><span class="hljs-section">### Features</span>
+</span><span>
+</span><span>&lt;!-- Features enable users (authors/readers) to do something new. --&gt;
+</span><span>
+</span><span><span class="hljs-section">### Enhancements</span>
+</span><span>
+</span><span>&lt;!-- Enhances any existing features --&gt;
+</span><span>
+</span><span><span class="hljs-section">### Fixes</span>
+</span><span>
+</span><span>&lt;!-- Fixes correct a programming error/assumption. --&gt;
+</span><span>
+</span><span><span class="hljs-section">### Documentation</span>
+</span><span>
+</span><span>&lt;!-- Pure changes to the documentation, such as typo, restructuring, etc --&gt;
+</span><span>
+</span><span><span class="hljs-section">## Developer Facing Changes</span>
+</span><span>
+</span><span><span class="hljs-section">### Code Quality</span>
+</span><span>
+</span><span>&lt;!-- Refactoring, etc. --&gt;
+</span><span>
+</span><span><span class="hljs-section">### DevOps Changes</span>
+</span><span>
+</span><span>&lt;!-- Tooling, etc. --&gt;
+</span><span>
+</span><span><span class="hljs-section">### Dependencies</span>
+</span><span>
+</span><span>&lt;!-- Dependency version upgrades of the main or any subpackages --&gt;
+</span><span>
+</span><span><span class="hljs-section">### Miscellaneous</span>
+</span><span>
+</span><span>&lt;!-- Any other changes --&gt;
+</span><span>
+</span></code></pre><p>Thoroughly review and categorize each PR to its appropriate section within the release notes. If needed, provide additional explanations for clarity. Any sections without a corresponding PR can be omitted.</p> <p>An example of a release note draft (taken from v1.18.0):</p> <pre><code class="hljs"><span># markbind-cli
 </span><span>
 </span><span>### Breaking Changes
 </span><span>
@@ -171,7 +171,7 @@ The table shown in <code class="hljs inline no-lang">README.md</code> is based o
 to include 'tlylt' in <code class="hljs inline no-lang">.all-contributorsrc</code> and <code class="hljs inline no-lang">README.md</code>.</li> <li>The senior dev approves and merge the automatic PR.</li> <li>The senior dev deletes the automatic PR.</li></ol> <p>Note that:</p> <ul><li>All contribution types specified <a href="https://allcontributors.org/docs/en/emoji-key">here</a> can be used.
 <ul><li>E.g. code, doc, mentoring, question, test, bug</li></ul></li> <li>Multiple contribution types can be included at once or updated later on.
 <ul><li>E.g. &quot;@all-contributors please add tlylt for code, doc&quot;</li></ul></li> <li>Contribution types can be updated later on.
-<ul><li>E.g &quot;@all-contributors please add tlylt for code&quot;</li> <li>Some time later: &quot;@all-contributors please add tlylt for doc&quot;</li> <li>Result: 'tlylt' will be updated to have both icons(code and doc)</li></ul></li></ul> <div class="clearfix"><p><span class="float-start"><a href="/devdocs/devGuide/githubActions/markbindReusableWorkflows.html" class="btn btn-light"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> <span>GitHub Actions: markbind-reusable-workflows</span></span></a></span></p> <p><span class="float-end"><a href="/devdocs/devGuide/styleGuides.html" class="btn btn-light"><span><span>Appendix: Style guides</span> <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></a></span></p></div> <br></div> <nav id="page-nav" data-v-e6005420><div class="nav-component slim-scroll" data-v-e6005420><nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#project-management" data-v-e6005420>Project management‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#managing-prs" data-v-e6005420>Managing PRs‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#approval" data-v-e6005420>Approval‎</a> <a class="nav-link py-1" href="#merging" data-v-e6005420>Merging‎</a></nav> <a class="nav-link py-1" href="#doing-a-release" data-v-e6005420>Doing a Release‎</a> <a class="nav-link py-1" href="#acknowledging-contributors" data-v-e6005420>Acknowledging Contributors‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#view-all-contributors" data-v-e6005420>View all contributors‎</a> <a class="nav-link py-1" href="#add-new-contributors" data-v-e6005420>Add new contributors‎</a></nav></nav> <!----></nav></div> <!----></nav> <div aria-hidden="true" class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;"><i class="fas fa-arrow-circle-up"></i></div></div> <div><footer><div class="text-center"><small>[Generated by <a href="https://markbind.org/">MarkBind 4.1.0</a> on Wed, 12 Apr 2023, 14:08:21 UTC]</small><br> <small>This site is powered by <a href="https://www.netlify.com/">Netlify</a>.</small></div></footer></div></div>
+<ul><li>E.g &quot;@all-contributors please add tlylt for code&quot;</li> <li>Some time later: &quot;@all-contributors please add tlylt for doc&quot;</li> <li>Result: 'tlylt' will be updated to have both icons(code and doc)</li></ul></li></ul> <div class="clearfix"><p><span class="float-start"><a href="/devdocs/devGuide/githubActions/markbindReusableWorkflows.html" class="btn btn-light"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> <span>GitHub Actions: markbind-reusable-workflows</span></span></a></span></p> <p><span class="float-end"><a href="/devdocs/devGuide/styleGuides.html" class="btn btn-light"><span><span>Appendix: Style guides</span> <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></a></span></p></div> <br></div> <nav id="page-nav" data-v-e6005420><div class="nav-component slim-scroll" data-v-e6005420><nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#project-management" data-v-e6005420>Project management‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#managing-prs" data-v-e6005420>Managing PRs‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#approval" data-v-e6005420>Approval‎</a> <a class="nav-link py-1" href="#merging" data-v-e6005420>Merging‎</a></nav> <a class="nav-link py-1" href="#doing-a-release" data-v-e6005420>Doing a Release‎</a> <a class="nav-link py-1" href="#acknowledging-contributors" data-v-e6005420>Acknowledging Contributors‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#view-all-contributors" data-v-e6005420>View all contributors‎</a> <a class="nav-link py-1" href="#add-new-contributors" data-v-e6005420>Add new contributors‎</a></nav></nav> <!----></nav></div> <!----></nav> <div aria-hidden="true" class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;"><i class="fas fa-arrow-circle-up"></i></div></div> <div><footer><div class="text-center"><small>[Generated by <a href="https://markbind.org/">MarkBind 4.1.0</a> on Thu, 13 Apr 2023, 6:32:39 UTC]</small><br> <small>This site is powered by <a href="https://www.netlify.com/">Netlify</a>.</small></div></footer></div></div>
 </body><script src="/devdocs/markbind/js/bootstrap-utility.min.js"></script>
 <script>
   MarkBind.setupWithSearch()
