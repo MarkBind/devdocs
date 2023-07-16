@@ -197,7 +197,8 @@
         "to-add-a-dependency": "To add a dependency",
         "to-delete-a-dependency": "To delete a dependency",
         "to-update-a-dependency": "To update a dependency",
-        "points-for-consideration": "Points for consideration"
+        "points-for-consideration": "Points for consideration",
+        "updating-plantuml": "Updating PlantUML"
       },
       "headingKeywords": {}
     },

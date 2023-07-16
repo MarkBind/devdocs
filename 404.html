@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 4.1.0">
+    <meta name="generator" content="MarkBind 5.0.0">
     <meta name="viewport" content="width=device-width, initial-scale=1"><title>MarkBind - Page not found</title><link rel="stylesheet" href="/devdocs/markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="/devdocs/markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/devdocs/markbind/glyphicons/css/bootstrap-glyphicons.min.css">
@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="/devdocs/markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="/devdocs/markbind/css/markbind.min.css"><script src="/devdocs/markbind/js/polyfill.min.js"></script>
     <script src="/devdocs/markbind/js/vue.min.js"></script>
     <script src="/devdocs/markbind/js/markbind.min.js"></script>
-    <script src="404.page-vue-render.js"></script>
-    <script src="/devdocs/markbind/js/jquery.min.js"></script><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-tree/markbind-plugin-tree.css"><link rel="icon" href="/devdocs/favicon.ico"></head>
+    <script src="404.page-vue-render.js"></script><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-tree/markbind-plugin-tree.css"><link rel="icon" href="/devdocs/favicon.ico"></head>
 <script>
   const baseUrl = '/devdocs'
 </script>
@@ -23,4 +22,19 @@
 <script>
   MarkBind.setupWithSearch()
 </script>
+    <script>
+    function copyCodeBlock(element) {
+        const pre = element.parentElement.parentElement;
+        const codeElement = pre.querySelector('code');
+
+        // create dummy text element to select() the text field
+        const textElement = document.createElement('textarea');
+        textElement.value = codeElement.textContent;
+        document.body.appendChild(textElement);
+        textElement.select();
+
+        document.execCommand('copy');
+        document.body.removeChild(textElement);
+    }
+    </script>
 </html>
