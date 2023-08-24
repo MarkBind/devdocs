@@ -198,7 +198,8 @@
         "to-delete-a-dependency": "To delete a dependency",
         "to-update-a-dependency": "To update a dependency",
         "points-for-consideration": "Points for consideration",
-        "updating-plantuml": "Updating PlantUML"
+        "updating-plantuml": "Updating PlantUML",
+        "updating-bootstrap-and-bootswatch": "Updating Bootstrap and Bootswatch"
       },
       "headingKeywords": {}
     },
