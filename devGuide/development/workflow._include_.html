@@ -140,6 +140,20 @@
 
     </div>
     </button></div></pre></div></div></modal></li></ul>
+<h4 id="keeping-your-fork-up-to-date">Keeping your fork up to date<a class="fa fa-anchor" href="#keeping-your-fork-up-to-date" onclick="event.stopPropagation()"></a></h4>
+<p>When new PRs are merged into the <code class="hljs inline no-lang" v-pre>master</code> branch, your <code class="hljs inline no-lang" v-pre>master</code> branch will be out of sync with the main repository. One way to update your branches to branch from the latest <code class="hljs inline no-lang" v-pre>master</code> is as follows:</p>
+<ol>
+<li>
+<p>Go to your fork on GitHub and click 'Sync fork' to update your remote <code class="hljs inline no-lang" v-pre>master</code> branch
+<a href="https://docs.github.com/assets/cb-75616/mw-1440/images/help/repository/sync-fork-dropdown.webp" target="_self"><img src="https://docs.github.com/assets/cb-75616/mw-1440/images/help/repository/sync-fork-dropdown.webp" alt class="img-fluid" width="700"></a></p></li>
+<li>
+<p>Checkout and sync your local <code class="hljs inline no-lang" v-pre>master</code> (the name of your local branch that tracks the remote <code class="hljs inline no-lang" v-pre>master</code>) branch with <code class="hljs inline no-lang" v-pre>git checkout master &amp;&amp; git pull</code></p></li>
+<li>
+<p>Checkout your feature branch and <a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing">rebase</a> the branch with <code class="hljs inline no-lang" v-pre>git rebase master</code> or <a href="https://git-scm.com/docs/git-merge">merge</a> <code class="hljs inline no-lang" v-pre>master</code> into the branch with <code class="hljs inline no-lang" v-pre>git merge master</code></p></li>
+<li>
+<p>Fix any merge conflicts (if applicable)</p></li></ol>
+<box type="tip" seamless>
+<p>You may want to use a tool like <a href="https://www.git-town.com/">GitTown</a> to speed up the process.</p></box>
 <h4 id="editing-backend-features">Editing backend features<a class="fa fa-anchor" href="#editing-backend-features" onclick="event.stopPropagation()"></a></h4>
 <p>Some of our backend code files in <code class="hljs inline no-lang" v-pre>packages/core</code> are written in TypeScript, and you will need to compile those into JavaScript for local execution with our command-line module <code class="hljs inline no-lang" v-pre>packages/cli</code>.</p>
 <p>You can run <code class="hljs inline no-lang" v-pre>npm run build:backend</code> in the root directory to compile the files, but in some cases, it might be tedious to manually execute the command many times. We recommend you to either:</p>
