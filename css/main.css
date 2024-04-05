@@ -85,7 +85,7 @@ mark {
 }
 
 .nav-component {
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #page-nav {
