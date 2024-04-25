@@ -264,6 +264,17 @@
       "headingKeywords": {}
     },
     {
+      "src": "devGuide/githubActions/workflowSecurity.md",
+      "title": "GitHub Actions: Workflow Security",
+      "headings": {
+        "github-actions-workflow-security": "GitHub Actions: Workflow Security",
+        "minimally-scoped-credentials": "Minimally scoped credentials",
+        "security-precautions-when-using-pull-request-target-event": "Security precautions when using pull_request_target event",
+        "untrusted-input": "Untrusted input"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "devGuide/projectManagement.md",
       "title": "Project management",
       "headings": {
