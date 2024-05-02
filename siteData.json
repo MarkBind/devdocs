@@ -286,6 +286,10 @@
         "acknowledging-contributors": "Acknowledging Contributors",
         "view-all-contributors": "View all contributors",
         "add-new-contributors": "Add new contributors",
+        "managing-the-repository": "Managing the repository",
+        "projects": "Projects",
+        "instructions": "Instructions:",
+        "some-tips-principles-from-current-use": "Some tips / principles from current use:",
         "other-notes": "Other Notes"
       },
       "headingKeywords": {}
