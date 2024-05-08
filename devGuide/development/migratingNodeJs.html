@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="generator" content="MarkBind 5.5.2">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><title>MarkBind - Migrating Node.js</title> <link rel="stylesheet" href="/devdocs/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/devdocs/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/devdocs/markbind/glyphicons/css/bootstrap-glyphicons.min.css"><link rel="stylesheet" href="/devdocs/markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="/devdocs/markbind/css/markbind.min.css"><link rel="stylesheet" href="/devdocs/plugins/web3Form/web-3-form.css"><link rel="stylesheet" href="/devdocs/plugins/dataTable/datatables.min.css"><link rel="stylesheet" href="/devdocs/plugins/dataTable/datatables-additional.css"><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>MarkBind - Migrating Node.js</title> <link rel="stylesheet" href="/devdocs/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/devdocs/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/devdocs/markbind/glyphicons/css/bootstrap-glyphicons.min.css"><link rel="stylesheet" href="/devdocs/markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="/devdocs/markbind/css/markbind.min.css"><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
     
   <link rel="stylesheet" href="/devdocs/css/main.css">
 <link rel="icon" href="/devdocs/favicon.ico"></head>
@@ -44,7 +44,7 @@ Switch to use the Node.js version that you are migrating to.</p> <h3 id="migrati
 <ul><li>Follow steps in <a tags="environment--dg" href="https://markbind.org/userGuide/deployingTheSite.html#using-ci-platforms">Using CI Platforms</a> but update the config files for the various CI Platforms to use the correct Node.js version. Try deploying and ensure there are no problems with deployment.<div class="alert box-container seamless d-flex" data-v-6607c59e><div class="d-flex" data-v-6607c59e><div class="icon-wrapper  text-info" data-v-6607c59e><i class="fas fa-info" data-v-6607c59e></i></div> <div aria-hidden="true" class="vertical-divider alert-info" data-v-6607c59e></div></div> <div class="header-and-body" data-v-6607c59e><div class="box-header-wrapper" data-v-6607c59e><!----> <div class="box-header" data-v-6607c59e><p data-v-6607c59e>If a different npm version is needed</p></div> <!----></div> <div class="box-body-wrapper box-body-wrapper-with-heading" data-v-6607c59e><!----> <!----> <div class="contents" data-v-6607c59e>
 Install the correct npm version before running npm commands. </div> <!----></div></div></div></li></ul></li></ul></li></ul></li> <li>Update documentation
 <ul><li>Update Node.js and npm version in documentation. See <a href="https://github.com/MarkBind/markbind/pull/2233/files#diff-0f8e38868f41667abec6adacbb5131fbd6999c4913fc43e3429390b744f7a1f3">Update to use Node 16</a> as an example. <div class="alert box-container seamless" data-v-6607c59e><!----> <div class="header-and-body" data-v-6607c59e><!----> <div class="box-body-wrapper" data-v-6607c59e><div class="icon-wrapper  text-success" data-v-6607c59e><i class="fas fa-lightbulb" data-v-6607c59e></i></div> <div aria-hidden="true" class="vertical-divider alert-success" data-v-6607c59e></div> <div class="contents" data-v-6607c59e>
-Don't forget to update the version numbers in the example config files in <a tags="environment--dg" href="https://markbind.org/userGuide/deployingTheSite.html" data-v-6607c59e>Deploying the Site</a>!</div> <!----></div></div></div></li></ul></li></ol> <div class="clearfix"><p><span class="float-start"><a href="/devdocs/devGuide/development/writingPlugins.html" class="btn btn-light"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> <span>Writing Plugins</span></span></a></span></p> <p><span class="float-end"><a href="/devdocs/devGuide/design/projectStructure.html" class="btn btn-light"><span><span>Project Structure</span> <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></a></span></p></div> <br></div> <nav id="page-nav" data-v-e6005420><div class="nav-component slim-scroll" data-v-e6005420><nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#migrating-node-js" data-v-e6005420>Migrating Node.js‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#preparation" data-v-e6005420>Preparation‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#choosing-node-js-version" data-v-e6005420>Choosing Node.js version‎</a> <a class="nav-link py-1" href="#setup" data-v-e6005420>Setup‎</a></nav> <a class="nav-link py-1" href="#migration-steps" data-v-e6005420>Migration steps‎</a></nav> <!----></nav></div> <!----></nav> <div aria-hidden="true" class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;"><i class="fas fa-arrow-circle-up"></i></div></div> <div><footer><div class="text-center"><small>[Generated by <a href="https://markbind.org/">MarkBind 5.5.2</a> on Thu, 2 May 2024, 14:00:54 UTC]</small><br> <small>This site is powered by <a href="https://www.netlify.com/">Netlify</a>.</small></div></footer></div></div>
+Don't forget to update the version numbers in the example config files in <a tags="environment--dg" href="https://markbind.org/userGuide/deployingTheSite.html" data-v-6607c59e>Deploying the Site</a>!</div> <!----></div></div></div></li></ul></li></ol> <div class="clearfix"><p><span class="float-start"><a href="/devdocs/devGuide/development/writingPlugins.html" class="btn btn-light"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> <span>Writing Plugins</span></span></a></span></p> <p><span class="float-end"><a href="/devdocs/devGuide/design/projectStructure.html" class="btn btn-light"><span><span>Project Structure</span> <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></a></span></p></div> <br></div> <nav id="page-nav" data-v-e6005420><div class="nav-component slim-scroll" data-v-e6005420><nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#migrating-node-js" data-v-e6005420>Migrating Node.js‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#preparation" data-v-e6005420>Preparation‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#choosing-node-js-version" data-v-e6005420>Choosing Node.js version‎</a> <a class="nav-link py-1" href="#setup" data-v-e6005420>Setup‎</a></nav> <a class="nav-link py-1" href="#migration-steps" data-v-e6005420>Migration steps‎</a></nav> <!----></nav></div> <!----></nav> <div aria-hidden="true" class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;"><i class="fas fa-arrow-circle-up"></i></div></div> <div><footer><div class="text-center"><small>[Generated by <a href="https://markbind.org/">MarkBind 5.5.2</a> on Wed, 8 May 2024, 6:11:47 UTC]</small><br> <small>This site is powered by <a href="https://www.netlify.com/">Netlify</a>.</small></div></footer></div></div>
 </body><script src="/devdocs/markbind/js/bootstrap-utility.min.js"></script>
 <script src="/devdocs/markbind/js/polyfill.min.js"></script>
 <script src="/devdocs/markbind/js/vue.min.js"></script>
@@ -53,50 +53,6 @@ Don't forget to update the version numbers in the example config files in <a tag
 <script>
   MarkBind.setupWithSearch()
 </script>
-    <script>
-    function toggleCodeBlockWrap(element) {
-      const pre = element.parentElement.parentElement;
-      const classList = pre.querySelector('code').classList; 
-      if (classList.contains('wrap')) {
-          classList.remove('wrap');
-      } else {
-          classList.add('wrap')
-      }
-    }
-    </script>
-    
-    <script>
-        function submitForm(element) {
-            event.preventDefault();
-            const formData = new FormData(element);
-            const formProps = Object.fromEntries(formData);
-            const json = JSON.stringify(formProps);
-            const submitButton = element.querySelector('button[type="submit"]');
-            const submitButtonText = submitButton.innerText;
-            submitButton.innerText = 'Please wait...'
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json,
-            })
-            .then(async (response) => {
-                if (response.status == 200) {
-                    alert('Form submitted! Thank you for your response');
-                } else {
-                    alert('Error submitting form! Please try again later.');
-                }
-            })
-            .catch(error => {
-                alert('Error submitting form! Please try again later.');
-            })
-            .finally(() => {
-                submitButton.innerText = submitButtonText;
-            })
-        }
-    </script>
     <script>
     function copyCodeBlock(element) {
         const pre = element.parentElement.parentElement;
@@ -112,55 +68,4 @@ Don't forget to update the version numbers in the example config files in <a tag
         document.body.removeChild(textElement);
     }
     </script>
-    <script src="/devdocs/plugins/dataTable/datatables.min.js"></script>
-    
-  <script>
-    function getTableOptions(el) {
-      const options = {};
-      if ($(el).hasClass('sortable-table')) {
-        options.searching = false;
-        options.paging = false;
-        options.info = false;
-      } else if ($(el).hasClass('searchable-table')) {
-        options.ordering = false;
-        options.paging = false;
-        options.info = false;
-        options.dom = '<"row"<"col-sm-12"f>>' + '<"row"<"col-sm-12"t>>';
-      } else if ($(el).hasClass('sortable-searchable-table')) {
-        options.paging = false;
-        options.info = false;
-        options.dom = '<"row"<"col-sm-12"f>>' + '<"row"<"col-sm-12"t>>';
-      }
-      return options;
-    }
-
-    Vue.directive('datatable', {
-      inserted: function(el, binding) {
-        const options = binding.value || {};
-        const tableOptions = getTableOptions(el);
-        $(el).DataTable({ ...tableOptions, ...options });
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-      $('table.sortable-table, table.searchable-table, table.sortable-searchable-table').each(function() {
-        const options = getTableOptions(this);
-        $(this).DataTable(options);
-      });
-    });
-  </script>
-
-    <script type="module">
-    import mermaid from 'https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs';
-    document.addEventListener('DOMContentLoaded', () => {
-      mermaid.initialize({});
-      Vue.directive('mermaid', {
-        inserted: function(el) {
-          mermaid.run({
-            nodes: [el]
-          });
-        }
-      });
-    });
-  </script>
 </html>

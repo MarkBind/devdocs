@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="generator" content="MarkBind 5.5.2">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><title>MarkBind - Writing Components</title> <link rel="stylesheet" href="/devdocs/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/devdocs/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/devdocs/markbind/glyphicons/css/bootstrap-glyphicons.min.css"><link rel="stylesheet" href="/devdocs/markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="/devdocs/markbind/css/markbind.min.css"><link rel="stylesheet" href="/devdocs/plugins/web3Form/web-3-form.css"><link rel="stylesheet" href="/devdocs/plugins/dataTable/datatables.min.css"><link rel="stylesheet" href="/devdocs/plugins/dataTable/datatables-additional.css"><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>MarkBind - Writing Components</title> <link rel="stylesheet" href="/devdocs/markbind/css/bootstrap.min.css"> <link rel="stylesheet" href="/devdocs/markbind/fontawesome/css/all.min.css"> <link rel="stylesheet" href="/devdocs/markbind/glyphicons/css/bootstrap-glyphicons.min.css"><link rel="stylesheet" href="/devdocs/markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="/devdocs/markbind/css/markbind.min.css"><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="/devdocs/plugins/markbind-plugin-tree/markbind-plugin-tree.css">
     
   <link rel="stylesheet" href="/devdocs/css/main.css">
 <link rel="icon" href="/devdocs/favicon.ico"></head>
@@ -40,7 +40,7 @@ Ideally, this should not increase MarkBind's bundle size too much.
 <a href="https://bundlephobia.com/">Bundlephobia</a> may be useful to quickly look up the size of a package!</p> <h4 id="dependencies">Dependencies<a href="#dependencies" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h4> <p>When choosing to use a third-party library or package, it should ideally be well-maintained and not have too many dependencies.
 While dependencies may be inevitable, a package with dependencies on large libraries may lag behind the most recent releases of these libraries, which may become a blocker for MarkBind to migrate to these recent releases as well.</p> <p>For instance, if <code class="hljs inline no-lang">bootstrap-vue</code> depends on Bootstrap and Vue, we will need to wait for <code class="hljs inline no-lang">bootstrap-vue</code> to migrate to the newest versions of both Bootstrap and Vue before MarkBind can migrate to these versions of Bootstrap and Vue as well.</p> <div class="alert box-container seamless" data-v-6607c59e><!----> <div class="header-and-body" data-v-6607c59e><!----> <div class="box-body-wrapper" data-v-6607c59e><div class="icon-wrapper  text-success" data-v-6607c59e><i class="fas fa-lightbulb" data-v-6607c59e></i></div> <div aria-hidden="true" class="vertical-divider alert-success" data-v-6607c59e></div> <div class="contents" data-v-6607c59e><p data-v-6607c59e>Feel free to raise any concerns during the initial discussion phase for other devs to weigh in on the tradeoffs!</p></div> <!----></div></div></div> <h4 id="attributes-and-slots">Attributes and Slots<a href="#attributes-and-slots" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h4> <p>MarkBind components may support <span data-mb-component-type="popover" tabindex="0" id="pop:markbind-attributes" class="trigger"><!----><!----></span>, <span data-mb-component-type="popover" tabindex="0" id="pop:markbind-slots" class="trigger"><!----><!----></span> or both.
 Some components allow users to supply the same content as either a slot or an attribute.
-If an author provides the same content as both a slot and an attribute, in most cases, the slot should override the attribute.</p> <div class="alert box-container seamless" data-v-6607c59e><!----> <div class="header-and-body" data-v-6607c59e><!----> <div class="box-body-wrapper" data-v-6607c59e><div class="icon-wrapper  text-warning" data-v-6607c59e><i class="fas fa-exclamation" data-v-6607c59e></i></div> <div aria-hidden="true" class="vertical-divider alert-warning" data-v-6607c59e></div> <div class="contents" data-v-6607c59e><p data-v-6607c59e>MarkBind should also <strong data-v-6607c59e>log a warning</strong> to inform the author of this conflict!</p></div> <!----></div></div></div> <div class="clearfix"><p><span class="float-start"><a href="/devdocs/devGuide/development/workflow.html" class="btn btn-light"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> <span>Workflow</span></span></a></span></p> <p><span class="float-end"><a href="/devdocs/devGuide/development/writingPlugins.html" class="btn btn-light"><span><span>Writing Plugins</span> <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></a></span></p></div> <br></div> <nav id="page-nav" data-v-e6005420><div class="nav-component slim-scroll" data-v-e6005420><nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#writing-components" data-v-e6005420>Writing Components‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#implementing-components" data-v-e6005420>Implementing Components‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#transforming-the-node-directly" data-v-e6005420>Transforming the Node Directly‎</a> <a class="nav-link py-1" href="#vue-components" data-v-e6005420>Vue Components‎</a> <a class="nav-link py-1" href="#as-a-plugin" data-v-e6005420>As a Plugin‎</a></nav> <a class="nav-link py-1" href="#testing-components" data-v-e6005420>Testing Components‎</a> <a class="nav-link py-1" href="#additional-considerations" data-v-e6005420>Additional Considerations‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#reactivity" data-v-e6005420>Reactivity‎</a> <a class="nav-link py-1" href="#ssr" data-v-e6005420>SSR‎</a> <a class="nav-link py-1" href="#bundle-size" data-v-e6005420>Bundle size‎</a> <a class="nav-link py-1" href="#dependencies" data-v-e6005420>Dependencies‎</a> <a class="nav-link py-1" href="#attributes-and-slots" data-v-e6005420>Attributes and Slots‎</a></nav></nav> <!----></nav></div> <!----></nav> <div aria-hidden="true" class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;"><i class="fas fa-arrow-circle-up"></i></div></div> <div><footer><div class="text-center"><small>[Generated by <a href="https://markbind.org/">MarkBind 5.5.2</a> on Thu, 2 May 2024, 14:00:54 UTC]</small><br> <small>This site is powered by <a href="https://www.netlify.com/">Netlify</a>.</small></div></footer></div></div>
+If an author provides the same content as both a slot and an attribute, in most cases, the slot should override the attribute.</p> <div class="alert box-container seamless" data-v-6607c59e><!----> <div class="header-and-body" data-v-6607c59e><!----> <div class="box-body-wrapper" data-v-6607c59e><div class="icon-wrapper  text-warning" data-v-6607c59e><i class="fas fa-exclamation" data-v-6607c59e></i></div> <div aria-hidden="true" class="vertical-divider alert-warning" data-v-6607c59e></div> <div class="contents" data-v-6607c59e><p data-v-6607c59e>MarkBind should also <strong data-v-6607c59e>log a warning</strong> to inform the author of this conflict!</p></div> <!----></div></div></div> <div class="clearfix"><p><span class="float-start"><a href="/devdocs/devGuide/development/workflow.html" class="btn btn-light"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> <span>Workflow</span></span></a></span></p> <p><span class="float-end"><a href="/devdocs/devGuide/development/writingPlugins.html" class="btn btn-light"><span><span>Writing Plugins</span> <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></a></span></p></div> <br></div> <nav id="page-nav" data-v-e6005420><div class="nav-component slim-scroll" data-v-e6005420><nav id="mb-page-nav" class="nav nav-pills flex-column my-0 small no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#writing-components" data-v-e6005420>Writing Components‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#implementing-components" data-v-e6005420>Implementing Components‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#transforming-the-node-directly" data-v-e6005420>Transforming the Node Directly‎</a> <a class="nav-link py-1" href="#vue-components" data-v-e6005420>Vue Components‎</a> <a class="nav-link py-1" href="#as-a-plugin" data-v-e6005420>As a Plugin‎</a></nav> <a class="nav-link py-1" href="#testing-components" data-v-e6005420>Testing Components‎</a> <a class="nav-link py-1" href="#additional-considerations" data-v-e6005420>Additional Considerations‎</a> <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap" data-v-e6005420><a class="nav-link py-1" href="#reactivity" data-v-e6005420>Reactivity‎</a> <a class="nav-link py-1" href="#ssr" data-v-e6005420>SSR‎</a> <a class="nav-link py-1" href="#bundle-size" data-v-e6005420>Bundle size‎</a> <a class="nav-link py-1" href="#dependencies" data-v-e6005420>Dependencies‎</a> <a class="nav-link py-1" href="#attributes-and-slots" data-v-e6005420>Attributes and Slots‎</a></nav></nav> <!----></nav></div> <!----></nav> <div aria-hidden="true" class="scroll-top-button fa-lg d-print-none" style="display:none;bottom:2%;right:2%;position:fixed;"><i class="fas fa-arrow-circle-up"></i></div></div> <div><footer><div class="text-center"><small>[Generated by <a href="https://markbind.org/">MarkBind 5.5.2</a> on Wed, 8 May 2024, 6:11:47 UTC]</small><br> <small>This site is powered by <a href="https://www.netlify.com/">Netlify</a>.</small></div></footer></div></div>
 </body><script src="/devdocs/markbind/js/bootstrap-utility.min.js"></script>
 <script src="/devdocs/markbind/js/polyfill.min.js"></script>
 <script src="/devdocs/markbind/js/vue.min.js"></script>
@@ -49,50 +49,6 @@ If an author provides the same content as both a slot and an attribute, in most 
 <script>
   MarkBind.setupWithSearch()
 </script>
-    <script>
-    function toggleCodeBlockWrap(element) {
-      const pre = element.parentElement.parentElement;
-      const classList = pre.querySelector('code').classList; 
-      if (classList.contains('wrap')) {
-          classList.remove('wrap');
-      } else {
-          classList.add('wrap')
-      }
-    }
-    </script>
-    
-    <script>
-        function submitForm(element) {
-            event.preventDefault();
-            const formData = new FormData(element);
-            const formProps = Object.fromEntries(formData);
-            const json = JSON.stringify(formProps);
-            const submitButton = element.querySelector('button[type="submit"]');
-            const submitButtonText = submitButton.innerText;
-            submitButton.innerText = 'Please wait...'
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json,
-            })
-            .then(async (response) => {
-                if (response.status == 200) {
-                    alert('Form submitted! Thank you for your response');
-                } else {
-                    alert('Error submitting form! Please try again later.');
-                }
-            })
-            .catch(error => {
-                alert('Error submitting form! Please try again later.');
-            })
-            .finally(() => {
-                submitButton.innerText = submitButtonText;
-            })
-        }
-    </script>
     <script>
     function copyCodeBlock(element) {
         const pre = element.parentElement.parentElement;
@@ -108,55 +64,4 @@ If an author provides the same content as both a slot and an attribute, in most 
         document.body.removeChild(textElement);
     }
     </script>
-    <script src="/devdocs/plugins/dataTable/datatables.min.js"></script>
-    
-  <script>
-    function getTableOptions(el) {
-      const options = {};
-      if ($(el).hasClass('sortable-table')) {
-        options.searching = false;
-        options.paging = false;
-        options.info = false;
-      } else if ($(el).hasClass('searchable-table')) {
-        options.ordering = false;
-        options.paging = false;
-        options.info = false;
-        options.dom = '<"row"<"col-sm-12"f>>' + '<"row"<"col-sm-12"t>>';
-      } else if ($(el).hasClass('sortable-searchable-table')) {
-        options.paging = false;
-        options.info = false;
-        options.dom = '<"row"<"col-sm-12"f>>' + '<"row"<"col-sm-12"t>>';
-      }
-      return options;
-    }
-
-    Vue.directive('datatable', {
-      inserted: function(el, binding) {
-        const options = binding.value || {};
-        const tableOptions = getTableOptions(el);
-        $(el).DataTable({ ...tableOptions, ...options });
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-      $('table.sortable-table, table.searchable-table, table.sortable-searchable-table').each(function() {
-        const options = getTableOptions(this);
-        $(this).DataTable(options);
-      });
-    });
-  </script>
-
-    <script type="module">
-    import mermaid from 'https://unpkg.com/mermaid@10/dist/mermaid.esm.min.mjs';
-    document.addEventListener('DOMContentLoaded', () => {
-      mermaid.initialize({});
-      Vue.directive('mermaid', {
-        inserted: function(el) {
-          mermaid.run({
-            nodes: [el]
-          });
-        }
-      });
-    });
-  </script>
 </html>
