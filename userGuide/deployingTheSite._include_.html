@@ -83,6 +83,8 @@ The branch that will be deployed to in the remote repo.</p></li></ul></div></pan
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">i</span> <span class="hljs-string">-g</span> <span class="hljs-string">markbind-cli</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">markbind</span> <span class="hljs-string">deploy</span> <span class="hljs-string">--ci</span>
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -97,6 +99,7 @@ The branch that will be deployed to in the remote repo.</p></li></ul></div></pan
     </g>
 </svg>
 
+    </div>
     </div>
     </button></div></pre><box type="info">
 <p>The sample <code class="hljs inline no-lang" v-pre>deploy.yml</code> workflow above uses the <a href="https://docs.github.com/en/actions/reference/authentication-in-a-workflow">default GitHub Token secret</a> that is generated automatically for each GitHub Actions workflow. You may also use a <a href="#generating-a-github-personal-access-token">GitHub Personal Access Token</a> in place of the default GitHub Token.</p></box>
@@ -119,6 +122,8 @@ The branch that will be deployed to in the remote repo.</p></li></ul></div></pan
 </span><span>        <span class="hljs-attr">with:</span>
 </span><span>          <span class="hljs-attr">token:</span> <span class="hljs-string">${{</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">}}</span>
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -133,6 +138,7 @@ The branch that will be deployed to in the remote repo.</p></li></ul></div></pan
     </g>
 </svg>
 
+    </div>
     </div>
     </button></div></pre><p>Read the <a href="https://github.com/MarkBind/markbind-action#readme">action documentation</a> to understand the various configuration options.</p></box>
 <p>For more information on customizing your workflow file to fit your specific needs, you may refer to the <a href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions">GitHub Action Docs</a>.</p></panel>
@@ -181,6 +187,8 @@ The branch that will be deployed to in the remote repo.</p></li></ul></div></pan
 </span><span>  <span class="hljs-attr">on:</span>
 </span><span>    <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span>
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -195,6 +203,7 @@ The branch that will be deployed to in the remote repo.</p></li></ul></div></pan
     </g>
 </svg>
 
+    </div>
     </div>
     </button></div></pre></li></ol>
 <p>More information about <code class="hljs inline no-lang" v-pre>.travis.yml</code> can be found in the <a href="https://docs.travis-ci.com/">Travis CI documentation</a>.</p>
@@ -212,6 +221,8 @@ If you want Travis CI to only deploy from a specific repository (eg. only from y
 </span><span>    <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span>
 </span><span>    <span class="hljs-attr">repo:</span> <span class="hljs-string">se-edu/se-book</span>
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -226,6 +237,7 @@ If you want Travis CI to only deploy from a specific repository (eg. only from y
     </g>
 </svg>
 
+    </div>
     </div>
     </button></div></pre><p>The <code class="hljs inline no-lang" v-pre>repo</code> value can be changed to your specific repository as desired.</p></box></panel>
 <panel type="seamless" expanded panelId="deploying-via-appveyor-ci"><template #header><h4 id="deploying-via-appveyor-ci">Deploying via AppVeyor CI<a class="fa fa-anchor" href="#deploying-via-appveyor-ci" onclick="event.stopPropagation()"></a></h4></template>
@@ -272,6 +284,8 @@ If you want Travis CI to only deploy from a specific repository (eg. only from y
 </span><span>
 </span><span><span class="hljs-attr">build:</span> <span class="hljs-string">off</span>
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -286,6 +300,7 @@ If you want Travis CI to only deploy from a specific repository (eg. only from y
     </g>
 </svg>
 
+    </div>
     </div>
     </button></div></pre></li></ol>
 <p>Commit and push <code class="hljs inline no-lang" v-pre>appveyor.yml</code> to your GitHub repository. Thereafter, AppVeyor CI should begin to run the build script. You are able to view the current build status by clicking on your repository in the <a href="https://ci.appveyor.com/projects">AppVeyor projects page</a>. Once the build succeeds, you should be able to view your MarkBind site, after a few seconds, at <code class="hljs inline no-lang" v-pre>http://&lt;username|org&gt;.github.io/&lt;repo&gt;</code> e.g., <a href="http://se-edu.github.io/se-book">http://se-edu.github.io/se-book</a>.</p></panel>
@@ -329,6 +344,8 @@ If you want Travis CI to only deploy from a specific repository (eg. only from y
 </span><span>    <span class="hljs-attr">jobs:</span>
 </span><span>      <span class="hljs-bullet">-</span> <span class="hljs-string">Build-And-Deploy</span>
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -343,6 +360,7 @@ If you want Travis CI to only deploy from a specific repository (eg. only from y
     </g>
 </svg>
 
+    </div>
     </div>
     </button></div></pre></li></ol>
 <p>After you have pushed the <code class="hljs inline no-lang" v-pre>config.yml</code> file to your remote repo, you should see Circle CI starting to run the Deploy job in your projects dashboard. Once it is successful, you should be able to view your MarkBind site at <code class="hljs inline no-lang" v-pre>http://&lt;username|org&gt;.github.io/&lt;repo&gt;</code>.</p>
@@ -441,6 +459,8 @@ to automatically build and deploy your site on their platform every time your Gi
 </span><span><span class="hljs-string">            ./_site</span>
 </span><span><span class="hljs-string">            ./pr</span>
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -455,6 +475,7 @@ to automatically build and deploy your site on their platform every time your Gi
     </g>
 </svg>
 
+    </div>
     </div>
     </button></div></pre></panel>
 <panel type="seamless"><template #header><p><code class="hljs inline no-lang" v-pre>previewPR.yml</code> File</p></template>
@@ -521,6 +542,8 @@ to automatically build and deploy your site on their platform every time your Gi
 </span><span>            <span class="hljs-string">Your</span> <span class="hljs-string">PR</span> <span class="hljs-string">can</span> <span class="hljs-string">be</span> <span class="hljs-string">previewed</span> [<span class="hljs-string">here</span>]<span class="hljs-string">(${{</span> <span class="hljs-string">steps.pr-url.outputs.ACTIONS_PREVIEW_URL</span> <span class="hljs-string">}})</span>
 </span><span>
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -535,6 +558,7 @@ to automatically build and deploy your site on their platform every time your Gi
     </g>
 </svg>
 
+    </div>
     </div>
     </button></div></pre></panel>
 <p>Finally, you may open a PR to the repo of your MarkBind site. If everything is configured correctly, after a few minutes, you should be able to see a <code class="hljs inline no-lang" v-pre>github-actions bot</code> automatically commenting on the PR with a link to <em>preview</em> the updated MarkBind site.</p>
@@ -552,6 +576,8 @@ to automatically build and deploy your site on their platform every time your Gi
 <pre><code class="hljs yaml" v-pre><span><span class="hljs-attr">install:</span>
 </span><span>  <span class="hljs-bullet">-</span> <span class="hljs-string">npm</span> <span class="hljs-string">i</span> <span class="hljs-string">-g</span> <span class="hljs-string">markbind-cli@1.6.3</span>
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -567,12 +593,15 @@ to automatically build and deploy your site on their platform every time your Gi
 </svg>
 
     </div>
+    </div>
     </button></div></pre></li>
 <li>
 <p>If you want to use the latest minor version automatically until the next major version (as major versions usually contain breaking changes), you can add a <code class="hljs inline no-lang" v-pre>^</code> in front of the version number. In the example below, Travis will use the latest version of MarkBind but will stop before <code class="hljs inline no-lang" v-pre>2.*</code></p>
 <pre><code class="hljs yaml" v-pre><span><span class="hljs-attr">install:</span>
 </span><span>  <span class="hljs-bullet">-</span> <span class="hljs-string">npm</span> <span class="hljs-string">i</span> <span class="hljs-string">-g</span> <span class="hljs-string">markbind-cli@^1.6.3</span>
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -587,6 +616,7 @@ to automatically build and deploy your site on their platform every time your Gi
     </g>
 </svg>
 
+    </div>
     </div>
     </button></div></pre></li></ul>
 <p><strong>Setting up Netlify to use a specific version of MarkBind</strong></p>
@@ -602,6 +632,8 @@ to automatically build and deploy your site on their platform every time your Gi
 <p>Create / Update <code class="hljs inline no-lang" v-pre>.gitignore</code> file in the root directory and add:</p>
 <pre><code class="hljs" v-pre><span>node_modules
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -617,12 +649,15 @@ to automatically build and deploy your site on their platform every time your Gi
 </svg>
 
     </div>
+    </div>
     </button></div></pre></li>
 <li>
 <p>Update <code class="hljs inline no-lang" v-pre>ignore</code> in site.json to include</p>
 <pre><code class="hljs" v-pre><span>node_modules/*
 </span><span>.gitignore
 </span></code><div class="function-btn-container"><button onclick="copyCodeBlock(this)" class="function-btn d-print-none">
+    <div class="tooltip-container">
+    <span class="tooltiptext">Copy</span>
     <div class="function-btn-body">
     
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18" version="1.1">
@@ -637,6 +672,7 @@ to automatically build and deploy your site on their platform every time your Gi
     </g>
 </svg>
 
+    </div>
     </div>
     </button></div></pre></li>
 <li>
