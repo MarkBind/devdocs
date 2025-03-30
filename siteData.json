@@ -122,6 +122,23 @@
       "headingKeywords": {}
     },
     {
+      "src": "devGuide/design/vueIntegration.md",
+      "title": "Vue Integration",
+      "headings": {
+        "vue-integration": "Vue Integration",
+        "overview": "Overview",
+        "custom-vue-components": "Custom Vue Components",
+        "what-vue-is-used-for": "What Vue is Used For",
+        "custom-vue-directives": "Custom Vue Directives",
+        "markbind-s-server-side-rendering-ssr-using-vue": "Markbind's Server-Side Rendering (SSR) using Vue",
+        "ssr-workflow-overview": "SSR Workflow Overview",
+        "dynamic-content-loading-client-side-rendering": "Dynamic Content Loading (Client-Side Rendering)",
+        "detailed-vue-app-setup-and-execution-flow": "Detailed Vue App Setup and Execution Flow",
+        "initialization-flow": "Initialization Flow"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "devGuide/devGuide.md",
       "title": "Contributing",
       "headings": {
