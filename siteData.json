@@ -307,6 +307,10 @@
         "projects": "Projects",
         "instructions": "Instructions:",
         "some-tips-principles-from-current-use": "Some tips / principles from current use:",
+        "managing-github-teams": "Managing GitHub Teams",
+        "team-structure": "Team Structure",
+        "contributor-journey": "Contributor Journey",
+        "team-maintenance": "Team Maintenance",
         "other-notes": "Other Notes"
       },
       "headingKeywords": {}
