@@ -30,13 +30,16 @@ a recent version of <strong>npm</strong></p></li>
 <li>
 <p><strong>Fork and clone</strong> the MarkBind repo.</p></li>
 <li>
-<p><strong>Bind your cloned version of MarkBind to your console</strong> by navigating to the cloned <code class="hljs inline no-lang" v-pre>packages/cli</code> folder and running <code class="hljs inline no-lang" v-pre>npm link</code></p></li>
-<li>
 <p><strong>Install dependencies</strong> by running
-<popover><template #content>Under the hood, this calls <code class="hljs inline no-lang" v-pre>npm ci</code> and <code class="hljs inline no-lang" v-pre>npm prepare</code></template><code class="hljs inline no-lang" v-pre>npm run setup</code></popover>
+<popover><template #content>Under the hood, this calls <code class="hljs inline no-lang" v-pre>npm ci</code> and <code class="hljs inline no-lang" v-pre>npm run build:backend</code></template><code class="hljs inline no-lang" v-pre>npm run setup</code></popover>
 in the <strong>root folder</strong> of your cloned repo.</p></li>
 <li>
-<p><strong>Congratulations!</strong> Now you are ready to start modifying MarkBind code.</p></li></ol>
+<p><strong>Bind your cloned version of MarkBind to your console</strong> by navigating to the cloned <code class="hljs inline no-lang" v-pre>packages/cli</code> folder and running <code class="hljs inline no-lang" v-pre>npm link</code></p></li></ol>
+<box type="warning" class="ms-4" seamless>
+<p>If the <code class="hljs inline no-lang" v-pre>markbind</code> command fails to execute with permission issues in the console, add execute permissions to the generated file in <code class="hljs inline no-lang" v-pre>packages/cli/dist/index.js</code></p>
+<p>To prevent this from occurring, it is recommended to use the <code class="hljs inline no-lang" v-pre>dev</code>/<code class="hljs inline no-lang" v-pre>build:backend</code> scripts as described in <a href="/devdocs/devGuide/development/workflow.html#editing-backend-features">the workflow</a></p></box>
+<ol>
+<li><strong>Congratulations!</strong> Now you are ready to start modifying MarkBind code.</li></ol>
 <h2 id="setting-up-the-git-hooks-optional-but-recommended">Setting up the git hooks (optional but recommended)<a class="fa fa-anchor" href="#setting-up-the-git-hooks-optional-but-recommended" onclick="event.stopPropagation()"></a></h2>
 <p>There are a few <a href="/devdocs/devGuide/development/workflow.html#git-hooks">Git hooks</a> implemented using the <a href="https://pre-commit.com/">pre-commit</a> tool that runs common tasks like linting, automated tests and compiling typescript files.</p>
 <p><strong>Install the hooks</strong> by running <code class="hljs inline no-lang" v-pre>python3 ./pre-commit/pre-commit-2.20.0.pyz install</code> in the <strong>root folder</strong> of your cloned repo.</p>
