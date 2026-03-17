@@ -214,6 +214,7 @@
         "keeping-your-fork-up-to-date": "Keeping your fork up to date",
         "editing-backend-features": "Editing backend features",
         "editing-frontend-features": "Editing frontend features",
+        "markbind-serve-d": "markbind serve -d",
         "testing": "Testing",
         "updating-and-writing-tests": "Updating and writing tests",
         "updating-unit-tests": "Updating unit tests",

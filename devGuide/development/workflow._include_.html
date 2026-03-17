@@ -184,6 +184,11 @@ This adds the necessary webpack middlewares to the development server to compile
 and enables live and hot reloading for frontend source files.</li>
 <li>Run <code class="hljs inline no-lang" v-pre>npm run build:web</code> in the root directory, which builds the above bundles,
 then run your markbind-cli <a tags="environment--dg" href="https://markbind.org/userGuide/cliCommands.html">command</a> of choice.</li></ol>
+<box type="info" seamless><template #header><p>Recommended Development Command</p></template>
+
+<h5 id="markbind-serve-d"><code class="hljs inline no-lang" v-pre>markbind serve -d</code><a class="fa fa-anchor" href="#markbind-serve-d" onclick="event.stopPropagation()"></a></h5>
+<p><code class="hljs inline no-lang" v-pre>markbind serve -d</code> adds the necessary webpack middlewares to the development server to compile the bundles for <code class="hljs inline no-lang" v-pre>markbind-core-web</code> and <code class="hljs inline no-lang" v-pre>markbind-vue-components</code>, and enables live and hot reloading for frontend source files.</p>
+<p>Note that the command is only applicable for local development, and does not work when you install MarkBind from npm, as it relies on developmental dependencies.</p></box>
 <div id="workflow-testing">
 <h2 id="testing">Testing<a class="fa fa-anchor" href="#testing" onclick="event.stopPropagation()"></a></h2>
 <p>Our test script does the following:</p>
