@@ -24,7 +24,13 @@ a recent version of <strong>npm</strong></p></li>
 <li><code class="hljs inline no-lang" v-pre>dot -V</code> (for Graphviz - optional on Windows)</li>
 <li><code class="hljs inline no-lang" v-pre>python3 -V</code></li></ul></li></ol>
 <box type="tip" seamless>
-<p>We recommend the <strong>WebStorm IDE</strong> or <strong>VS Code</strong> for working with MarkBind code.</p></box>
+<p>We recommend the <strong>WebStorm IDE</strong> or <strong>VS Code</strong> for working with MarkBind code.</p>
+<p><strong>JetBrains users:</strong> Run configurations are included in the repository under <code class="hljs inline no-lang" v-pre>.run/</code>. After cloning, WebStorm (and other JetBrains IDEs) will pick these up automatically. The configurations cover:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>root | test</code>, <code class="hljs inline no-lang" v-pre>cli | test</code>, <code class="hljs inline no-lang" v-pre>core | test</code> — run the test suites</li>
+<li><code class="hljs inline no-lang" v-pre>root | build_backend</code>, <code class="hljs inline no-lang" v-pre>root | build_docs</code> — build targets</li>
+<li><code class="hljs inline no-lang" v-pre>root | dev</code> — starts the dev watcher</li>
+<li><code class="hljs inline no-lang" v-pre>serve</code>, <code class="hljs inline no-lang" v-pre>serve -d</code> — serves the docs site, with and without debug mode</li></ul></box>
 <h2 id="setting-up-the-dev-environment">Setting up the dev environment<a class="fa fa-anchor" href="#setting-up-the-dev-environment" onclick="event.stopPropagation()"></a></h2>
 <ol>
 <li>
